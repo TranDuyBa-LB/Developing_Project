@@ -1,0 +1,102 @@
+*{margin: 0px; padding: 0px;}
+body {
+    background-color: rgb(238, 238, 238);
+    font-family: 'Roboto', sans-serif;
+}
+#head_web {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(81, 189, 252);
+    position: relative;
+}
+#head_web #logo_website{
+    width: 100px;
+    height: 50px;
+    background-color: blue;
+    margin-left: 100px;
+    position: absolute;
+    top: 10px;
+}
+#head_web #cac_cong_cu {
+    position: absolute;
+    margin-left: 300px;
+    width: auto;
+    height: 50px;
+    top: 10px;
+}
+#head_web #cac_cong_cu .cong_cu {
+    float: left;
+    width: auto;
+    height: 100%;
+    background-color: rgba(0, 255, 255, 0);
+    margin-left: 20px;
+    user-select: none;
+}
+#head_web #cac_cong_cu .cong_cu:hover {
+    color: white;
+    transition: 0.2s;
+}
+#head_web #cac_cong_cu .cong_cu #input_tim_kiem {
+    max-width: 300px;
+    width: 300px;
+    height: 90%;
+    border: 1px solid rgb(160, 160, 160);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+#head_web #cac_cong_cu .cong_cu #button_tim_kiem {
+    width: 70px;
+    height: 90%;
+    border: 1px solid rgb(160, 160, 160);
+    background-color: rgb(233, 233, 233);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-left: -4px;
+    font-size: 15px;
+}
+#head_web #cac_cong_cu .cong_cu p{
+    font-size: 25px;
+    margin-top: 7px;
+}
+#head_web #cac_cong_cu div:nth-child(5) input{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(81, 189, 252);
+    font-size: 15px;
+}
+#head_web #cac_cong_cu div:nth-child(5) input:hover{
+    background-color: rgb(255, 124, 124);
+    color: white;
+}
+#body_web {
+    width: 1050px;
+    height: 1000px;
+    margin-top: 50px; 
+    margin-left: 100px;
+    background-color: rgb(255, 255, 255);
+
+}
+#body_web #cong_cu_loc {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid rgb(161, 161, 161);
+}
+#body_web #cong_cu_loc div {
+    float: left;
+    margin-left: 20px;
+    width: 100px;
+    height: 100%;
+    text-align: center;
+}
+#body_web #cong_cu_loc div:hover {
+    border-bottom: 2px solid rgb(81, 189, 252);
+    color: rgb(81, 189, 252);
+    transition: 0.1s;
+}
+#body_web #cong_cu_loc div p {
+    margin-top: 10px;
+    user-select: none;
+}
