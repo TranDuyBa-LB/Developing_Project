@@ -5,6 +5,7 @@
         <title>Chợ HaUi</title>
         <meta charset="UTF-8" />
         <link rel="stylesheet" type="text/css" href="views/css/index.css" />
+        <link rel="stylesheet" type="text/css" href="views/css/san_pham_demo.css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
     </head>
     <body>
@@ -42,6 +43,28 @@
                 <div>
                     <p>Giá giảm dần</p>
                 </div>
+            </div>
+            <div id="noi_dung_web">
+                <div class="san_pham_demo">
+                    <img src="views/imgs/canon_700d.jpg" alt="canon_700d" />
+                    <p class="ten_san_pham"> Máy ảnh Canon 700d Máy ảnh Canon 700d </p>
+                    <p class="gia_san_pham">10.000.000 đ</p>
+                </div>
+                <div class="san_pham_demo">
+                        <img src="views/imgs/canon_700d.jpg" alt="canon_700d" />
+                        <p class="ten_san_pham"> Máy ảnh Canon 700d Máy ảnh Canon 700d </p>
+                        <p class="gia_san_pham">10.000.000 đ</p>
+                    </div>
+                    <div class="san_pham_demo">
+                            <img src="views/imgs/canon_700d.jpg" alt="canon_700d" />
+                            <p class="ten_san_pham"> Máy ảnh Canon 700d Máy ảnh Canon 700d </p>
+                            <p class="gia_san_pham">10.000.000 đ</p>
+                        </div>
+                        <div class="san_pham_demo">
+                                <img src="views/imgs/canon_700d.jpg" alt="canon_700d" />
+                                <p class="ten_san_pham"> Máy ảnh Canon 700d Máy ảnh Canon 700d </p>
+                                <p class="gia_san_pham">10.000.000 đ</p>
+                            </div>
             </div>
         </div>
     </body>
