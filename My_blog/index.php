@@ -3,6 +3,7 @@
     <head>
         <title>BL Blog</title>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="views/css/header.css" />
         <link rel="stylesheet" type="text/css" href="views/css/content_index.css" />
         <link rel="stylesheet" type="text/css" href="views/css/footer.css" />
@@ -15,6 +16,11 @@
                     <img src="views/images/img_designs/login.png" />
                 </a>
                 <ul id="table_log">
+                    <li>
+                        <a href="">
+                            Quản lý
+                        </a>
+                    </li>
                     <li>
                         <a href="">
                             Đăng nhập
@@ -49,7 +55,7 @@
             </div>
         </div>
         <div id="content">
-            <div class="posts">
+            <div class="list_posts">
                 <h2>
                     <a href="">Tìm việc như thế nào? Developer tìm việc như thế nào??</a>
                 </h2>
@@ -63,7 +69,7 @@
                     <img src="views/images/img_designs/list.png" title="Danh mục" /> <p>Chuyện thường ngày Chuyện thường ngày </p>
                 </div>
             </div>
-            <div class="posts">
+            <div class="list_posts">
                 <h2>
                     <a href="">Tìm việc như thế nào? Developer tìm việc như thế nào?? việc như thế nào? Developer tìm việc như thế nào??</a>
                 </h2>
@@ -93,6 +99,5 @@
             <p>Admin: Trần Duy Bá</p>
             <p>Design and Code: Trần Duy Bá-LB</p>
         </div>
-        <script src="views/js/animation.js" ></script>
     </body>
 </html>

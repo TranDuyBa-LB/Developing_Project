@@ -11,20 +11,19 @@
     color: rgb(0, 0, 0);
 }
 #header span > a img {
-    width: 5%;
-    height: 23%;
+    width: 70px;
+    height: 70px;
     position: absolute;
     right: 0px;
 }
 #header span > ul {
-    display: none;
     position: absolute;
     width: 200px;
     text-decoration: none;
     list-style: none;
-    top: 80px;
+    top: -200px;
     border-radius: 4px;
-    right: 5px;
+    right: 70px;
     background-color: rgb(238, 238, 238);
 }
 #header span > ul li {
@@ -38,13 +37,20 @@
 }
 #header span > ul li a {
     display: block;
-    height: 100%;
+    height: 80%;
     text-align: center;
     padding-top: 13px;
     color: white;
 }
-#header span > ul li:nth-child(2){
-    margin-top: 20px;
+#header span:hover ul {
+    top: 0px;
+    transition: 1s;
+}
+#header span:hover ul li:nth-child(1){
+    display: none;
+}
+#header span:hover ul li:nth-child(3){
+    display: none;
 }
 #header #logo{
     text-align: center;

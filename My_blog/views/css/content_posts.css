@@ -1,0 +1,73 @@
+#content_posts {
+    border-bottom: 1px solid black;
+    width: 60%;
+    margin-left: 100px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+#content_posts h2 {
+    font-size: 40px;
+    font-weight: normal;
+    width: 100%;
+    text-align: left;
+    background-color: rgb(199, 64, 64);
+}
+#content_posts div:nth-child(2) {
+    margin-top: 20px;
+}
+#content_posts div:nth-child(2) img {
+    width: 2%;
+    height: 2%;
+}
+#content_posts div:nth-child(2) img:first-child ~ img {
+    margin-left: 20px;
+}
+#content_posts div:nth-child(2) p {
+    display: inline;
+    padding-left: 5px;
+}
+#content_posts div:nth-child(3) {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 180%;
+} 
+#content_posts > a {
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
+}
+#content_posts > a img {
+    width: 5%;
+    height: 5%;
+}
+#content_posts > a p {
+    display: inline;
+    padding-left: 5px;
+}
+
+#comments {
+    height: 500px;
+    
+    margin-left: 100px;
+    width: 60%;
+}
+#comments input {
+    border-radius: 2px;
+    border: 1px solid silver;
+}
+#comments textarea {
+    width: 90%;
+    height: auto;
+    padding-left: 10px;
+    font-size: 20px;
+    padding-top: 15px;
+}
+#comments input:nth-child(2) {
+    display: block;
+    height: 50px;
+    width: 9%;
+    margin-top: 10px;
+}

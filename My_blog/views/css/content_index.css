@@ -4,23 +4,23 @@
     margin-top: 100px;
     margin-bottom: 100px;
 }
-#content .posts {
+#content .list_posts {
     margin-bottom: 50px;
     border-bottom: 2px solid silver;
 }
-#content .posts h2 {
+#content .list_posts h2 {
     max-height: 160px;
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: left;
 }
-#content .posts h2 a {
+#content .list_posts h2 a {
     font-size: 40px;
     font-weight: normal; /*Hiển thị chữ in thường*/
     text-decoration: none;
     color: black;
 }
-#content .posts > p {
+#content .list_posts > p {
     margin-top: 20px;
     font-size: 20px;
     line-height: 180%;
@@ -29,7 +29,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-#content .posts input {
+#content .list_posts input {
     display: block;
     width: 150px;
     height: 50px;
@@ -40,24 +40,22 @@
     font-size: 18px;
     color: white;
 }
-#content .posts input:hover {
+#content .list_posts input:hover {
     background-color: silver;
 }
-#content .posts > div {
+#content .list_posts > div {
     margin-top: 50px;
-    overflow: hidden;
-    text-overflow: ellipsis;
     margin-bottom: 50px;
 }
-#content .posts > div img {
+#content .list_posts > div img {
     width: 3%;
     height: 3%;
     display: inline-block;
 }
-#content .posts > div img:first-child ~ img {
+#content .list_posts > div img:first-child ~ img {
     margin-left: 20px;
 }
-#content .posts > div p {
+#content .list_posts > div p {
     display: inline;
-    margin-left: 5px;
+    padding-left: 5px;
 }
