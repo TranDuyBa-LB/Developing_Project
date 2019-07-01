@@ -5,10 +5,28 @@
         <meta charset="UTF-8" />
         <link rel="stylesheet" type="text/css" href="views/css/header.css" />
         <link rel="stylesheet" type="text/css" href="views/css/content_index.css" />
+        <link rel="stylesheet" type="text/css" href="views/css/footer.css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet" />
     </head>
     <body>
         <div id="header">
+            <span>
+                <a href="" id="icon_log">
+                    <img src="views/images/img_designs/login.png" />
+                </a>
+                <ul id="table_log">
+                    <li>
+                        <a href="">
+                            Đăng nhập
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Đăng xuất
+                        </a>
+                    </li>
+                </ul>
+            </span>
             <div id="logo">
                 <a href="#" title="BL Blog">
                     <img src="views/images/img_designs/My_Logo.png" />
@@ -60,5 +78,21 @@
                 </div>
             </div>
         </div>
+        <div id="footer">
+            <div>
+                 <a href="">
+                    <img src="views/images/img_designs/facebook_footer.png" title="facebook" />
+                </a>
+                <a href="">
+                    <img src="views/images/img_designs/github_footer.png" title="GitHub" />
+                </a>
+                <a href="">
+                    <img src="views/images/img_designs/gmail_footer.png" title="Gmail" /> 
+                </a>
+            </div>
+            <p>Admin: Trần Duy Bá</p>
+            <p>Design and Code: Trần Duy Bá-LB</p>
+        </div>
+        <script src="views/js/animation.js" ></script>
     </body>
 </html>

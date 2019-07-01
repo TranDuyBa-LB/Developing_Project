@@ -1,0 +1,19 @@
+#footer {
+    height: 150px;
+    background-color: #e0e0e0;
+    text-align: center;
+    padding-top: 10px;
+}
+#footer div a {
+    text-decoration: none;
+}
+#footer div a:first-child ~ a{
+    margin-left: 20px;
+}
+#footer div a img {
+    width: 3%;
+    height: 3%;
+}
+#footer div ~ p {
+    margin-top: 20px;
+}

@@ -3,9 +3,48 @@
     padding: 0px;
     font-family: 'Roboto Slab', serif;
 }
+#header {
+    position: relative;
+}
 #header a {
     text-decoration: none;
     color: rgb(0, 0, 0);
+}
+#header span > a img {
+    width: 5%;
+    height: 23%;
+    position: absolute;
+    right: 0px;
+}
+#header span > ul {
+    display: none;
+    position: absolute;
+    width: 200px;
+    text-decoration: none;
+    list-style: none;
+    top: 80px;
+    border-radius: 4px;
+    right: 5px;
+    background-color: rgb(238, 238, 238);
+}
+#header span > ul li {
+    background-color: #4876d3;
+    margin-top: 10px;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+#header span > ul li a {
+    display: block;
+    height: 100%;
+    text-align: center;
+    padding-top: 13px;
+    color: white;
+}
+#header span > ul li:nth-child(2){
+    margin-top: 20px;
 }
 #header #logo{
     text-align: center;
