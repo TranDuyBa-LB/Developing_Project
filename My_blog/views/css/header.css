@@ -1,0 +1,35 @@
+*{
+    margin: 0px; 
+    padding: 0px;
+    font-family: 'Roboto Slab', serif;
+}
+#header a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+#header #logo{
+    text-align: center;
+}
+#header #logo a img {
+    width: 13%;
+    height: 13%;
+}
+#header #slogan {
+    text-align: center;
+    margin-top: 10px;
+}
+#header #slogan p{
+    width: 25%;
+    display: inline-block;
+}
+#header #info {
+    text-align: center;
+    margin-top: 15px;
+}
+#header #info > a {
+    margin-left: 20px;
+}
+#header #info > a img {
+    width: 2%;
+    height: 2%;
+}
