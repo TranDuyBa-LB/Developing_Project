@@ -61,61 +61,57 @@
                             <tr class="tr_1">
                                 <th>ID</th>
                                 <th>Tiêu đề</th>
-                                <th>Mô tả</th>
                                 <th>Chủ đề</th>
                                 <th>Số views</th>
                                 <th>Số share</th>
                                 <th>Số comment</th>
                                 <th>Người viết</th>
                                 <th>Thời gian đăng</th>
+                                <th>Tác vụ</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>001</td>
-                                <td>Tiêu đề 1 Tiêu đề 1
-                                        Tiêu đề 1 Tiêu đề 1
-                                        Tiêu đề 1 Tiêu đề 1
-                                        Tiêu đề 1 Tiêu đề 1
-                                        Tiêu đề 1 Tiêu đề 1
-                                        Tiêu đề 1 Tiêu đề 1
-                                        Tiêu đề 1 Tiêu đề 1
-                                        Tiêu đề 1 Tiêu đề 1
-                                        Tiêu đề 1 Tiêu đề 1
-
-                                        Tiêu đề 1 Tiêu đề 1
-
-                                        Tiêu đề 1 Tiêu đề 1
-                                </td>
-                                <td>Mô tả 1</td>
+                                <td>Tiêu đề 1 Tiêu đề 1</td>
                                 <td>Chủ đề 1</td>
                                 <td>30</td>
                                 <td>30</td>
                                 <td>30</td>
                                 <td>Trần Duy Bá</td>
                                 <td>5:00pm-2/7/2019</td>
+                                <td>
+                                    <input type="button" value="Sửa" />
+                                    <input type="button" value="Xóa" />
+                                </td>
                             </tr>
                             <tr>
                                 <td>001</td>
                                 <td>Tiêu đề 1</td>
-                                <td>Mô tả 1</td>
                                 <td>Chủ đề 1</td>
                                 <td>30</td>
                                 <td>30</td>
                                 <td>30</td>
                                 <td>Trần Duy Bá</td>
                                 <td>5:00pm-2/7/2019</td>
+                                <td>
+                                    <input type="button" value="Sửa" />
+                                    <input type="button" value="Xóa" />
+                                </td>
                             </tr>
                             <tr>
                                     <td>001</td>
                                     <td>Tiêu đề 1</td>
-                                    <td>Mô tả 1</td>
                                     <td>Chủ đề 1</td>
                                     <td>30</td>
                                     <td>30</td>
                                     <td>30</td>
                                     <td>Trần Duy Bá</td>
                                     <td>5:00pm-2/7/2019</td>
+                                    <td>
+                                        <input type="button" value="Sửa" />
+                                        <input type="button" value="Xóa" />
+                                    </td>
                                 </tr>
                         </tbody>
                     </table>

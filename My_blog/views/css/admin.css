@@ -87,6 +87,7 @@
     background-color: rgb(255, 255, 255);
     border-bottom: 1px solid silver;
     padding-top: 15px;
+    box-shadow: 7px 0px 15px silver;
 }
 #view_control #manage_posts #option input,p,select {
     display: inline-block;
@@ -108,15 +109,51 @@
 #table_posts {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 32px;
+    box-shadow: 15px 10px 20px rgb(161, 161, 161);
 }
 #table_posts tr:nth-child(odd):not(.tr_1) {
-    background-color: #a0c0ff;
+    background-color: #7edf8e;
 }
 #table_posts tr:hover:not(.tr_1) {
-    background-color: silver;
+    background-color: rgb(255, 253, 142);
+    transition: 0.5s;
+}
+#table_posts th {
+    background-color: rgb(255, 78, 78);
+    height: 50px;
+    color: rgb(255, 255, 255);
 }
 #table_posts th,td {
     text-align: left;
-    border-bottom:1px solid rgb(0, 0, 0);
-    border-left: 1px solid rgb(0, 0, 0);
+    border:1px solid rgb(0, 0, 0);
+    max-width: 450px;
+    text-align: center;
+}
+#table_posts tbody tr td:nth-child(2) {
+    text-align: left;
+    padding-left: 10px;
+}
+#table_posts tbody tr td input {
+    width: 60px;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+    display: block;
+    border-radius: 3px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: #6297ff;
+    color: white;
+}
+#table_posts tbody tr td input:first-child ~ input {
+    margin-bottom: 10px;
+    background-color: #ff5555;
+}
+#table_posts tbody tr td input:first-child ~ input:hover {
+    background-color: silver;
+    transition: 0.3s;
+}
+#table_posts tbody tr td input:hover {
+    background-color: silver;
+    transition: 0.5s;
 }
