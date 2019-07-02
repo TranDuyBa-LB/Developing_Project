@@ -67,7 +67,8 @@
                                 <th>Số comment</th>
                                 <th>Người viết</th>
                                 <th>Thời gian đăng</th>
-                                <th>Tác vụ</th>
+                                <th>Sửa</th>
+                                <th>Xóa</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -81,8 +82,10 @@
                                 <td>Trần Duy Bá</td>
                                 <td>5:00pm-2/7/2019</td>
                                 <td>
-                                    <input type="button" value="Sửa" />
-                                    <input type="button" value="Xóa" />
+                                    <a href="">Sửa</a>
+                                </td>
+                                <td>
+                                    <a href="">Xóa</a>
                                 </td>
                             </tr>
                             <tr>
@@ -95,8 +98,10 @@
                                 <td>Trần Duy Bá</td>
                                 <td>5:00pm-2/7/2019</td>
                                 <td>
-                                    <input type="button" value="Sửa" />
-                                    <input type="button" value="Xóa" />
+                                    <a href="">Sửa</a>
+                                </td>
+                                <td>
+                                    <a href="">Xóa</a>
                                 </td>
                             </tr>
                             <tr>
@@ -109,8 +114,10 @@
                                     <td>Trần Duy Bá</td>
                                     <td>5:00pm-2/7/2019</td>
                                     <td>
-                                        <input type="button" value="Sửa" />
-                                        <input type="button" value="Xóa" />
+                                        <a href="">Sửa</a>
+                                    </td>
+                                    <td>
+                                        <a href="">Xóa</a>
                                     </td>
                                 </tr>
                         </tbody>

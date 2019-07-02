@@ -5,12 +5,12 @@
 }
 
 #body_control #option_control {
-    width: 200px;
+    width: 20%;
     height: 100%;
-    background-color: rgb(214, 214, 214);
+    background-color: rgb(223, 223, 223);
     position: absolute;
     display: inline-block;
-    border-right: 1px solid rgb(187, 187, 187);
+    border-right: 1px solid rgb(199, 199, 199);
 }
 #body_control #option_control ul li:first-child {
     height: 100px;
@@ -60,11 +60,11 @@
     position: absolute;
     text-decoration: none;
     color: black;
-    font-size: 20px;
+    font-size: 15px;
     display: inline-block;
     width: 82%;
     height: 100%;
-    padding-top: 13px;
+    padding-top: 17px;
     padding-left: 10px;
 }
 
@@ -107,10 +107,12 @@
     border: 1px solid black;
 }
 #table_posts {
-    width: 100%;
+    width: 90%;
     border-collapse: collapse;
     margin-top: 32px;
-    box-shadow: 15px 10px 20px rgb(161, 161, 161);
+    margin-left: 60px;
+    font-size: 15px;
+    box-shadow: 10px 10px 20px rgb(161, 161, 161);
 }
 #table_posts tr:nth-child(odd):not(.tr_1) {
     background-color: #7edf8e;
@@ -134,26 +136,26 @@
     text-align: left;
     padding-left: 10px;
 }
-#table_posts tbody tr td input {
-    width: 60px;
+#table_posts tbody tr td {
+    padding: 10px;
+}
+#table_posts tbody tr td a {
+    width: 50px;
     height: 30px;
-    margin-left: 10px;
-    margin-top: 10px;
-    display: block;
+    display: inline-block;
     border-radius: 3px;
     border: 1px solid rgb(255, 255, 255);
-    background-color: #6297ff;
     color: white;
+    text-decoration: none;
+    padding-top: 10px;
 }
-#table_posts tbody tr td input:first-child ~ input {
-    margin-bottom: 10px;
-    background-color: #ff5555;
+#table_posts tbody tr td:nth-child(9) a {
+    background-color: rgb(61, 145, 255);
 }
-#table_posts tbody tr td input:first-child ~ input:hover {
-    background-color: silver;
-    transition: 0.3s;
+#table_posts tbody tr td:nth-child(10) a {
+    background-color: rgb(255, 67, 67);
 }
-#table_posts tbody tr td input:hover {
-    background-color: silver;
+#table_posts tbody tr td a:hover {
+    background-color: rgb(189, 189, 189);
     transition: 0.5s;
 }
