@@ -6,7 +6,7 @@
     margin-bottom: 50px;
 }
 #content_posts h2 {
-    font-size: 40px;
+    font-size: 35px;
     font-weight: normal;
     width: 100%;
     text-align: left;
@@ -28,7 +28,7 @@
 }
 #content_posts div:nth-child(3) {
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 17px;
     line-height: 180%;
 } 
 #content_posts > a {

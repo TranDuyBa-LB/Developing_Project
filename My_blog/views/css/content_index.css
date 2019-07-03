@@ -1,5 +1,5 @@
 #content {
-    width: 55%;
+    width: 50%;
     margin-left: 100px;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -15,19 +15,21 @@
     text-align: left;
 }
 #content .list_posts h2 a {
-    font-size: 40px;
+    font-size: 35px;
     font-weight: normal; /*Hiển thị chữ in thường*/
     text-decoration: none;
     color: black;
+    text-align: justify;
 }
 #content .list_posts > p {
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 17px;
     line-height: 180%;
-    max-height: 150px;
+    max-height: 160px;
     height: auto;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: justify;
 }
 #content .list_posts input {
     display: block;
