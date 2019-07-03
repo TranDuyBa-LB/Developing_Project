@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="css/admin.css" />
+        <script type="text/javascript" src="ckeditor/ckeditor.js" ></script>
     </head>
     <body>
         <div id="header">
@@ -38,7 +39,22 @@
             </div>
             <div id="view_control">
                <div id="create_posts">
-                   
+                    <input type="text" value=""  placeholder="Người viết..." />
+                    <textarea id="title_posts" name="title_posts" placeholder="Tiêu đề bài viết..." ></textarea>
+                    <p>Chuyên mục</p>
+                    <select>
+                        <option>Chuyên mục 1</option>
+                        <option>Chuyên mục 2</option>
+                        <option>Chuyên mục 3</option>
+                    </select> 
+                    <textarea id="content_posts" name="content"> </textarea>   
+                    <script type="text/javascript">
+                        var config = {};
+                        config.entities_latin = false;
+                        config.language = 'vi';
+                        CKEDITOR.replace('content_posts', config);
+                    </script>  
+                    <a href="" id="submit" name="create">Tạo bài viết</a>            
                </div>
             </div>
         </div>
