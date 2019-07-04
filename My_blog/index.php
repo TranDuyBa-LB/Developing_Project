@@ -64,9 +64,10 @@
                 <div>
                     <img src="views/images/img_designs/writer.png" title="Người viết" /> <p>Trần Duy Bá</p>
                     <img src="views/images/img_designs/views.png" title="Số lượt xem" /> <p>20</p>
-                    <img src="views/images/img_designs/comment.png" title="Số bình luận" /> <p>30</p>
+                    <!--<img src="views/images/img_designs/comment.png" title="Số bình luận" /> <p>30</p>-->
                     <img src="views/images/img_designs/share.png" title="Chia sẻ" /> <p>30</p>
-                    <img src="views/images/img_designs/list.png" title="Danh mục" /> <p>Chuyện thường ngày Chuyện thường ngày </p>
+                    <img src="views/images/img_designs/list.png" title="Danh mục" /> <p>Chuyện thường ngày</p>
+                    <img src="views/images/img_designs/date_up.png" title="Thời gian đăng" /> <p>4/7/2019</p>
                 </div>
             </div>
             <div class="list_posts">

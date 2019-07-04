@@ -8,14 +8,6 @@
         <option>Chuyên mục 3</option>
     </select> 
     <textarea id="content_posts" name="content"> </textarea>   
-    <script type="text/javascript">
-        var config = {};
-        config.entities_latin = false;
-        config.language = 'vi';
-        config.extraPlugins = 'autogrow';
-        config.autoGrow_minHeight = 200;
-        config.autoGrow_maxHeight = 500;
-        CKEDITOR.replace('content_posts', config);
-    </script>  
+    <?php require 'js/display_ckeditor.js'; ?> 
     <a href="" id="submit" name="create">Tạo bài viết</a>            
 </div>

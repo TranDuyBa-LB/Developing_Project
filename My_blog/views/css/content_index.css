@@ -6,7 +6,7 @@
 }
 #content .list_posts {
     margin-bottom: 50px;
-    border-bottom: 2px solid silver;
+    border-bottom: 1.5px solid silver;
 }
 #content .list_posts h2 {
     max-height: 160px;
@@ -44,6 +44,7 @@
 }
 #content .list_posts input:hover {
     background-color: silver;
+    transition: 0.5s;
 }
 #content .list_posts > div {
     margin-top: 50px;

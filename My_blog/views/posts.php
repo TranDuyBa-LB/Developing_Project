@@ -5,6 +5,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="css/header.css" />
+        <link rel="stylesheet" type="text/css" href="css/footer.css" />
         <link rel="stylesheet" type="text/css" href="css/content_posts.css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet" />
     </head>
@@ -58,8 +59,9 @@
             <div>
                 <img src="images/img_designs/writer.png" title="Người viết" /> <p>Trần Duy Bá</p>
                 <img src="images/img_designs/views.png" title="Số lượt xem" /> <p>20</p>
-                <img src="images/img_designs/comment.png" title="Số bình luận" /> <p>30</p>
-                <img src="images/img_designs/list.png" title="Danh mục" /> <p>Chuyện thường ngày Chuyện thường ngày</p>
+                <!--<img src="images/img_designs/comment.png" title="Số bình luận" /> <p></p> -->
+                <img src="images/img_designs/list.png" title="Danh mục" /> <p>Chuyện thường ngày</p>
+                <img src="images/img_designs/date_up.png" title="Thời gian đăng" /> <p>4/7/2019</p>
             </div>
             <div>
                 Một câu hỏi thường gặp của những bạn sinh viên mới ra trường, thậm chí là những bạn junior developer dưới một năm kinh nghiệm đó là: Developer tìm việc như thế nào? 
@@ -83,8 +85,21 @@ Ngoài ra thì các bạn nên connect với bạn bè, đồng nghiệp, nếu 
             </a>
         </div>
         <div id="comments">
-            <textarea name="comment" placeholder="Viết bình luận vào đây..."></textarea>
-            <input type="button" name="submit_comment" value="Bình luận" />
+        </div>
+        <div id="footer">
+            <div>
+                 <a href="">
+                    <img src="images/img_designs/facebook_footer.png" title="facebook" />
+                </a>
+                <a href="">
+                    <img src="images/img_designs/github_footer.png" title="GitHub" />
+                </a>
+                <a href="">
+                    <img src="images/img_designs/gmail_footer.png" title="Gmail" /> 
+                </a>
+            </div>
+            <p>Admin: Trần Duy Bá</p>
+            <p>Design and Code: Trần Duy Bá-LB</p>
         </div>
     </body>
 </html>

@@ -10,11 +10,11 @@
         <link rel="stylesheet" type="text/css" href="css/change_password.css" />
         <link rel="stylesheet" type="text/css" href="css/create_admin.css" />
         <link rel="stylesheet" type="text/css" href="css/create_posts.css" />
-        <script type="text/javascript" src="ckeditor/ckeditor.js" ></script>
+        <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
     </head>
     <body>
         <div id="header">
-
+            
         </div>
         <div id="body_control">
             <div id="option_control">
@@ -29,19 +29,19 @@
                     </li>
                     <li>
                         <img src="images/img_designs/add_new_posts.png" /> 
-                        <a href="">Tạo bài viết</a>
+                        <a href="javascript:void(0);"  id="create_posts" >Tạo bài viết</a>
                     </li>
                     <li>
                         <img src="images/img_designs/manage_posts.png" /> 
-                        <a href="">Quản lý bài viết</a>
+                        <a href="javascript:void(0);" id="manage_posts" >Quản lý bài viết</a>
                     </li>
                     <li>
                         <img src="images/img_designs/create_account.png" /> 
-                        <a href="">Tạo tài khoản</a>
+                        <a href="javascript:void(0);"  id="create_admin" >Tạo tài khoản</a>
                     </li>
                     <li>
                         <img src="images/img_designs/change_password.png" /> 
-                        <a href="">Đổi mật khẩu</a>
+                        <a href="javascript:void(0);"  id="change_password" >Đổi mật khẩu</a>
                     </li>
                 </ul>
             </div>
@@ -49,5 +49,6 @@
                 
             </div>
         </div>
+        <script typ="text/javascript" src="../controller/ajax.js"></script>
     </body>
 </html>

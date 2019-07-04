@@ -75,6 +75,10 @@
     margin-left: 20px;
 }
 #header #info > a img {
-    width: 2%;
-    height: 2%;
+    width: 2.5%;
+    height: 2.5%;
+}
+#header #info > a img:hover {
+    box-shadow: 0px 0px 10px rgb(179, 179, 179);
+    border-radius: 50%;
 }

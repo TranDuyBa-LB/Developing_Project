@@ -47,27 +47,3 @@
     display: inline;
     padding-left: 5px;
 }
-
-#comments {
-    height: 500px;
-    
-    margin-left: 100px;
-    width: 60%;
-}
-#comments input {
-    border-radius: 2px;
-    border: 1px solid silver;
-}
-#comments textarea {
-    width: 90%;
-    height: auto;
-    padding-left: 10px;
-    font-size: 20px;
-    padding-top: 15px;
-}
-#comments input:nth-child(2) {
-    display: block;
-    height: 50px;
-    width: 9%;
-    margin-top: 10px;
-}
