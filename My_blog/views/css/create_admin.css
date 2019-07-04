@@ -1,0 +1,41 @@
+#view_control #create_admin {
+    width: 25%;
+    height: 400px;
+    background-color: #5880cf;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 30px;
+    border-radius: 3px;
+    box-shadow: 10px 10px 10px rgb(185, 185, 185);
+}
+#view_control #create_admin p {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 25px;
+    color: white;
+}
+#view_control #create_admin input {
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid black;
+    padding-left: 10px;
+    font-size: 15px;
+}
+#view_control #create_admin a {
+    font-size: 15px;
+    display: inline-block;
+    width: 40%;
+    height: 30px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(255, 94, 94);
+    margin-top: 30px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    padding-top: 10px;
+}

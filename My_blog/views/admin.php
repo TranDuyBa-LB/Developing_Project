@@ -6,6 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="css/admin.css" />
+        <link rel="stylesheet" type="text/css" href="css/table_manage_posts.css" />
+        <link rel="stylesheet" type="text/css" href="css/change_password.css" />
+        <link rel="stylesheet" type="text/css" href="css/create_admin.css" />
+        <link rel="stylesheet" type="text/css" href="css/create_posts.css" />
         <script type="text/javascript" src="ckeditor/ckeditor.js" ></script>
     </head>
     <body>
@@ -42,13 +46,7 @@
                 </ul>
             </div>
             <div id="view_control">
-               <div id="change_password">
-                   <p>Đổi PassWord</p>
-                   <input type="password" placeholder="Mật khẩu cũ..."/>
-                   <input type="password" placeholder="Mật khẩu mới..."/>
-                   <input type="password" placeholder="Nhập lại mật khẩu mới..."/>
-                   <a href="" id="submit" > Thay đổi </a>
-               </div>
+                
             </div>
         </div>
     </body>
