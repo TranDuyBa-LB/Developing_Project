@@ -25,11 +25,11 @@
                     </li>
                     <li>
                        <img src="images/img_designs/home.png" /> 
-                       <a href="#" target="_blank">Trang chủ</a>
+                       <a href="../index.php" target="_blank">Trang chủ</a>
                     </li>
                     <li>
                         <img src="images/img_designs/add_new_posts.png" /> 
-                        <a href="javascript:void(0);"  id="create_posts" >Tạo bài viết</a>
+                        <a href="admin.php"  id="create_posts" >Tạo bài viết</a>
                     </li>
                     <li>
                         <img src="images/img_designs/manage_posts.png" /> 
@@ -46,9 +46,26 @@
                 </ul>
             </div>
             <div id="view_control">
-                
+                <form action="../controller/request_admin.php" method="POST">
+                    <div id="create_posts">
+                        <input type="text" name="writer"  placeholder="Người viết..." />
+                        <textarea id="title_posts" name="title" placeholder="Tiêu đề bài viết..." ></textarea>
+                        <input type="text" name="list" placeholder="Chuyên mục..."/>
+                        <textarea id="content" name="content"> </textarea>   
+                        <script type="text/javascript">
+                            var config = {};
+                            config.entities_latin = false;
+                            config.language = 'vi';
+                            config.extraPlugins = 'autogrow';
+                            config.autoGrow_minHeight = 200;
+                            config.autoGrow_maxHeight = 500;
+                            CKEDITOR.replace('content_posts', config);
+                        </script>
+                        <input id="submit" type="submit" value="Tạo bài viết" />          
+                    </div>
+                </form>
             </div>
         </div>
-        <script typ="text/javascript" src="../controller/ajax.js"></script>
+        <script typ="text/javascript" src="../controller/ajax_control_admin.js"></script>
     </body>
 </html>

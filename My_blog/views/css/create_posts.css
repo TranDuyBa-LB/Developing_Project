@@ -1,7 +1,7 @@
 #view_control #create_posts input,textarea {
     display: block;
 }
-#view_control #create_posts input {
+#view_control #create_posts input:nth-child(1) {
     margin-left: 10%;
     margin-top: 50px;
     width: 15%;
@@ -20,16 +20,14 @@
     border: 1px solid rgb(131, 131, 131);
     border-radius: 3px;
 }
-#view_control #create_posts p {
+#view_control #create_posts input:nth-child(3) {
     margin-left: 10%;
-    margin-top: 20px;
-    color: rgb(102, 102, 102);
-}
-#view_control #create_posts select {
-    width: 10%;
+    margin-top: 10px;
+    width: 15%;
     height: 30px;
     border: 1px solid rgb(131, 131, 131);
     border-radius: 3px;
+    padding-left: 10px;
 }
 #view_control #create_posts #cke_content_posts {
     display: block;
@@ -40,11 +38,10 @@
 #view_control #create_posts #submit {
     display: block;
     width: 10%;
-    height: 30px;
+    height: 50px;
     text-decoration: none;
     color: white;
     text-align: center;
-    padding-top: 10px;
     background-color: rgb(50, 139, 255);
     margin-top: 30px;
     margin-left: 40%;
