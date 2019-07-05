@@ -51,7 +51,7 @@
                         <input type="text" name="writer"  placeholder="Người viết..." />
                         <textarea id="title_posts" name="title" placeholder="Tiêu đề bài viết..." ></textarea>
                         <input type="text" name="list" placeholder="Chuyên mục..."/>
-                        <textarea id="content" name="content"> </textarea>   
+                        <textarea id="content_posts" name="content"> </textarea>   
                         <script type="text/javascript">
                             var config = {};
                             config.entities_latin = false;

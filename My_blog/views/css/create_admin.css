@@ -26,16 +26,19 @@
     padding-left: 10px;
     font-size: 15px;
 }
-#view_control #create_admin a {
+#view_control #create_admin #submit {
     font-size: 15px;
     display: inline-block;
-    width: 40%;
-    height: 30px;
-    text-decoration: none;
+    width: 45%;
+    height: 50px;
     color: white;
-    background-color: rgb(255, 94, 94);
+    background-color: rgb(255, 85, 85);
     margin-top: 30px;
     border-radius: 3px;
     border: 1px solid rgba(0, 0, 0, 0);
-    padding-top: 10px;
+    padding-right: 10px;
+}
+#view_control #create_admin #submit:hover {
+    background-color: #919191;
+    transition: 0.5s;
 }

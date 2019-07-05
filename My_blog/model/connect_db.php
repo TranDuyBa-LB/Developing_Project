@@ -7,7 +7,7 @@
         $_host = 'localhost';
         $_user_name = 'myblog';
         $_user_pass = 'Ba123456789';
-        $_objec_db = new PDO("mysql:host=$_host;dbname=$_db_name",$_user_name,$_user_pass);
+        $_object_db = new PDO("mysql:host=$_host;dbname=$_db_name",$_user_name,$_user_pass);
     } catch (PDOException $_error) {
         $_error = $_error->getMessage();
         echo ("<script>console.log('$_error')</script>");
