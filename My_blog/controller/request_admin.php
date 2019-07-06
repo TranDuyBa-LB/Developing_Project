@@ -9,11 +9,12 @@
         $_content = $_posts['content'];
         $_query = $_object_db->query();
     }
-    function create_admin($_posts){
+
+    function create_admin($_post){
         require '../controller/check/check.php';
-        $_user_name = $_posts['user_name'];
-        $_nickname = $_posts['nickname'];
-        $_password = md5($_posts['password']);
+        $_user_name = $_post['user_name'];
+        $_nickname = $_post['nickname'];
+        $_password = md5($_post['password']);
         $_date = date('h:i-d/m/y');
         $_id_user = md5($_user_name);
         if(check_create_admin($_user_name,$_nickname)){
@@ -21,15 +22,15 @@
             $_table = 'admin';
             $_values = "'$_id_user','$_nickname','$_user_name','$_password','$_date'";
             try {
-                require '../model/query_db.php';
+                require '../model/connect_db.php';
                 $_object_db->query(INSERT($_column,$_table,$_values));
+                header ('Location:../views/admin.php?error=Tạo tài khoản Admin thành công !');
             } catch(Exception $_error){
-                echo "<script>alert('$_error');</script>";     
-                header ('Location:../views/admin.php');
+                header ("Location:../views/admin.php?error=$_error");
             }
         }
     }
     
-    if($_POST['request']=='create_admin') 
+    if($_POST['request']=='create_admin')
         create_admin($_POST);
  ?>

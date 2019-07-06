@@ -67,5 +67,9 @@
             </div>
         </div>
         <script typ="text/javascript" src="../controller/ajax_control_admin.js"></script>
+        <?php
+            if(!empty($_GET))
+            echo "<script>alert('".$_GET['error']."')</script>";
+        ?>
     </body>
 </html>
