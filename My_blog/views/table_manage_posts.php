@@ -83,4 +83,5 @@
                 </tr>
         </tbody>
     </table>
+    <input type="hidden" name="request" value="manage_posts" />
 </div>

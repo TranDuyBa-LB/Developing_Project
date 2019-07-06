@@ -8,8 +8,10 @@
         $_where_user_name = "a_user_name='$_user_name'";
         $_where_nickname = "a_nickname='$_nickname'";
         $_query = $_object_db->query(SELECT($_column,$_table,$_where_user_name));
+        $_query = $_query->fetch();
         if(empty($_query)){
             $_query = $_object_db->query(SELECT($_column,$_table,$_where_nickname));
+            $_query = $_query->fetch();
             if(empty($_query)){
                 return true;
             } else {

@@ -52,6 +52,7 @@
                         <textarea id="title_posts" name="title" placeholder="Tiêu đề bài viết..." ></textarea>
                         <input type="text" name="list" placeholder="Chuyên mục..."/>
                         <textarea id="content_posts" name="content"> </textarea>   
+                        <input type="hidden" name="request" value="create_posts" />
                         <script type="text/javascript">
                             var config = {};
                             config.entities_latin = false;
@@ -66,7 +67,7 @@
                 </form>
             </div>
         </div>
-        <script typ="text/javascript" src="../controller/ajax_control_admin.js"></script>
+        <script typ="text/javascript" src="../controller/ajax/ajax_control_admin.js"></script>
         <?php
             if(!empty($_GET))
             echo "<script>alert('".$_GET['error']."')</script>";

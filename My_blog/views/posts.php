@@ -11,28 +11,6 @@
     </head>
     <body>
         <div id="header">
-            <span>
-                <a href="" id="icon_log">
-                    <img src="images/img_designs/login.png" />
-                </a>
-                <ul id="table_log">
-                    <li>
-                        <a href="">
-                            Quản lý
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Đăng nhập
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Đăng xuất
-                        </a>
-                    </li>
-                </ul>
-            </span>
             <div id="logo">
                 <a href="#" title="BL Blog">
                     <img src="images/img_designs/My_Logo.png" />

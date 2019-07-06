@@ -1,4 +1,7 @@
-function ajax(request_url){
+
+// Quản lý AJAX trong trang admin.php
+
+function ajax_admin(request_url){
     var xmlhttp = new XMLHttpRequest() || ActiveXObject("Microsoft.XMLHTTP");
     xmlhttp.onreadystatechange = function(){
         if(xmlhttp.readyState==4 && xmlhttp.status==200){
@@ -8,12 +11,14 @@ function ajax(request_url){
     xmlhttp.open("POST",request_url,true);
     xmlhttp.send();
 }
+
+
 document.getElementById('manage_posts').onclick = function(){
-    ajax("table_manage_posts.php");
+    ajax_admin("table_manage_posts.php");
 }
 document.getElementById('create_admin').onclick = function(){
-    ajax("create_admin.php");
+    ajax_admin("create_admin.php");
 }
 document.getElementById('change_password').onclick = function(){
-    ajax("change_password.php");
+    ajax_admin("change_password.php");
 }
