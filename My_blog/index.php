@@ -1,13 +1,21 @@
 <?php
+use League\Flysystem\Exception;
 
-    require 'model/connect_db.php';
+require 'model/connect_db.php';
     require 'model/query_db.php';
 
     $_column = '*';
     $_table = 'posts';
     $_where = 1;
 
-    $_query = $_object_db->query(SELECT($_column,$_table,$_where));
+    try {
+        $_obj_statement= $_object_db->prepare(SELECT($_column,$_table,$_where));
+        $_obj_statement->execute();
+        $_product = $_obj_statement->fetch();
+    } catch (Exception $_error){
+        echo "<script>console.log($_error);</script>";
+        exit();
+    }
 
  ?>
 <!DOCTYPE html>
@@ -45,58 +53,63 @@
             </div>
         </div>
         <div id="content">
-            <?php foreach($_query as $_posts): ?>
+            <?php
+                while(!empty($_product)):
+            ?>
             <div class="list_posts">
                 <h2>
                     <!--title-->
-                    <a href="views/posts.php?id_posts=<?php echo $_posts['p_id']; ?>" >
-                        <?php echo $_posts['p_title']; ?>
+                    <a href="views/posts.php?id_posts=<?php echo $_product['p_id']; ?>" target="_blank" >
+                        <?php echo $_product['p_title']; ?>
                     </a>
                 </h2>
                 <p> 
                     <!--demo content-->
-                    <?php echo $_posts['p_demo']; ?>
+                    <?php echo $_product['p_demo']; ?>
                 </p>
                 <script>
                     function Location(){
-                        window.location = "views/posts.php?id_posts=<?php echo $_posts['p_id'] ?>";
+                        window.location = "views/posts.php?id_posts=<?php echo $_product['p_id'] ?>";
                     }
                 </script>
                 <input type="button" value="Xem bài viết..." onclick="Location()" />
                 <div>
                     <img src="views/images/img_designs/writer.png" title="Người viết" /> 
-                        <p> <?php echo $_posts['p_writer']; ?> </p>
+                        <p> <?php echo $_product['p_writer']; ?> </p>
                     <img src="views/images/img_designs/views.png" title="Số lượt xem" /> 
                         <p> 
                             <?php 
-                                if($_posts['p_views']==NULL)
-                                    $_posts['p_views']=0;
-                                echo $_posts['p_views'];
+                                if($_product['p_views']==NULL)
+                                    $_product['p_views']=0;
+                                echo $_product['p_views'];
                              ?>
                         </p>
                     <!--<img src="views/images/img_designs/comment.png" title="Số bình luận" /> <p>30</p>-->
                     <img src="views/images/img_designs/share.png" title="Chia sẻ" /> 
                         <p>
                             <?php 
-                                if($_posts['p_share']==NULL)
-                                    $_posts['p_share']=0;
-                                echo $_posts['p_share'];
+                                if($_product['p_share']==NULL)
+                                    $_product['p_share']=0;
+                                echo $_product['p_share'];
                              ?> 
                         </p>
                     <img src="views/images/img_designs/list.png" title="Danh mục" /> 
                         <p>
-                            <?php echo $_posts['p_list']; ?>
+                            <?php echo $_product['p_list']; ?>
                         </p>
                     <img src="views/images/img_designs/date_up.png" title="Thời gian đăng" /> 
                         <p>
                             <?php
-                                $_array = explode('-',$_posts['p_date']);
+                                $_array = explode('-',$_product['p_date']);
                                 echo $_array[1];
                              ?>
                         </p>
                 </div>
             </div>
-            <?php endforeach; ?>
+            <?php 
+                    $_product = $_obj_statement->fetch();
+                endwhile;
+            ?>
         </div>
         <div id="footer">
             <div>

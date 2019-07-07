@@ -1,13 +1,19 @@
 <?php
-    $_query;
     if(!empty($_GET['id_posts'])){
-        require '../model/query_db.php';
         require '../model/connect_db.php';
+        require '../model/query_db.php';
         $_column = 'p_title,p_content,p_writer,p_list,p_views,p_share,p_date';
         $_table = 'posts';
-        $_where = "p_id = ' ".$_GET['id_posts']." ' ";
-        $_query = $_object_db->query(SELECT($_column,$_table,$_where));
-        $_query = $_query->fetch();
+        $_id = $_GET['id_posts'];
+        $_where = "p_id='$_id'";
+        try {
+            $_obj_statement = $_object_db->prepare(SELECT($_column,$_table,$_where));
+            $_obj_statement->execute();
+            $_product = $_obj_statement->fetch();
+        } catch (Exception $_error) {
+            echo "<script>console.log($_error);</script>";
+            exit();
+        }
     }
  ?>
 <!DOCTYPE html>
@@ -45,49 +51,51 @@
             </div>
         </div>
         <div id="content_posts">
+            <?php if(!empty($_product)): ?>
             <h2 name = "title" > 
-                <?php echo $_query['p_title']; ?>
+                <?php echo $_product['p_title']; ?>
             </h2>
             <div>
                 <img src="images/img_designs/writer.png" title="Người viết" /> 
                     <p>
-                        <?php echo $_query['p_writer']; ?>
+                        <?php echo $_product['p_writer']; ?>
                     </p>
                 <img src="images/img_designs/views.png" title="Số lượt xem" /> 
                     <p>
                         <?php 
-                            if($_query['p_views']==NULL)
-                                $_query['p_views']=0;
-                            echo $_query['p_views']; 
+                            if($_product['p_views']==NULL)
+                                $_product['p_views']=0;
+                            echo $_product['p_views']; 
                         ?>
                     </p>
                 <img src="images/img_designs/share.png" title="Chia sẻ" /> 
                     <p>
                         <?php 
-                            if($_query['p_share']==NULL)
-                                $_query['p_share']=0;
-                            echo $_query['p_share']; 
+                            if($_product['p_share']==NULL)
+                                $_product['p_share']=0;
+                            echo $_product['p_share']; 
                          ?>
                     </p>
                 <!--<img src="images/img_designs/comment.png" title="Số bình luận" /> <p></p> -->
                 <img src="images/img_designs/list.png" title="Danh mục" /> 
                     <p>
-                        <?php echo $_query['p_list']; ?>
+                        <?php echo $_product['p_list']; ?>
                     </p>
                 <img src="images/img_designs/date_up.png" title="Thời gian đăng" /> 
                     <p>
                         <?php 
-                            $_array = explode('-',$_query['p_date']);
+                            $_array = explode('-',$_product['p_date']);
                             echo $_array[1];
                         ?>
                     </p>
             </div>
             <div name="content" >
-                <?php echo $_query['p_content']; ?>
+                <?php echo $_product['p_content']; ?>
             </div>
             <a href="">
                 <img src="images/img_designs/share.png" /> <p>Share facebook</p>
             </a>
+            <?php endif; ?>
         </div>
         <div id="comments">
         </div>
