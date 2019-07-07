@@ -10,13 +10,14 @@
         $_date = date('h:i-d/m/y');
         $_writer = htmlentities($_posts['writer']);
         $_title = htmlentities($_posts['title']);
+        $_demo = htmlentities($_posts['demo']);
         $_list = htmlentities($_posts['list']);
         $_content = $_posts['content'];
-        $_id_posts = md5($_date);
+        $_id = md5($_date);
 
-        $_column = 'p_id_posts,p_title,p_writer,p_content,p_list,p_date';
+        $_column = 'p_id,p_title,p_demo,p_writer,p_content,p_list,p_date';
         $_table = 'posts';
-        $_values = "'$_id_posts','$_title','$_writer','$_content','$_list','$_date'";
+        $_values = "'$_id','$_title','$_demo','$_writer','$_content','$_list','$_date'";
         try {
             require '../model/connect_db.php';
             $_object_db->query(INSERT($_column,$_table,$_values));

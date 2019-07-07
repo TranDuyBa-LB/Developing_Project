@@ -49,8 +49,9 @@
                 <form action="../controller/request_admin.php" method="POST">
                     <div id="create_posts">
                         <input type="text" name="writer"  placeholder="Người viết..." />
-                        <textarea id="title_posts" name="title" placeholder="Tiêu đề bài viết..." ></textarea>
                         <input type="text" name="list" placeholder="Chuyên mục..."/>
+                        <textarea id="title_posts" name="title" placeholder="Tiêu đề bài viết..." ></textarea>
+                        <textarea id="title_posts" name="demo" placeholder="Demo ngắn gọn bài viết..." ></textarea>
                         <textarea id="content_posts" name="content"> </textarea>   
                         <input type="hidden" name="request" value="create_posts" />
                         <script type="text/javascript">

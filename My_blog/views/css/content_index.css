@@ -9,7 +9,7 @@
     border-bottom: 1.5px solid silver;
 }
 #content .list_posts h2 {
-    max-height: 160px;
+    max-height: 140px;
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: left;

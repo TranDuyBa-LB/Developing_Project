@@ -1,3 +1,15 @@
+<?php
+    $_query;
+    if(!empty($_GET['id_posts'])){
+        require '../model/query_db.php';
+        require '../model/connect_db.php';
+        $_column = 'p_title,p_content,p_writer,p_list,p_views,p_share,p_date';
+        $_table = 'posts';
+        $_where = "p_id = ' ".$_GET['id_posts']." ' ";
+        $_query = $_object_db->query(SELECT($_column,$_table,$_where));
+        $_query = $_query->fetch();
+    }
+ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -33,30 +45,45 @@
             </div>
         </div>
         <div id="content_posts">
-            <h2> Developer tìm việc như thế nào? </h2>
+            <h2 name = "title" > 
+                <?php echo $_query['p_title']; ?>
+            </h2>
             <div>
-                <img src="images/img_designs/writer.png" title="Người viết" /> <p>Trần Duy Bá</p>
-                <img src="images/img_designs/views.png" title="Số lượt xem" /> <p>20</p>
+                <img src="images/img_designs/writer.png" title="Người viết" /> 
+                    <p>
+                        <?php echo $_query['p_writer']; ?>
+                    </p>
+                <img src="images/img_designs/views.png" title="Số lượt xem" /> 
+                    <p>
+                        <?php 
+                            if($_query['p_views']==NULL)
+                                $_query['p_views']=0;
+                            echo $_query['p_views']; 
+                        ?>
+                    </p>
+                <img src="images/img_designs/share.png" title="Chia sẻ" /> 
+                    <p>
+                        <?php 
+                            if($_query['p_share']==NULL)
+                                $_query['p_share']=0;
+                            echo $_query['p_share']; 
+                         ?>
+                    </p>
                 <!--<img src="images/img_designs/comment.png" title="Số bình luận" /> <p></p> -->
-                <img src="images/img_designs/list.png" title="Danh mục" /> <p>Chuyện thường ngày</p>
-                <img src="images/img_designs/date_up.png" title="Thời gian đăng" /> <p>4/7/2019</p>
+                <img src="images/img_designs/list.png" title="Danh mục" /> 
+                    <p>
+                        <?php echo $_query['p_list']; ?>
+                    </p>
+                <img src="images/img_designs/date_up.png" title="Thời gian đăng" /> 
+                    <p>
+                        <?php 
+                            $_array = explode('-',$_query['p_date']);
+                            echo $_array[1];
+                        ?>
+                    </p>
             </div>
-            <div>
-                Một câu hỏi thường gặp của những bạn sinh viên mới ra trường, thậm chí là những bạn junior developer dưới một năm kinh nghiệm đó là: Developer tìm việc như thế nào? 
-
-Mình đã từng trả lời rất nhiều câu hỏi dạng như vậy nên hôm nay mình sẽ chia sẻ một số kinh nghiệm của mình trong quá trình “lăn lộn ra đường kiếm ăn”.
-
-Mình tìm việc hay việc tìm mình
-Kinh nghiệm của mình sau nhiều năm làm việc đó là mình hãy chủ động để công việc tìm đến với mình thay vì mình chủ động đi tìm việc.
-
-Để công việc có thể tìm đến với mình cách tốt nhất và duy nhất đó là xây dựng một profile thật đẹp trên các trang web mạng xã hội tìm kiếm việc làm lớn. Trang web lớn nhất mà các bạn nên biết và tạo profile đó chính là Linkedin. Hãy coi profile Linkedin như CV của mình và thường xuyên update thông tin trên đó.
-
-Một profile đẹp là một profile có đầy đủ các thông tin như
-
-Đầy đủ thông tin cá nhân, và một số kênh chính thống để liên lạc (email, skype), nên chọn một bức hình nghiêm túc để làm ảnh đại diện.
-Ghi phần thông tin overall một cách ngắn gọn và thể hiện đầy đủ thông tin để người đọc có thể biết được bạn có những khả năng gì và kinh nghiệm ra sao. Ngoài ra nếu các bạn có những điểm nổi trội nào khác như account Github, hay blog cá nhân các bạn cũng nên thêm vào, đây sẽ là những điểm cộng đối với một profile Linkedin.
-Phần kinh nghiệm làm việc sẽ là một phần “ăn điểm” nếu như bạn viết đầy đủ về công ty, dự án cũng như vai trò của bạn trong mỗi dự án, hoặc đơn giản hơn các bạn có thể bê nguyên si CV vào cũng được.
-Ngoài ra thì các bạn nên connect với bạn bè, đồng nghiệp, nếu profile của các bạn có nhiều feedback, nó sẽ tạo nên sự tin tưởng hơn với người đọc.
+            <div name="content" >
+                <?php echo $_query['p_content']; ?>
             </div>
             <a href="">
                 <img src="images/img_designs/share.png" /> <p>Share facebook</p>
