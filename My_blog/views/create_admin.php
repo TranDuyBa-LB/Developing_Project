@@ -1,5 +1,5 @@
 <script type="text/javascript" src="../controller/check/check_repeat_password.js"></script>
-<form /*action="../controller/request_admin.php"*/ method="POST">
+<form action="../controller/request_admin.php" method="POST">
     <div id="create_admin" >
         <p>Đăng ký admin</p>
         <input type="text" name="user_name" placeholder="Tên đăng nhập..."  />

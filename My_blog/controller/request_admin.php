@@ -42,7 +42,7 @@
         $_id_user = md5($_user_name);
 
         if(check_create_admin($_user_name,$_nickname)){
-            $_column = 'a_id,a_nickname,a_user_name,a_user_password,a_date';
+            $_column = 'a_id,a_nickname,a_name,a_password,a_date';
             $_table = 'admin';
             $_values = "'$_id_user','$_nickname','$_user_name','$_password','$_date'";
             try {

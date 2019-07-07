@@ -6,14 +6,13 @@
         $_table = 'posts';
         $_id = $_GET['id_posts'];
         $_where = "p_id='$_id'";
-        try {
-            $_obj_statement = $_object_db->prepare(SELECT($_column,$_table,$_where));
-            $_obj_statement->execute();
-            $_product = $_obj_statement->fetch();
-        } catch (Exception $_error) {
-            echo "<script>console.log($_error);</script>";
-            exit();
-        }
+
+        $_obj_statement = $_object_db->prepare(SELECT($_column,$_table,$_where));
+        $_obj_statement->execute();
+        $_product = $_obj_statement->fetch();
+        
+        if(empty($_product))
+            header ('Location:../index.php');
     }
  ?>
 <!DOCTYPE html>

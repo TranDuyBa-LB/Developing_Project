@@ -5,7 +5,7 @@
         require '../model/query_db.php';
         $_column = '*';
         $_table = 'admin';
-        $_where_user_name = "a_user_name='$_user_name'";
+        $_where_user_name = "a_name='$_user_name'";
         $_where_nickname = "a_nickname='$_nickname'";
         $_query = $_object_db->query(SELECT($_column,$_table,$_where_user_name));
         $_query = $_query->fetch();
@@ -20,6 +20,27 @@
         } else {
             header ("Location:../views/admin.php?error=Tên đăng nhập bạn tạo bị trùng !");
         }
+    }
+
+    function check_session(){
+        session_start();
+        if(!empty($_SESSION['user'])){
+
+            require_once '../model/connect_db.php';
+            require_once '../model/query_db.php';
+
+            $_column = 'a_nickname';
+            $_table = 'admin';
+            $_a_id = $_SESSION['user'];
+            $_where = "a_id='$_a_id'";
+
+            $_obj_statement = $_object_db->prepare(SELECT($_column,$_table,$_where));
+            $_obj_statement->execute();
+            $_product = $_obj_statement->fetch();
+            if(empty($_product))
+                header ('Location:../views/login.php');
+        } else 
+            header ('Location:../views/login.php');
     }
 
  ?>

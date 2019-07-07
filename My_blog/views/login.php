@@ -18,7 +18,7 @@
     </head>
     <body>
         <div id="form_login">
-           <form action="../controller/login.php" method="POST">
+           <form action="../controller/check_login.php" method="POST">
                 <img src="images/img_designs/My_Logo.png" />
                 <p>Đăng nhập</p>
                 <input type="text" name="user_name" placeholder="Tên đăng nhập..." />

@@ -1,3 +1,18 @@
+<?php
+    require '../controller/check/check.php';
+    require '../model/connect_db.php';
+    check_session();
+
+    $_column = 'a_nickname';
+    $_table = 'admin';
+    $_a_id = $_SESSION['user'];
+    $_where = "a_id=$_a_id";
+
+    $_obj_statement = $_object_db->prepare(SELECT($_column,$_table,$_where));
+    $_obj_statement->execute();
+    $_product=$_obj_statement->fetch();
+
+ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,8 +35,11 @@
             <div id="option_control">
                 <ul>
                     <li class="admin">
-                        <img src="images/img_designs/writer.png" /> <p>Trần Duy Bá</p>
-                        <input type="button" value="Đăng xuất" />
+                        <img src="images/img_designs/writer.png" /> 
+                            <p>
+                                <?php echo $_product['a_nickname']; ?>
+                            </p>
+                        <a href="">Đăng xuất</a>
                     </li>
                     <li>
                        <img src="images/img_designs/home.png" /> 
@@ -71,7 +89,7 @@
         <script typ="text/javascript" src="../controller/ajax/ajax_control_admin.js"></script>
         <?php
             if(!empty($_GET))
-            echo "<script>alert('".$_GET['error']."')</script>";
+                echo "<script>alert('".$_GET['error']."')</script>";
         ?>
     </body>
 </html>

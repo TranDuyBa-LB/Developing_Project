@@ -1,6 +1,11 @@
 body {
     padding: 0px;
     margin: 0px;
+    /*
+    background: url('../images/img_designs/background_login.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;*/
+    
 }
 #form_login {
     width: 350px;
