@@ -1,0 +1,78 @@
+<?php
+
+    require '../../model/connect_db.php';
+    require '../../model/query_db.php';
+
+    $_column = '*';
+    $_table = 'posts';
+    $_where = 1;
+
+    $_obj_statement = $_object_db->prepare(SELECT($_column, $_table, $_where));
+    $_obj_statement->execute();
+    $_product=$_obj_statement->fetch();
+
+ ?>
+<div id="manage_posts">
+    <div id="option">
+        <input type="text" placeholder="Tìm kiếm bài viết..." />
+        <p>Sắp xếp theo tương tác</p>
+        <select name="sort_1">
+            <option>Mới nhất</option>
+            <option>Cũ nhất</option>
+            <option>Nhiều views</option>
+            <option>Nhiều share</option>
+            <option>Nhiều comment</option>
+        </select>
+        <p>Sắp xếp theo chủ đề</p>
+        <select name="sort_2">
+            <option>Đời sống</option>
+            <option>Công việc</option>
+            <option>Xã hội</option>
+            <option>Chuyên ngành</option>
+        </select>
+    </div>
+    <table id="table_posts">
+        <thead>
+            <tr class="tr_1">
+                <th>STT</th>
+                <th>Tiêu đề</th>
+                <th>Chủ đề</th>
+                <th>Số views</th>
+                <th>Số share</th>
+                <th>Số comment</th>
+                <th>Người viết</th>
+                <th>Thời gian đăng</th>
+                <th>Sửa</th>
+                <th>Xóa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php 
+                $_stt=0;
+                while(!empty($_product)):
+                    ++$_stt;
+             ?>
+                <tr>
+                    <td> <?php echo $_stt; ?> </td>
+                    <td> <?php echo $_product['p_title']; ?> </td>
+                    <td> <?php echo $_product['p_list'] ?> </td>
+                    <td> <?php echo $_product['p_views'] ?> </td>
+                    <td> <?php echo $_product['p_share'] ?> </td>
+                    <td>0</td>
+                    <td> <?php echo $_product['p_writer'] ?> </td>
+                    <td> <?php echo $_product['p_date'] ?> </td>
+                    <td>
+                        <a href="../controller/admin/change_posts.php?id_posts=<?php echo $_product['p_id'] ?> ">Sửa</a>
+                    </td>
+                    <td>
+                        <a href="../../controller/admin/delete_posts.php?id_posts=<?php echo $_product['p_id'] ?> ">Xóa</a>
+                    </td>
+                </tr>
+            <?php 
+                $_product = $_obj_statement->fetch();
+                endwhile; 
+            ?>
+        </tbody>
+    </table>
+    <input type="hidden" name="request" value="manage_posts" />
+</div>

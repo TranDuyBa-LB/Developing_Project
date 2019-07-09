@@ -18,11 +18,11 @@
     </head>
     <body>
         <div id="form_login">
-           <form action="../controller/check_login.php" method="POST">
+           <form action="../controller/admin/check_login.php" method="POST">
                 <img src="images/img_designs/My_Logo.png" />
                 <p>Đăng nhập</p>
-                <input type="text" name="user_name" placeholder="Tên đăng nhập..." />
-                <input type="password" name="user_password" placeholder="Mật khẩu..." />
+                <input type="text" name="user_name" placeholder="Tên đăng nhập..." required />
+                <input type="password" name="user_password" placeholder="Mật khẩu..." required />
                 <input class="submit" type="submit" value="Đăng nhập" />
             </form>
         </div>

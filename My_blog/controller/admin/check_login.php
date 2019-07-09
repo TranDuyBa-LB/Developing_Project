@@ -2,8 +2,8 @@
     //Kiểm tra tài khản và mật khẩu
     function check_login($_post){
 
-        require '../model/connect_db.php';
-        require '../model/query_db.php';
+        require '../../model/connect_db.php';
+        require '../../model/query_db.php';
 
         $_column = 'a_password';
         $_table = 'admin';
@@ -15,21 +15,21 @@
         $_product = $_obj_statement->fetch();
 
         if(!empty($_product)){
-            if(md5($_POST['user_password'])=== $_product['a_password']) {
+            if(md5($_POST['user_password']) === $_product['a_password']) {
                 session_start();
                 $_SESSION['user']=md5($_POST['user_name']);
                 echo "haha!";
-                header ('Location:../views/admin.php');
+                header ('Location:../../views/admin/admin.php');
             } else 
-                header ('Location:../views/login.php?id_login=fe8b4dc9c9b47e55a04cca4563841f79&error=Sai mật khẩu !');
+                header ('Location:../../views/login.php?id_login=fe8b4dc9c9b47e55a04cca4563841f79&error=Sai mật khẩu !');
         } else 
-            header ('Location:../views/login.php?id_login=fe8b4dc9c9b47e55a04cca4563841f79&error=Sai tài khoản !');
+            header ('Location:../../views/login.php?id_login=fe8b4dc9c9b47e55a04cca4563841f79&error=Sai tài khoản !');
     }
 
     if($_SERVER['REQUEST_METHOD']=='POST')
         check_login($_POST);
     else 
-        header ('Location:../views/login.php?id_login=fe8b4dc9c9b47e55a04cca4563841f79&error= Có chuyện gì đó !');
+        header ('Location:../../views/login.php?id_login=fe8b4dc9c9b47e55a04cca4563841f79&error= Có chuyện gì đó !');
 
 
  ?>

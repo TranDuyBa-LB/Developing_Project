@@ -113,5 +113,8 @@
             <p>Admin: Trần Duy Bá</p>
             <p>Design and Code: Trần Duy Bá-LB</p>
         </div>
+        <?php  
+            require '../controller/posts/check_views.php';
+         ?>
     </body>
 </html>

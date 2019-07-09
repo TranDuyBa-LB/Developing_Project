@@ -35,6 +35,7 @@
     margin-left: 60px;
     font-size: 15px;
     box-shadow: 10px 10px 20px rgb(161, 161, 161);
+    margin-bottom: 50px;
 }
 #table_posts tr:nth-child(odd):not(.tr_1) {
     background-color: #7edf8e;

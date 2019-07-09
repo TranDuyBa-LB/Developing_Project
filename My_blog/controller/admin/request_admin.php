@@ -5,7 +5,7 @@
 
     function create_posts($_posts){
 
-        require '../model/query_db.php';
+        require '../../model/query_db.php';
 
         $_date = date('h:i-d/m/y');
         $_writer = htmlentities($_posts['writer']);
@@ -19,12 +19,12 @@
         $_table = 'posts';
         $_values = "'$_id','$_title','$_demo','$_writer','$_content','$_list','$_date'";
         try {
-            require '../model/connect_db.php';
+            require '../../model/connect_db.php';
             $_object_db->query(INSERT($_column,$_table,$_values));
-            header ('Location:../views/admin.php?error=Tạo bài viết thành công !');
+            header ('Location:../../views/admin/admin.php?error=Tạo bài viết thành công !');
         } catch (PDOException $_error ){
             $_error = $_error->getMessage();
-            header ("Location:../views/admin.php?error=$_error");
+            header ("Location:../../views/admin/admin.php?error=$_error");
         }
 
     }
@@ -33,7 +33,7 @@
 
     function create_admin($_post){
 
-        require '../controller/check/check.php';
+        require '../../controller/check/check.php';
 
         $_user_name = $_post['user_name'];
         $_nickname = $_post['nickname'];
@@ -46,12 +46,12 @@
             $_table = 'admin';
             $_values = "'$_id_user','$_nickname','$_user_name','$_password','$_date'";
             try {
-                require '../model/connect_db.php';
+                require '../../model/connect_db.php';
                 $_object_db->query(INSERT($_column,$_table,$_values));
-                header ('Location:../views/admin.php?error=Tạo tài khoản Admin thành công !');
+                header ('Location:../../views/admin/admin.php?error=Tạo tài khoản Admin thành công !');
             } catch(PDOException $_error){
                 $_error = $_error->getMessage();
-                header ("Location:../views/admin.php?error=$_error");
+                header ("Location:../../views/admin/admin.php?error=$_error");
             }
         }
     }

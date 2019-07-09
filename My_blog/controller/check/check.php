@@ -1,8 +1,8 @@
 <?php
     
     function check_create_admin($_user_name,$_nickname){
-        require '../model/connect_db.php';
-        require '../model/query_db.php';
+        require '../../model/connect_db.php';
+        require '../../model/query_db.php';
         $_column = '*';
         $_table = 'admin';
         $_where_user_name = "a_name='$_user_name'";
@@ -15,10 +15,10 @@
             if(empty($_query)){
                 return true;
             } else {
-                header ("Location:../views/admin.php?error=Nickname bạn tạo bị trùng !");
+                header ("Location:../../views/admin/admin.php?error=Nickname bạn tạo bị trùng !");
             }
         } else {
-            header ("Location:../views/admin.php?error=Tên đăng nhập bạn tạo bị trùng !");
+            header ("Location:../../views/admin/admin.php?error=Tên đăng nhập bạn tạo bị trùng !");
         }
     }
 
@@ -26,8 +26,7 @@
         session_start();
         if(!empty($_SESSION['user'])){
 
-            require_once '../model/connect_db.php';
-            require_once '../model/query_db.php';
+            require '../../model/connect_db.php';
 
             $_column = 'a_nickname';
             $_table = 'admin';
@@ -38,9 +37,9 @@
             $_obj_statement->execute();
             $_product = $_obj_statement->fetch();
             if(empty($_product))
-                header ('Location:../views/login.php');
+                header ('Location:../../index.php');
         } else 
-            header ('Location:../views/login.php');
+            header ('Location:../../index.php');
     }
 
  ?>
