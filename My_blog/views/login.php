@@ -15,11 +15,12 @@
     <head>
         <title>Đăng nhập</title>
         <link rel="stylesheet" type="text/css" href="css/login.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet" />
     </head>
     <body>
         <div id="form_login">
            <form action="../controller/admin/check_login.php" method="POST">
-                <img src="images/img_designs/My_Logo.png" />
+                <img src="images/img_designs/My_Logo_login.png" />
                 <p>Đăng nhập</p>
                 <input type="text" name="user_name" placeholder="Tên đăng nhập..." required />
                 <input type="password" name="user_password" placeholder="Mật khẩu..." required />

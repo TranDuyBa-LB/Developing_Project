@@ -1,7 +1,7 @@
 #view_control #manage_posts {
     width: 100%;
     height: 100%;
-    
+    color: rgb(56, 56, 56);
 }
 #view_control #manage_posts #option {
     width: 100%;
@@ -54,6 +54,7 @@
     border:1px solid rgb(0, 0, 0);
     max-width: 450px;
     text-align: center;
+    padding: 10px;
 }
 #table_posts tbody tr td:nth-child(2) {
     text-align: left;
@@ -61,6 +62,7 @@
 }
 #table_posts tbody tr td {
     padding: 10px;
+    font-family: 'Open Sans', sans-serif;
 }
 #table_posts tbody tr td a {
     width: 50px;

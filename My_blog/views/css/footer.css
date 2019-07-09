@@ -3,17 +3,42 @@
     background-color: #e0e0e0;
     text-align: center;
     padding-top: 10px;
+    font-family: 'Roboto Slab', serif;
 }
-#footer div a {
+#footer div ul li a {
     text-decoration: none;
 }
-#footer div a:first-child ~ a{
+#footer div ul li:first-child ~ li{
     margin-left: 20px;
 }
-#footer div a img {
+#footer div ul li a img {
     width: 3%;
     height: 3%;
 }
-#footer div ~ p {
+#footer > div ~ p {
     margin-top: 20px;
+}
+#footer div > ul li {
+    display: inline;
+}
+#footer div #gmail {
+    position: absolute;
+    display: none;
+    width: 20%;
+    margin-left: 1px;
+    margin-top: -9px;
+    background-color: rgb(255, 86, 86);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 10px 10px 10px rgb(158, 158, 158);
+    font-family: 'Roboto Slab', serif;
+}
+#footer div #gmail p {
+    
+}
+#footer div > ul li:hover #gmail {
+    display: inline-block;
 }

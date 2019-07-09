@@ -1,7 +1,7 @@
-*{
-    margin: 0px; 
+* {
+    margin: 0px;
     padding: 0px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
 }
 #body_control #option_control {
     width: 13%;

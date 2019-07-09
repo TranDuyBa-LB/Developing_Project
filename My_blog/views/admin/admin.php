@@ -20,13 +20,13 @@
         <title>Quản trị viên</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="../css/admin.css" />
         <link rel="stylesheet" type="text/css" href="../css/table_manage_posts.css" />
         <link rel="stylesheet" type="text/css" href="../css/change_password.css" />
         <link rel="stylesheet" type="text/css" href="../css/create_admin.css" />
         <link rel="stylesheet" type="text/css" href="../css/create_posts.css" />
         <script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet" />
     </head>
     <body>
         <div id="header">

@@ -1,17 +1,20 @@
-*{
-    margin: 0px; 
+* {
+    margin: 0px;
     padding: 0px;
-    font-family: 'Roboto Slab', serif;
 }
 #header {
     position: relative;
 }
 #header a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: black;
 }
 #header #logo{
     text-align: center;
+    font-family: 'Roboto Slab', serif;
+}
+#header #logo a h1 {
+    color: rgb(56, 56, 56);
 }
 #header #logo a img {
     width: 13%;
@@ -24,19 +27,43 @@
 #header #slogan p{
     width: 25%;
     display: inline-block;
+    font-family: 'Roboto Slab', serif;
+    color: rgb(56, 56, 56);
 }
 #header #info {
     text-align: center;
     margin-top: 15px;
 }
-#header #info > a {
+#header #info > ul li {
+    display: inline;
+}
+#header #info > ul li a {
     margin-left: 20px;
 }
-#header #info > a img {
+#header #info > ul li a img {
     width: 2.5%;
     height: 2.5%;
 }
-#header #info > a img:hover {
+#header #info > ul li a img:hover {
     box-shadow: 0px 0px 10px rgb(179, 179, 179);
     border-radius: 50%;
+    transition: 0.5s;
+}
+#header #info #gmail {
+    position: absolute;
+    display: none;
+    width: 20%;
+    margin-left: 1px;
+    margin-top: -9px;
+    background-color: rgb(255, 86, 86);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 10px 10px 10px silver;
+    font-family: 'Roboto Slab', serif;
+}
+#header #info > ul li:hover #gmail {
+    display: inline-block;
 }

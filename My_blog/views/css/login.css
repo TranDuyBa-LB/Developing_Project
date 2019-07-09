@@ -1,22 +1,20 @@
 body {
     padding: 0px;
-    margin: 0px;
-    /*
+    margin: 0px; 
+    font-family: 'Roboto Slab', serif;
     background: url('../images/img_designs/background_login.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;*/
-    
+    background-size: cover;
 }
 #form_login {
     width: 350px;
     height: 450px;
-    background-color: rgba(233, 233, 233, 0.514);
+    background-color: rgba(0, 0, 0, 0.514);
     text-align: center;
     margin: 5% auto;
     border-radius: 10px;
     color:rgb(0, 0, 0);
-    border: 1px solid silver;
-    box-shadow: 5px 5px 10px silver;
+    
+    box-shadow: 0px 0px 20px rgb(255, 255, 255);
 }
 #form_login img {
     width: 100px;
@@ -24,6 +22,7 @@ body {
 }
 #form_login p {
     font-size: 30px;
+    color: white;
 }
 #form_login input {
     width: 300px;
@@ -32,18 +31,20 @@ body {
     margin-top: 20px;
     border: 1px solid silver;
     padding-left: 10px;
-    font-size: 18px;
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0.233);
+    font-family: 'Roboto Slab', serif;
 }
 #form_login .submit {
     width: 120px;
     height: 50px;
     border-radius: 3px;
-    background-color: rgb(42, 159, 255);
+    background-color: rgba(42, 159, 255, 0);
     color: white;
-    border: 1px solid rgba(255, 255, 255, 0);
+    border: 1px solid rgb(255, 255, 255);
 }
 #form_login .submit:hover {
-    background-color: rgb(255, 85, 85);
+    background-color: rgba(255, 255, 255, 0.507);
     transition: 0.3s;
-    box-shadow: 5px 5px 10px silver;
+    
 }

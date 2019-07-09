@@ -10,9 +10,9 @@
         $_obj_statement = $_object_db->prepare(SELECT($_column,$_table,$_where));
         $_obj_statement->execute();
         $_product = $_obj_statement->fetch();
-        
         if(empty($_product))
             header ('Location:../index.php');
+        require '../controller/posts/check_views.php';
     }
  ?>
 <!DOCTYPE html>
@@ -25,6 +25,7 @@
         <link rel="stylesheet" type="text/css" href="css/footer.css" />
         <link rel="stylesheet" type="text/css" href="css/content_posts.css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
     </head>
     <body>
         <div id="header">
@@ -38,15 +39,26 @@
                 <p>Phương châm sống !</p>
             </div>
             <div id="info">
-                <a href="">
-                    <img src="images/img_designs/facebook.png" title="facebook" />
-                </a>
-                <a href="">
-                    <img src="images/img_designs/github.png" title="GitHub" />
-                </a>
-                <a href="">
-                    <img src="images/img_designs/gmail.png" title="Gmail" /> 
-                </a>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/TranDuyBa.LB">
+                            <img src="images/img_designs/facebook.png" title="facebook" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/TranDuyBa-LB">
+                            <img src="images/img_designs/github.png" title="GitHub" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/img_designs/gmail.png" title="Gmail" /> 
+                        </a>
+                        <div id="gmail">
+                            <p>tranduyba2599@gmail.com</p>
+                        </div>
+                    </li>
+                </ul>  
             </div>
         </div>
         <div id="content_posts">
@@ -100,21 +112,29 @@
         </div>
         <div id="footer">
             <div>
-                 <a href="">
-                    <img src="images/img_designs/facebook_footer.png" title="facebook" />
-                </a>
-                <a href="">
-                    <img src="images/img_designs/github_footer.png" title="GitHub" />
-                </a>
-                <a href="">
-                    <img src="images/img_designs/gmail_footer.png" title="Gmail" /> 
-                </a>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/TranDuyBa.LB">
+                            <img src="images/img_designs/facebook.png" title="facebook" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/TranDuyBa-LB">
+                            <img src="images/img_designs/github.png" title="GitHub" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/img_designs/gmail.png" title="Gmail" /> 
+                        </a>
+                        <div id="gmail">
+                            <p>tranduyba2599@gmail.com</p>
+                        </div>
+                    </li>
+                </ul>  
             </div>
             <p>Admin: Trần Duy Bá</p>
             <p>Design and Code: Trần Duy Bá-LB</p>
         </div>
-        <?php  
-            require '../controller/posts/check_views.php';
-         ?>
     </body>
 </html>
