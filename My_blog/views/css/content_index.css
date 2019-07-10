@@ -1,7 +1,30 @@
+#search {
+    display: block;
+    margin-top: 50px;
+    margin-left: 100px;
+    height: 40px;
+    width: 0%;
+    background-image: url('../images/img_designs/search.png');
+    background-size: 29px 29px;
+    background-repeat: no-repeat;
+    background-position: 5px;
+    padding-left: 40px;
+    border: 1.5px solid #4876d3;
+    border-radius: 50px;
+    font-size: 15px;
+    box-shadow: 5px 5px 10px rgba(161, 161, 161, 0.548);
+}
+#search:focus {
+    outline: 0;
+}#search:hover {
+    width: 30%;
+    transition: 1s;
+    padding-right: 30px;
+}
 #content {
     width: 50%;
     margin-left: 100px;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 100px;
 }
 #content .list_posts {

@@ -16,11 +16,10 @@
         $_demo = htmlentities($_posts['demo']);
         $_list = htmlentities($_posts['list']);
         $_content = $_posts['content'];
-        $_id = md5($_date);
 
-        $_column = 'p_id,p_title,p_demo,p_writer,p_content,p_list,p_date';
+        $_column = 'p_title,p_demo,p_writer,p_content,p_list,p_date';
         $_table = 'posts';
-        $_values = "'$_id','$_title','$_demo','$_writer','$_content','$_list','$_date'";
+        $_values = "$_title','$_demo','$_writer','$_content','$_list','$_date'";
 
         $_query = $_db->INSERT($_column,$_table,$_values);
         $_obj_statement = $_db->execute_query($_query);

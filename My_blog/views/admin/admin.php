@@ -95,7 +95,7 @@
                 </form>
             </div>
         </div>
-        <script typ="text/javascript" src="../../controller/ajax/control_admin.js"></script>
+        <script type="text/javascript" src="../../controller/ajax/control_admin.js"></script>
         <?php
             if(!empty($_GET))
                 echo "<script>alert('".$_GET['error']."')</script>";

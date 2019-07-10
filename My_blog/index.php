@@ -1,23 +1,3 @@
-<?php
-
-    require 'model/database.php';
-
-    $_db = new database();
-
-    $_column = '*';
-    $_table = 'posts';
-    $_where = 1;
-
-    $_query = $_db->SELECT($_column, $_table, $_where);
-    $_obj_statement = $_db->execute_query($_query);
-    if($_obj_statement != false)
-        $_product = $_obj_statement->fetch();
-    else {
-        $_error = $_db->_error;
-        echo "<script>console.log('$_error');</script>";
-    }
-
- ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -64,64 +44,9 @@
                 </ul>   
             </div>
         </div>
+        <input id="search" type="text" placeholder="Tìm kiếm tiêu đề bài viết..." />
         <div id="content">
-            <?php
-                while(!empty($_product)):
-            ?>
-            <div class="list_posts">
-                <h2>
-                    <!--title-->
-                    <a href="views/posts.php?id_posts=<?php echo $_product['p_id']; ?>" target="_blank" >
-                        <?php echo $_product['p_title']; ?>
-                    </a>
-                </h2>
-                <p> 
-                    <!--demo content-->
-                    <?php echo $_product['p_demo']; ?>
-                </p>
-                <script>
-                    function Location(){
-                        window.location = "views/posts.php?id_posts=<?php echo $_product['p_id'] ?>";
-                    }
-                </script>
-                <input type="button" value="Xem bài viết..." onclick="Location()" />
-                <div>
-                    <img src="views/images/img_designs/writer.png" title="Người viết" /> 
-                        <p> <?php echo $_product['p_writer']; ?> </p>
-                    <img src="views/images/img_designs/views.png" title="Số lượt xem" /> 
-                        <p> 
-                            <?php 
-                                if($_product['p_views']==NULL)
-                                    $_product['p_views']=0;
-                                echo $_product['p_views'];
-                             ?>
-                        </p>
-                    <!--<img src="views/images/img_designs/comment.png" title="Số bình luận" /> <p>30</p>-->
-                    <img src="views/images/img_designs/share.png" title="Chia sẻ" /> 
-                        <p>
-                            <?php 
-                                if($_product['p_share']==NULL)
-                                    $_product['p_share']=0;
-                                echo $_product['p_share'];
-                             ?> 
-                        </p>
-                    <img src="views/images/img_designs/list.png" title="Danh mục" /> 
-                        <p>
-                            <?php echo $_product['p_list']; ?>
-                        </p>
-                    <img src="views/images/img_designs/date_up.png" title="Thời gian đăng" /> 
-                        <p>
-                            <?php
-                                $_array = explode('-',$_product['p_date']);
-                                echo $_array[1];
-                             ?>
-                        </p>
-                </div>
-            </div>
-            <?php 
-                    $_product = $_obj_statement->fetch();
-                endwhile;
-            ?>
+            
         </div>
         <div id="footer">
             <div>
@@ -149,5 +74,11 @@
             <p>Admin: Trần Duy Bá</p>
             <p>Design and Code: Trần Duy Bá-LB</p>
         </div>
+        <script type="text/javascript" src="controller/ajax/listDemoPosts_index.js"></script>
+        <script type="text/javascript">
+            window.onload=function(){
+                 search();
+            }
+        </script>
     </body>
 </html>

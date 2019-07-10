@@ -21,21 +21,6 @@
 <div id="manage_posts">
     <div id="option">
         <input type="text" placeholder="Tìm kiếm bài viết..." />
-        <p>Sắp xếp theo tương tác</p>
-        <select name="sort_1">
-            <option>Mới nhất</option>
-            <option>Cũ nhất</option>
-            <option>Nhiều views</option>
-            <option>Nhiều share</option>
-            <option>Nhiều comment</option>
-        </select>
-        <p>Sắp xếp theo chủ đề</p>
-        <select name="sort_2">
-            <option>Đời sống</option>
-            <option>Công việc</option>
-            <option>Xã hội</option>
-            <option>Chuyên ngành</option>
-        </select>
     </div>
     <table id="table_posts">
         <thead>
