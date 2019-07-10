@@ -1,15 +1,21 @@
 <?php
 
-    require '../../model/connect_db.php';
-    require '../../model/query_db.php';
+    require '../../model/database.php';
+
+    $_db = new database();
 
     $_column = '*';
     $_table = 'posts';
     $_where = 1;
 
-    $_obj_statement = $_object_db->prepare(SELECT($_column, $_table, $_where));
-    $_obj_statement->execute();
-    $_product=$_obj_statement->fetch();
+    $_query=$_db->SELECT($_column, $_table, $_where);
+    $_obj_statement = $_db->execute_query($_query);
+    if($_obj_statement!=false)
+        $_product=$_obj_statement->fetch();
+    else {
+        echo "<script>console.log('$_error');</script>";
+        exit();
+    }
 
  ?>
 <div id="manage_posts">
@@ -62,10 +68,10 @@
                     <td> <?php echo $_product['p_writer'] ?> </td>
                     <td> <?php echo $_product['p_date'] ?> </td>
                     <td>
-                        <a href="../controller/admin/change_posts.php?id_posts=<?php echo $_product['p_id'] ?> ">Sửa</a>
+                        <a href="../controller/admin/request_admin.php?id_posts=<?php echo $_product['p_id'] ?>&action=delete_posts">Sửa</a>
                     </td>
                     <td>
-                        <a href="../../controller/admin/delete_posts.php?id_posts=<?php echo $_product['p_id'] ?> ">Xóa</a>
+                        <a href="../../controller/admin/request_admin.php?id_posts=<?php echo $_product['p_id'] ?>&action=delete_posts">Xóa</a>
                     </td>
                 </tr>
             <?php 

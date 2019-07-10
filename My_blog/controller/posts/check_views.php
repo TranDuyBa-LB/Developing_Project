@@ -7,18 +7,28 @@
             $_table = 'posts';
             $_where = "p_id='$_id'";
 
-            $_obj_Statement_cookie = $_object_db->prepare(SELECT($_column,$_table,$_where));
-            $_obj_Statement_cookie ->execute();
-            $_product_cookie  = $_obj_Statement_cookie ->fetch();
-            $_views = $_product['p_views'];
-            
+            $_query = $_db->SELECT($_column, $_table, $_where);
+            $_obj_statement_cookie = $_db->execute_query($_query);
+
+            if($_obj_statement_cookie != false)
+                $_product_cookie = $_obj_statement_cookie->fetch();
+            else {
+                $_error = $_db->_error;
+                echo "<script>console.log('$_error');</script>";
+            }
+            $_views = $_product_cookie['p_views'];
             if($_views==NULL)
                 $_views = 1;
             else 
                 $_views = (int)$_views + 1;
 
             $_set = "p_views='$_views'";
-            $_obj_Statement_cookie  = $_object_db->prepare(UPDATE($_table,$_set,$_where));
-            $_obj_Statement_cookie ->execute();       
+            $_query = $_db->UPDATE($_table,$_set,$_where);
+            $_obj_statement_cookie  = $_db->execute_query($_query);
+            if($_obj_statement_cookie==false){
+                $_error = $_db->_error;
+                echo "<script>console.log('$_error');</script>";
+            }
+
         }
  ?>

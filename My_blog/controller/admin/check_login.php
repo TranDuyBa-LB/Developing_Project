@@ -2,17 +2,23 @@
     //Kiểm tra tài khản và mật khẩu
     function check_login($_post){
 
-        require '../../model/connect_db.php';
-        require '../../model/query_db.php';
+        require '../../model/database.php';
+
+        $_db=new database();
 
         $_column = 'a_password';
         $_table = 'admin';
         $_a_name = $_POST['user_name'];
         $_where = "a_name='$_a_name'";
 
-        $_obj_statement = $_object_db->prepare(SELECT($_column,$_table,$_where));
-        $_obj_statement->execute();
-        $_product = $_obj_statement->fetch();
+        $_query = $_db->SELECT($_column, $_table, $_where);
+        $_obj_statement = $_db->execute_query($_query);
+        if($_obj_statement != false)
+            $_product = $_obj_statement->fetch();
+        else {
+            $_error = $_db->_error;
+            echo "<script>console.log('$_error');</script>";
+        }
 
         if(!empty($_product)){
             if(md5($_POST['user_password']) === $_product['a_password']) {

@@ -1,20 +1,20 @@
 <?php
-use League\Flysystem\Exception;
 
-require 'model/connect_db.php';
-    require 'model/query_db.php';
+    require 'model/database.php';
+
+    $_db = new database();
 
     $_column = '*';
     $_table = 'posts';
     $_where = 1;
 
-    try {
-        $_obj_statement= $_object_db->prepare(SELECT($_column,$_table,$_where));
-        $_obj_statement->execute();
+    $_query = $_db->SELECT($_column, $_table, $_where);
+    $_obj_statement = $_db->execute_query($_query);
+    if($_obj_statement != false)
         $_product = $_obj_statement->fetch();
-    } catch (Exception $_error){
-        echo "<script>console.log($_error);</script>";
-        exit();
+    else {
+        $_error = $_db->_error;
+        echo "<script>console.log('$_error');</script>";
     }
 
  ?>
@@ -33,7 +33,7 @@ require 'model/connect_db.php';
     <body>
         <div id="header">
             <div id="logo">
-                <a href="#" title="BL Blog">
+                <a href="http://localhost:8080/Developing_Project/My_blog/" title="BL Blog">
                     <img src="views/images/img_designs/My_Logo.png" />
                     <h1>TranDuyBa-LB</h1>
                 </a>

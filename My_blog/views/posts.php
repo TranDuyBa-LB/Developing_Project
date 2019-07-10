@@ -1,17 +1,26 @@
 <?php
     if(!empty($_GET['id_posts'])){
-        require '../model/connect_db.php';
-        require '../model/query_db.php';
+
+        require '../model/database.php';
+
+        $_db = new database();
+        
         $_column = 'p_title,p_content,p_writer,p_list,p_views,p_share,p_date';
         $_table = 'posts';
         $_id = $_GET['id_posts'];
         $_where = "p_id='$_id'";
 
-        $_obj_statement = $_object_db->prepare(SELECT($_column,$_table,$_where));
-        $_obj_statement->execute();
-        $_product = $_obj_statement->fetch();
-        if(empty($_product))
-            header ('Location:../index.php');
+        $_query = $_db->SELECT($_column, $_table, $_where);
+        $_obj_statement = $_db->execute_query($_query);
+        if($_obj_statement != false){
+            $_product = $_obj_statement->fetch();
+            if(empty($_product))
+                header ('Location:../index.php');
+        }
+        else {
+            $_error = $_db->_error;
+            echo "<script>console.log('$_error');</script>";
+        }
         require '../controller/posts/check_views.php';
     }
  ?>
@@ -30,7 +39,7 @@
     <body>
         <div id="header">
             <div id="logo">
-                <a href="#" title="BL Blog">
+                <a href="http://localhost:8080/Developing_Project/My_blog/" title="BL Blog">
                     <img src="images/img_designs/My_Logo.png" />
                     <h1>BL-Bá Linh</h1>
                 </a>
