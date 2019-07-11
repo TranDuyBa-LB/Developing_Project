@@ -15,13 +15,17 @@
     width: 3%;
     height: 3%;
 }
+#footer div ul li a img:hover {
+    transition: 1.5s;
+    transform: rotate(360deg);
+}
 #footer > div ~ p {
     margin-top: 20px;
 }
 #footer div > ul li {
     display: inline;
 }
-#footer div #gmail_footer {
+#footer div > ul li #gmail_footer {
     position: absolute;
     display: inline-block;
     width: 0%;

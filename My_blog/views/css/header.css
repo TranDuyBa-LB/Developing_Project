@@ -48,7 +48,8 @@
 #header #info > ul li a img:hover {
     box-shadow: 0px 0px 10px rgb(179, 179, 179);
     border-radius: 50%;
-    transition: 0.5s;
+    transition: 1.5s;
+    transform: rotate(360deg);
     
 }
 #header #info #gmail_header {

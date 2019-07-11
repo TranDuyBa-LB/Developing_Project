@@ -11,7 +11,6 @@ function search(){
              document.getElementById('content').innerHTML=xmlhttp.responseText;
         }
     } 
-    console.log("Request="+request);
     xmlhttp.open("GET",request,true);
     xmlhttp.send();
 }

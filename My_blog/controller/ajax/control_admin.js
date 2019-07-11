@@ -14,7 +14,7 @@ function ajax_admin(request_url){
 
 
 document.getElementById('manage_posts').onclick = function(){
-    ajax_admin("table_manage_posts.php");
+    ajax_admin("tableManage_posts.php");
 }
 document.getElementById('create_admin').onclick = function(){
     ajax_admin("create_admin.php");

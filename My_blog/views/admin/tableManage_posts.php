@@ -20,7 +20,14 @@
  ?>
 <div id="manage_posts">
     <div id="option">
-        <input type="text" placeholder="Tìm kiếm bài viết..." />
+        <input id="search" type="text" placeholder="Tìm kiếm bài viết..." />
+        <p>Sắp xếp</p>
+        <select id="sort">
+            <option>Mới nhất</option>
+            <option>Cũ nhất</option>
+            <option>Nhiều views</option>
+            <option>Nhiều share</option>
+        </select>
     </div>
     <table id="table_posts">
         <thead>

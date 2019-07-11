@@ -64,7 +64,7 @@
                         <a href="">
                             <img src="images/img_designs/gmail.png" title="Gmail" /> 
                         </a>
-                        <div id="gmail">
+                        <div id="gmail_header">
                             <p>tranduyba2599@gmail.com</p>
                         </div>
                     </li>
@@ -137,7 +137,7 @@
                         <a href="">
                             <img src="images/img_designs/gmail.png" title="Gmail" /> 
                         </a>
-                        <div id="gmail">
+                        <div id="gmail_footer">
                             <p>tranduyba2599@gmail.com</p>
                         </div>
                     </li>

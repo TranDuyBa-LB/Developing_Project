@@ -37,7 +37,7 @@
                                 WHERE $_where ";
                     return $_select;
                 }
-                function INSERT($_column,$_table,$_values) {
+                function INSERT ($_column,$_table,$_values) {
                     $_insert = " INSERT INTO $_table($_column)
                                 VALUES ($_values) ";
                     return $_insert;

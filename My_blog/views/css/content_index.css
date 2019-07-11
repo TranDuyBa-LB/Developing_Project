@@ -71,9 +71,12 @@
     box-shadow: 7px 7px 10px rgb(151, 151, 151);
 }
 #content .list_posts input:hover {
-    background-color: silver;
-    transition: 0.5s;
+    background-color: rgb(255, 87, 87);
+    transition: 1s;
     cursor: pointer;
+}
+#content .list_posts input:focus {
+    outline: 0;
 }
 #content .list_posts > div {
     margin-top: 50px;

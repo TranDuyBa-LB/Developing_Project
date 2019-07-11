@@ -76,7 +76,6 @@
             <p>Design and Code: Trần Duy Bá-LB</p>
         </div>
         <script type="text/javascript" src="controller/ajax/listDemoPosts_index.js"></script>
-        <script type="text/javascript" src="views/js/inputSearch_index.js"></script>
         <script type="text/javascript">
             window.onload=function(){
                  search();

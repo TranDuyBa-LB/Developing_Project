@@ -18,7 +18,7 @@
             $_product = $_obj_statement->fetch();
         else {
             $_error = $_db->_error;
-            echo "<script>console.log('$_error');</script>";
+            echo "<script>console.log('HaHa=$_error');</script>";
         }
         $_array_where = [];
         while(!empty($_product)){
@@ -58,12 +58,12 @@
             <!--demo content-->
             <?php echo $_product['p_demo']; ?>
         </p>
-        <script>
+        <script type="text/javascript">
             function Location(){
-                window.location = "views/posts.php?id_posts=<?php echo $_product['p_id'] ?>";
+                window.location = "views/posts.php?id_posts=<?php echo $_product['p_id']; ?>";
             }
         </script>
-        <input type="button" value="Xem bài viết..." onclick="Location()" />
+        <input type="button" value="Xem bài viết..." onclick='window.location = "views/posts.php?id_posts=<?php echo $_product['p_id']; ?>";' />
         <div>
             <img src="views/images/img_designs/writer.png" title="Người viết" /> 
                 <p> <?php echo $_product['p_writer']; ?> </p>
