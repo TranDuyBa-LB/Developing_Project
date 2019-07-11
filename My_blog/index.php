@@ -15,6 +15,7 @@
             <div id="logo">
                 <a href="http://localhost:8080/Developing_Project/My_blog/" title="BL Blog">
                     <img src="views/images/img_designs/My_Logo.png" />
+                    <div></div>
                     <h1>TranDuyBa-LB</h1>
                 </a>
             </div>
@@ -34,10 +35,10 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="" >
                             <img src="views/images/img_designs/gmail.png" title="Gmail" /> 
                         </a>
-                        <div id="gmail">
+                        <div id="gmail_header">
                             <p>tranduyba2599@gmail.com</p>
                         </div>
                     </li>
@@ -65,7 +66,7 @@
                         <a href="">
                             <img src="views/images/img_designs/gmail.png" title="Gmail" /> 
                         </a>
-                        <div id="gmail">
+                        <div id="gmail_footer">
                             <p>tranduyba2599@gmail.com</p>
                         </div>
                     </li>
@@ -75,6 +76,7 @@
             <p>Design and Code: Trần Duy Bá-LB</p>
         </div>
         <script type="text/javascript" src="controller/ajax/listDemoPosts_index.js"></script>
+        <script type="text/javascript" src="views/js/inputSearch_index.js"></script>
         <script type="text/javascript">
             window.onload=function(){
                  search();

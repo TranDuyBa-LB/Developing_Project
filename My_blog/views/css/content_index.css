@@ -62,16 +62,18 @@
     width: 150px;
     height: 50px;
     margin-top: 20px;
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0);
     border-radius: 5px;
     background-color: #4876d3;
     font-size: 18px;
     color: white;
     font-family: 'Roboto Slab', serif;
+    box-shadow: 7px 7px 10px rgb(151, 151, 151);
 }
 #content .list_posts input:hover {
     background-color: silver;
     transition: 0.5s;
+    cursor: pointer;
 }
 #content .list_posts > div {
     margin-top: 50px;

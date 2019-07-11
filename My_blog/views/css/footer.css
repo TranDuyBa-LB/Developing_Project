@@ -21,13 +21,13 @@
 #footer div > ul li {
     display: inline;
 }
-#footer div #gmail {
+#footer div #gmail_footer {
     position: absolute;
-    display: none;
-    width: 20%;
+    display: inline-block;
+    width: 0%;
     margin-left: 1px;
     margin-top: -9px;
-    background-color: rgb(255, 86, 86);
+    background-color: #4876d3;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -35,10 +35,9 @@
     color: white;
     box-shadow: 10px 10px 10px rgb(158, 158, 158);
     font-family: 'Roboto Slab', serif;
+    overflow: hidden;
 }
-#footer div #gmail p {
-    
-}
-#footer div > ul li:hover #gmail {
-    display: inline-block;
+#footer div > ul li:hover #gmail_footer {
+    width: 20%;
+    transition: 1s;
 }

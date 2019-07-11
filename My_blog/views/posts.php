@@ -41,6 +41,7 @@
             <div id="logo">
                 <a href="http://localhost:8080/Developing_Project/My_blog/" title="BL Blog">
                     <img src="images/img_designs/My_Logo.png" />
+                    <div></div>
                     <h1>BL-Bá Linh</h1>
                 </a>
             </div>

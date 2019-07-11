@@ -2,8 +2,7 @@
     if(!empty($_GET['search']))
         $_search = $_GET['search'];
     else 
-        $_search = false;
-    echo $_search;
+        $_search = null;
     require '../model/database.php';
     $_db = new database();
 
@@ -11,7 +10,7 @@
     $_table = 'posts';
     $_where = 1;
 
-    if($_search!=false){
+    if($_search!=null){
         $_query = $_db->SELECT($_column, $_table, $_where);
         $_query = $_query.'ORDER BY p_id DESC';
         $_obj_statement = $_db->execute_query($_query);
@@ -23,11 +22,12 @@
         }
         $_array_where = [];
         while(!empty($_product)){
-            $_title = $_product['p_title'];
-            if(stripos($_title,$_search,0)!=false){
+            $_title = "_".$_product['p_title'];
+            if(stripos($_title,$_search)!=false){
                 $_p_id = $_product['p_id'];
                 $_array_where[]="p_id=$_p_id";
-            }
+            } else 
+                $_array_where[]="p_id=' '";
             $_product=$_obj_statement->fetch();
         }
     }
@@ -35,7 +35,6 @@
     $_column = '*';
     if(!empty($_array_where))
         $_where = implode(" or ",$_array_where);
-    echo "Where=$_where";
     $_query = $_db->SELECT($_column, $_table, $_where);
     $_query = $_query.'ORDER BY p_id DESC';
     $_obj_statement = $_db->execute_query($_query);
@@ -43,7 +42,6 @@
         $_product = $_obj_statement->fetch();
     else {
         $_error = $_db->_error;
-        echo "<script>console.log('$_error');</script>";
     }
 
  ?>

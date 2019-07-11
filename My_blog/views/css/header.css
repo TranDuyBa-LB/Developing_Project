@@ -15,6 +15,7 @@
 }
 #header #logo a h1 {
     color: rgb(56, 56, 56);
+    display: inline;;
 }
 #header #logo a img {
     width: 13%;
@@ -50,13 +51,13 @@
     transition: 0.5s;
     
 }
-#header #info #gmail {
+#header #info #gmail_header {
     position: absolute;
-    display: none;
-    width: 20%;
+    display: inline-block;
+    width: 0%;
     margin-left: 1px;
     margin-top: -9px;
-    background-color: rgb(255, 86, 86);
+    background-color: #4876d3;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -64,7 +65,9 @@
     color: white;
     box-shadow: 10px 10px 10px silver;
     font-family: 'Roboto Slab', serif;
+    overflow: hidden;
 }
-#header #info > ul li:hover #gmail {
-    display: inline-block;
+#header #info > ul li:hover #gmail_header {
+    width: 20%;
+    transition: 1s;
 }

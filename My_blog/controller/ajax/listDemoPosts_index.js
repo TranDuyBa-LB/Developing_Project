@@ -16,9 +16,4 @@ function search(){
     xmlhttp.send();
 }
 
-document.getElementById('search').onkeydown = function(){
-    search(); 
-}
-document.getElementById('search').onblur = function(){
-    search();
-}
+document.getElementById('search').onkeyup = search;
