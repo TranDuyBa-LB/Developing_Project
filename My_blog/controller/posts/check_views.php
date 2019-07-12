@@ -17,7 +17,7 @@
                 echo "<script>console.log('$_error');</script>";
             }
             $_views = $_product_cookie['p_views'];
-            if($_views==NULL)
+            if($_views==0||null)
                 $_views = 1;
             else 
                 $_views = (int)$_views + 1;

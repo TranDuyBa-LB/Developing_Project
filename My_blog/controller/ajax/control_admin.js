@@ -12,10 +12,6 @@ function ajax_admin(request_url){
     xmlhttp.send();
 }
 
-
-document.getElementById('manage_posts').onclick = function(){
-    ajax_admin("tableManage_posts.php");
-}
 document.getElementById('create_admin').onclick = function(){
     ajax_admin("create_admin.php");
 }

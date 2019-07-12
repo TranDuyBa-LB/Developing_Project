@@ -6,11 +6,11 @@
     require '../model/database.php';
     $_db = new database();
 
-    $_column = 'p_id,p_title';
     $_table = 'posts';
     $_where = 1;
 
     if($_search!=null){
+        $_column = 'p_id,p_title';
         $_query = $_db->SELECT($_column, $_table, $_where);
         $_query = $_query.'ORDER BY p_id DESC';
         $_obj_statement = $_db->execute_query($_query);
@@ -18,7 +18,7 @@
             $_product = $_obj_statement->fetch();
         else {
             $_error = $_db->_error;
-            echo "<script>console.log('HaHa=$_error');</script>";
+            require 'index.php';
         }
         $_array_where = [];
         while(!empty($_product)){
@@ -41,7 +41,7 @@
     if($_obj_statement != false)
         $_product = $_obj_statement->fetch();
     else {
-        $_error = $_db->_error;
+        exit();
     }
 
  ?>
@@ -69,20 +69,12 @@
                 <p> <?php echo $_product['p_writer']; ?> </p>
             <img src="views/images/img_designs/views.png" title="Số lượt xem" /> 
                 <p> 
-                    <?php 
-                        if($_product['p_views']==NULL)
-                            $_product['p_views']=0;
-                        echo $_product['p_views'];
-                        ?>
+                    <?php echo $_product['p_views']; ?>
                 </p>
             <!--<img src="views/images/img_designs/comment.png" title="Số bình luận" /> <p>30</p>-->
             <img src="views/images/img_designs/share.png" title="Chia sẻ" /> 
                 <p>
-                    <?php 
-                        if($_product['p_share']==NULL)
-                            $_product['p_share']=0;
-                        echo $_product['p_share'];
-                        ?> 
+                    <?php echo $_product['p_share']; ?>
                 </p>
             <img src="views/images/img_designs/list.png" title="Danh mục" /> 
                 <p>

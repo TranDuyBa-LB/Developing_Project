@@ -17,9 +17,9 @@
         $_list = htmlentities($_posts['list']);
         $_content = $_posts['content'];
 
-        $_column = 'p_title,p_demo,p_writer,p_content,p_list,p_date';
+        $_column = 'p_title,p_demo,p_writer,p_content,p_views,p_share,p_list,p_date';
         $_table = 'posts';
-        $_values = "'$_title','$_demo','$_writer','$_content','$_list','$_date'";
+        $_values = "'$_title','$_demo','$_writer','$_content',0,0,'$_list','$_date'";
 
         $_query = $_db->INSERT($_column,$_table,$_values);
         $_obj_statement = $_db->execute_query($_query);
@@ -62,9 +62,7 @@
     
     //Đổi mật khẩu
 
-    function change_password($_post){
-        $_post['']
-    }
+    function change_password(){}
     //Xóa một bài viết
     function delete_posts($_id_posts) {
         GLOBAL $_db;
@@ -76,9 +74,9 @@
         $_query= $_db->DELETE($_table,$_where);
         $_obj_statement = $_db->execute_query($_query);
         if($_obj_statement!=false){
-            header ('Location:../../views/admin/admin.php?error=Xóa bài viết thành công !');
+            header ('Location:../../views/admin/admin.php?request=tableManage_posts&error=Xóa bài viết thành công !');
         } else {
-            header ('Location:../../views/admin/admin.php?error=Xóa bài viết không thành công !');
+            header ('Location:../../views/admin/admin.php?request=tableManage_posts&error=Xóa bài viết không thành công !');
         }
     }
 

@@ -6,9 +6,9 @@
                 echo "<script>alert('$_error');</script>";
             }
         } else 
-            exit();
+            require '../index.php';
     } else 
-        exit();
+        require '../index.php';
  ?>
 <!DOCTYPE html>
 <html>
