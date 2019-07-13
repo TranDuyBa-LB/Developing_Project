@@ -7,8 +7,8 @@
         <link rel="stylesheet" type="text/css" href="views/css/header.css" />
         <link rel="stylesheet" type="text/css" href="views/css/content_index.css" />
         <link rel="stylesheet" type="text/css" href="views/css/footer.css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="header">
@@ -20,7 +20,7 @@
                 </a>
             </div>
             <div id="slogan">
-                <p>Đừng chỉ mãi đi ghi nhớ lịch sử của người khác mà hãy tự mình tạo lên lịch sử.</p>
+                <p>Đừng chỉ mãi đi ghi nhớ lịch sử của người khác mà hãy tự mình tạo lên lịch sử</p>
             </div>
             <div id="info">
                 <ul>

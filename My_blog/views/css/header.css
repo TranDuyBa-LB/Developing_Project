@@ -11,7 +11,7 @@
 }
 #header #logo{
     text-align: center;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Cabin', sans-serif;
 }
 #header #logo a h1 {
     color: rgb(56, 56, 56);
@@ -28,7 +28,7 @@
 #header #slogan p{
     width: 25%;
     display: inline-block;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Varela Round', sans-serif;
     color: rgb(56, 56, 56);
 }
 #header #info {
@@ -56,16 +56,17 @@
     position: absolute;
     display: inline-block;
     width: 0%;
+    height: 30px;
     margin-left: 1px;
     margin-top: -9px;
     background-color: #4876d3;
     text-align: center;
-    padding-top: 6px;
+    padding-top: 10px;
     padding-bottom: 5px;
     border-radius: 5px;
     color: white;
     box-shadow: 10px 10px 10px silver;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Cabin', sans-serif;
     overflow: hidden;
 }
 #header #info > ul li:hover #gmail_header {
@@ -74,7 +75,7 @@
 }
 
 /*----------------CSS cho thiết bị di động--------------------------*/
-@media only screen and (max-device-width: 414px ) {
+@media only screen and (max-width: 414px ) {
     #header #logo a img {
         width: 40%;
         height: 40%;

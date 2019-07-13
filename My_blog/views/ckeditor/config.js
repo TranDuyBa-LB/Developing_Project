@@ -8,7 +8,7 @@ CKEDITOR.editorConfig = function( config ) {
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
 
-var host = "localhost:8080/My_Project/Project_Private/My_blog/views";
+var host = "localhost:8080/Developing_Project/My_blog/views";
 config.filebrowserBrowseUrl = "http://"+host+"/ckfinder/ckfinder.html";
  
 config.filebrowserImageBrowseUrl = "http://"+host+"/ckfinder/ckfinder.html?type=Images";

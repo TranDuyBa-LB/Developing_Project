@@ -33,8 +33,8 @@
         <link rel="stylesheet" type="text/css" href="css/header.css" />
         <link rel="stylesheet" type="text/css" href="css/footer.css" />
         <link rel="stylesheet" type="text/css" href="css/content_posts.css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="header">
@@ -42,11 +42,11 @@
                 <a href="http://localhost:8080/Developing_Project/My_blog/" title="BL Blog">
                     <img src="images/img_designs/My_Logo.png" />
                     <div></div>
-                    <h1>BL-Bá Linh</h1>
+                    <h1>TranDuyBa-LB</h1>
                 </a>
             </div>
             <div id="slogan">
-                <p>Phương châm sống !</p>
+                <p>Đừng chỉ mãi đi ghi nhớ lịch sử của người khác mà hãy tự mình tạo lên lịch sử</p>
             </div>
             <div id="info">
                 <ul>

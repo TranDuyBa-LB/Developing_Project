@@ -1,20 +1,17 @@
 body {
     padding: 0px;
     margin: 0px; 
-    font-family: 'Roboto Slab', serif;
-    background: url('../images/img_designs/background_login.jpg');
-    background-size: cover;
+    font-family: 'Cabin', sans-serif;
 }
 #form_login {
     width: 350px;
     height: 450px;
-    background-color: rgba(0, 0, 0, 0.514);
+    background-color: #3871a3;
     text-align: center;
     margin: 5% auto;
     border-radius: 10px;
     color:rgb(0, 0, 0);
-    
-    box-shadow: 0px 0px 20px rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px rgb(116, 116, 116);
 }
 #form_login img {
     width: 100px;
@@ -32,14 +29,14 @@ body {
     border: 1px solid silver;
     padding-left: 10px;
     font-size: 15px;
-    background-color: rgba(255, 255, 255, 0.233);
-    font-family: 'Roboto Slab', serif;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Cabin', sans-serif;
 }
 #form_login .submit {
     width: 120px;
     height: 50px;
     border-radius: 3px;
-    background-color: rgba(42, 159, 255, 0);
+    background-color: rgb(255, 86, 86);
     color: white;
     border: 1px solid rgb(255, 255, 255);
 }
@@ -47,4 +44,34 @@ body {
     background-color: rgba(255, 255, 255, 0.507);
     transition: 0.3s;
     
+}
+
+/***********************Hiển thị trên điện thoại******************/
+@media only screen and (max-device-width: 414px){
+    #form_login {
+        width: 90%;
+        height: 90%;
+    }
+    #form_login img {
+        width: 50%;
+        height: 50%;
+    }
+    #form_login p {
+        font-size: 90px;
+    }
+    #form_login input {
+        display: block;
+        margin: 50px auto;
+    }
+    #form_login input:not(.submit) {
+        width: 80%;
+        height: 100px;
+        font-size: 50px;
+        padding-left: 30px;
+    }
+    #form_login .submit {
+        width: 40%;
+        height: 130px;
+        font-size: 50px;
+    }
 }

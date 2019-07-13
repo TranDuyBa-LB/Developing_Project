@@ -1,7 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Cabin', sans-serif;
 }
 #body_control #option_control {
     width: 13%;
@@ -37,6 +37,7 @@
     background-color: rgb(255, 66, 66);
     color: white;
     text-align: center;
+    line-height: 18px;
 }
 #body_control #option_control ul li:first-child a:hover {
     background-color: silver;
@@ -59,7 +60,7 @@
     height: 30px;
     margin-top: 10px;
 }
-#body_control #option_control ul li a {
+#body_control #option_control ul li a{
     position: absolute;
     text-decoration: none;
     color: black;
@@ -67,10 +68,10 @@
     display: inline-block;
     width: 82%;
     height: 100%;
-    padding-top: 17px;
+    line-height: 60px;
     padding-left: 10px;
 }
-#view_control {
+#body_control #view_control {
     display: inline-block;
     position: absolute;
     width: 85%;
@@ -81,12 +82,3 @@
     border-radius: 5px;
     box-shadow: 0px 5px 15px rgb(175, 175, 175);
 }
-
-/*Quản lý bài viết*/
-
-/*Tạo bài viết mới*/
-
-/*Tạo mới admin */
-
-/*Thay đổi mật khẩu*/
-

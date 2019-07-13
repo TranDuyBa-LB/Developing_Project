@@ -33,7 +33,7 @@
         <link rel="stylesheet" type="text/css" href="../css/create_admin.css" />
         <link rel="stylesheet" type="text/css" href="../css/create_posts.css" />
         <script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="header">
