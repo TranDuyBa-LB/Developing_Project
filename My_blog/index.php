@@ -35,7 +35,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" >
+                        <a href="javascript:void(0)" >
                             <img src="views/images/img_designs/gmail.png" title="Gmail" /> 
                         </a>
                         <div id="gmail_header">
@@ -63,7 +63,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="javascript:void(0)">
                             <img src="views/images/img_designs/gmail.png" title="Gmail" /> 
                         </a>
                         <div id="gmail_footer">

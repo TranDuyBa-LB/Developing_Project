@@ -19,9 +19,6 @@
     transition: 1.5s;
     transform: rotate(360deg);
 }
-#footer > div ~ p {
-    margin-top: 20px;
-}
 #footer div > ul li {
     display: inline;
 }
@@ -44,4 +41,41 @@
 #footer div > ul li:hover #gmail_footer {
     width: 20%;
     transition: 1s;
+}
+#footer > div ~ p {
+    margin-top: 20px;
+}
+
+
+/*----------------CSS cho thiết bị di động--------------------------*/
+@media only screen and (max-device-width: 414px ) {
+    #footer {
+        height: auto;
+    }
+    #footer div ul li a img {
+        width: 10%;
+        height: 10%;
+    }
+    #footer div > ul li #gmail_footer  {
+        display: block;
+        margin: 10px auto;
+        position: relative;
+        width: 0%;
+        height: 0%;
+        padding-top: 10px;
+        font-size: 18px;
+        padding-bottom: 5px;
+        margin-bottom: 0px;
+    }
+    #footer div > ul li:hover #gmail_footer{
+        height: 30px;
+        width: 100%;
+        transition: 1s;
+    }
+    #footer > p:nth-child(1){
+        padding-bottom: 0px;
+    }
+    #footer > p:nth-child(3){
+        padding-bottom: 50px;
+    }
 }
