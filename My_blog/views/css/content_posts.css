@@ -39,11 +39,11 @@
     font-family: 'Varela Round', sans-serif;
     color: rgb(0, 0, 0);
 } 
-
+/*
 #content_posts div:nth-child(3) h1,h2,h3,h4,h5,h6 {
     padding-top: 20px;
     padding-bottom: 20px;
-}
+}*/
 #content_posts #share_facebook{
     display: block;
     margin-top: 25px;
