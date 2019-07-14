@@ -9,7 +9,7 @@
     background-color: #5a84d8;
     border-bottom: 1px solid silver;
     padding-top: 15px;
-    box-shadow: 7px 0px 15px silver;
+    box-shadow: 0px 0px 15px rgb(129, 129, 129);
 }
 #view_control #manage_posts #option input,p,select {
     display: inline-block;
@@ -36,23 +36,23 @@
     border: 1px solid black;
 }
 #table_posts {
-    width: 90%;
+    width: 98%;
     border-collapse: collapse;
-    margin-top: 32px;
-    margin-left: 60px;
+    border: none;
+    margin: 32px auto;
     font-size: 15px;
-    box-shadow: 10px 10px 20px rgb(161, 161, 161);
+    box-shadow: 0px 0px 20px rgb(141, 141, 141);
     margin-bottom: 50px;
 }
 #table_posts tr:nth-child(odd):not(.tr_1) {
-    background-color: #7edf8e;
+    background-color: #e0e0e0;
 }
 #table_posts tr:hover:not(.tr_1) {
-    background-color: rgb(255, 253, 142);
+    background-color: #cbdcff;
     transition: 0.5s;
 }
 #table_posts th {
-    background-color: rgb(255, 78, 78);
+    background-color: #ff5e5e;
     height: 50px;
     color: rgb(255, 255, 255);
 }
@@ -62,6 +62,7 @@
     max-width: 450px;
     text-align: center;
     padding: 10px;
+    border: none;
 }
 #table_posts tbody tr td:nth-child(2) {
     text-align: left;

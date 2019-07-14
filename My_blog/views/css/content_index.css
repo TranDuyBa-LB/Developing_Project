@@ -29,7 +29,7 @@
 }
 #content .list_posts {
     margin-bottom: 50px;
-    border-bottom: 1.5px solid silver;
+    border-bottom: 1px solid silver;
 }
 #content .list_posts h2 {
     max-height: 140px;
@@ -130,17 +130,20 @@
     #content .list_posts > div {
         margin-top: 30px;
         margin-bottom: 15px;
-        text-align: center;
+        text-align: left;
     }
     #content .list_posts > div p {
-        font-size: 15px;
+        font-size: 13px;
         padding-left: 3px;
+    }
+    #content .list_posts > div p:first-child:after {
+        content: "<br/>";
     }
     #content .list_posts > div img {
         width: 5%;
         height: 5%;
     }
-    #content .list_posts > div img:first-child ~ img {
-        margin-left: 25px;
+    #content .list_posts > div img:nth-child(3) ~ img {
+        margin-left: 20px;
     }
 }

@@ -72,10 +72,7 @@
                     <?php echo $_product['p_views']; ?>
                 </p>
             <!--<img src="views/images/img_designs/comment.png" title="Số bình luận" /> <p>30</p>-->
-            <img src="views/images/img_designs/share.png" title="Chia sẻ" /> 
-                <p>
-                    <?php echo $_product['p_share']; ?>
-                </p>
+            <!--<img src="views/images/img_designs/share.png" title="Chia sẻ" /> -->
             <img src="views/images/img_designs/list.png" title="Danh mục" /> 
                 <p>
                     <?php echo $_product['p_list']; ?>

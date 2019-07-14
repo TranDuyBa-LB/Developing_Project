@@ -54,6 +54,10 @@
                        <a href="../../index.php" target="_blank">Trang chủ</a>
                     </li>
                     <li>
+                        <img src="../images/img_designs/web-design.png" /> 
+                        <a href="javascript:void(0);"  id="change_interface_website" >Quản lý website</a>
+                    </li>
+                    <li>
                         <img src="../images/img_designs/add_new_posts.png" /> 
                         <a href="admin.php"  id="create_posts" >Tạo bài viết</a>
                     </li>

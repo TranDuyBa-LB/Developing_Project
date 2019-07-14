@@ -3,18 +3,26 @@
     padding: 0px;
     font-family: 'Cabin', sans-serif;
 }
+body {
+    background-color: rgb(243, 243, 243);
+}
 #body_control #option_control {
     width: 13%;
-    background-color: rgb(230, 230, 230);
+    background-color: rgba(255, 255, 255, 0);
     display: inline-block;
+    /*
     border-right: 1px solid rgb(199, 199, 199);
     border-bottom: 1px solid rgb(199, 199, 199);
-    box-shadow: 5px 5px 10px silver;
+    box-shadow: 5px 5px 10px silver; */
     border-radius: 3px;
+}
+#body_control #option_control ul li:nth-child(2) {
+    margin-top: 30px;
 }
 #body_control #option_control ul li:first-child {
     height: 130px;
-    background-color: #4876d3;
+    background-color: #ff5e5e;
+    box-shadow: 5px 5px 15px rgb(146, 146, 146);
 }
 #body_control #option_control ul li:first-child img {
     width: 40px;
@@ -23,37 +31,43 @@
 }
 #body_control #option_control ul li:first-child p {
     display: inline;
-    color: white
+    color: rgb(255, 255, 255);
 }
 #body_control #option_control ul li:first-child a {
     display: block;
     margin-top: 30px;
     width: 50%;
     height: 20%;
-    padding-top: 5px;
+    padding-top: 10px;
     padding-left: 0px;
     border-radius: 10px;
     border: 1px solid rgb(255, 255, 255);
-    background-color: rgb(255, 66, 66);
-    color: white;
+    background-color: #ff5e5e;
+    color: rgb(255, 255, 255);
     text-align: center;
     line-height: 18px;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
 }
 #body_control #option_control ul li:first-child a:hover {
-    background-color: silver;
+    background-color: rgb(238, 238, 238);
+    color: rgb(72, 115, 255);
     transition: 0.5s;
 }
 #body_control #option_control ul li {
     height: 50px;
     padding-left: 10px;
-    border-bottom: 1px rgb(255, 255, 255) solid;
+    border-bottom: 1px rgba(255, 255, 255, 0) solid;
     overflow: hidden;
     position: relative;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 #body_control #option_control ul li:hover:not(.admin){
-    background-color: rgb(255, 66, 66);
-    transition: 0.5s;
+    background-color: rgb(255, 78, 78);
+    transition: 1s;
+}
+#body_control #option_control ul li:hover a{
+    color:white;
+    transition: 1s;
 }
 #body_control #option_control ul li img {
     width: 30px;
@@ -63,7 +77,7 @@
 #body_control #option_control ul li a{
     position: absolute;
     text-decoration: none;
-    color: black;
+    color: #20345e;
     font-size: 15px;
     display: inline-block;
     width: 82%;
@@ -77,8 +91,8 @@
     width: 85%;
     min-height: 100%;
     margin-left: 20px;
-    background: rgb(230, 230, 230);
+    background: rgba(255, 255, 255, 0);
     margin-bottom: 50px;
     border-radius: 5px;
-    box-shadow: 0px 5px 15px rgb(175, 175, 175);
+    /*box-shadow: 0px 5px 15px rgb(175, 175, 175);*/
 }

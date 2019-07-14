@@ -18,3 +18,6 @@ document.getElementById('create_admin').onclick = function(){
 document.getElementById('change_password').onclick = function(){
     ajax_admin("change_password.php");
 }
+document.getElementById('change_interface_website').onclick = function(){
+    ajax_admin("change_interface_Website.php");
+}
