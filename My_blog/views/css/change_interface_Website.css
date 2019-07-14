@@ -1,0 +1,45 @@
+#change_interface_website .up_logo{
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-top: 50px;
+}
+#change_interface_website input:focus{
+    outline: 0;
+}
+#change_interface_website input:not(.up_logo), textarea {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    height: 30px;
+    width: 20%;
+    border-radius: 5px;
+    border: 1px solid silver;
+    font-size: 18px;
+    padding-left: 10px;
+}
+#change_interface_website input:not(.submit):hover {
+    width: 40%;
+    transition: 1s;
+}
+#change_interface_website textarea:hover {
+    width: 40%;
+    transition: 1s;
+}
+#change_interface_website textarea {
+    height: 150px;
+    padding-top: 10px;
+}
+#change_interface_website .submit {
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgb(71, 144, 255);
+    color: white;
+    margin: 50px auto;
+}
+#change_interface_website .submit:hover {
+    background-color: rgb(255, 85, 85);
+    cursor: pointer;
+    transition: 1s;
+}

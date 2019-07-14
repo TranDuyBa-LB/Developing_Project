@@ -32,6 +32,7 @@
         <link rel="stylesheet" type="text/css" href="../css/change_password.css" />
         <link rel="stylesheet" type="text/css" href="../css/create_admin.css" />
         <link rel="stylesheet" type="text/css" href="../css/create_posts.css" />
+        <link rel="stylesheet" type="text/css" href="../css/change_interface_Website.css" />
         <script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
     </head>
