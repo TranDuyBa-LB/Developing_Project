@@ -20,6 +20,9 @@
     margin-top: 50px;
     font-family: 'Varela Round', sans-serif;
 }
+#content_posts div:nth-child(2) > div{
+    display: none;
+}
 #content_posts div:nth-child(2) img {
     width: 2%;
     height: 2%;
@@ -39,15 +42,8 @@
     font-family: 'Varela Round', sans-serif;
     color: rgb(0, 0, 0);
 } 
-/*
-#content_posts div:nth-child(3) h1,h2,h3,h4,h5,h6 {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}*/
-#content_posts #share_facebook{
-    display: block;
-    margin-top: 25px;
-    margin-bottom: 25px;
+#content_posts iframe {
+    margin-top: 30px;
 }
 
 /*----------------CSS cho thiết bị di động--------------------------*/
@@ -62,7 +58,7 @@
         font-size: 25px;
     }
     #content_posts div:nth-child(2) {
-        margin-top: 10px;
+        margin-top: 15px;
     }
     #content_posts div:nth-child(2) img {
         width: 5%;
@@ -76,5 +72,11 @@
         text-align: justify;
         font-size: 14px;
         line-height: 21px;
+    }
+    #content_posts div:nth-child(2) > div{
+        display: block;
+    }
+    #content_posts div:nth-child(2) > img:nth-child(4){
+        margin-left: 0px !important;
     }
 }

@@ -67,6 +67,7 @@
         <div>
             <img src="views/images/img_designs/writer.png" title="Người viết" /> 
                 <p> <?php echo $_product['p_writer']; ?> </p>
+            <div></div>
             <img src="views/images/img_designs/views.png" title="Số lượt xem" /> 
                 <p> 
                     <?php echo $_product['p_views']; ?>

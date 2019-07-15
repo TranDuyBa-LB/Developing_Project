@@ -1,7 +1,7 @@
 #view_control #create_admin {
     width: 25%;
     height: 400px;
-    background-color: #5880cf;
+    background-color: #ff5e5e;
     margin: 0 auto;
     margin-top: 50px;
     text-align: center;
@@ -31,14 +31,16 @@
     display: inline-block;
     width: 45%;
     height: 50px;
-    color: white;
-    background-color: rgb(255, 85, 85);
+    color: rgb(0, 0, 0);
+    background-color: rgb(236, 236, 236);
     margin-top: 30px;
     border-radius: 3px;
     border: 1px solid rgba(0, 0, 0, 0);
     padding-right: 10px;
 }
 #view_control #create_admin #submit:hover {
-    background-color: #919191;
+    background-color: #297eff;
+    color:white;
+    border: 1px solid white;
     transition: 0.5s;
 }

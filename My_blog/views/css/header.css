@@ -14,8 +14,10 @@
     font-family: 'Cabin', sans-serif;
 }
 #header #logo a h1 {
+    width: 25%;
     color: rgb(56, 56, 56);
     display: inline;
+    word-wrap: break-word;
 }
 #header #logo a img {
     width: 13%;
@@ -30,6 +32,7 @@
     display: inline-block;
     font-family: 'Varela Round', sans-serif;
     color: rgb(56, 56, 56);
+    word-wrap: break-word;
 }
 #header #info {
     text-align: center;
@@ -46,23 +49,20 @@
     height: 2.5%;
 }
 #header #info > ul li a img:hover {
-    box-shadow: 0px 0px 10px rgb(179, 179, 179);
-    border-radius: 50%;
-    transition: 1.5s;
+    transition: 2s;
     transform: rotate(360deg);
-    
 }
+
 #header #info #gmail_header {
     position: absolute;
     display: inline-block;
     width: 0%;
-    height: 30px;
+    height: 20px;
     margin-left: 1px;
-    margin-top: -9px;
-    background-color: #4876d3;
+    background-color: #ff5d5d;
     text-align: center;
     padding-top: 10px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     border-radius: 5px;
     color: white;
     box-shadow: 10px 10px 10px silver;

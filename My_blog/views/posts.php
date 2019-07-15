@@ -81,6 +81,7 @@
                     <p>
                         <?php echo $_product['p_writer']; ?>
                     </p>
+                <div></div>
                 <img src="images/img_designs/views.png" title="Số lượt xem" /> 
                     <p>
                         <?php 
@@ -89,14 +90,7 @@
                             echo $_product['p_views']; 
                         ?>
                     </p>
-                <img src="images/img_designs/share.png" title="Chia sẻ" /> 
-                    <p>
-                        <?php 
-                            if($_product['p_share']==NULL)
-                                $_product['p_share']=0;
-                            echo $_product['p_share']; 
-                         ?>
-                    </p>
+                <!--<img src="images/img_designs/share.png" title="Chia sẻ" />-->
                 <!--<img src="images/img_designs/comment.png" title="Số bình luận" /> <p></p> -->
                 <img src="images/img_designs/list.png" title="Danh mục" /> 
                     <p>
@@ -113,9 +107,7 @@
             <div name="content" >
                 <?php echo $_product['p_content']; ?>
             </div>
-            <a id="share_facebook">
-                <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Flocalhost%3A8080%2FDeveloping_Project%2FMy_blog%2F&layout=button&size=large&width=83&height=28&appId" width="83" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-            </a>
+            <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Flocalhost%3A8080%2FDeveloping_Project%2FMy_blog%2F&layout=button&size=large&width=83&height=28&appId" width="83" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
             <?php endif; ?>
         </div>
         <div id="comments">

@@ -12,19 +12,11 @@
     margin-bottom: 30px;
     margin-left: 20px;
     height: 30px;
-    width: 20%;
+    width: 40%;
     border-radius: 5px;
     border: 1px solid silver;
     font-size: 18px;
     padding-left: 10px;
-}
-#change_interface_website input:not(.submit):hover {
-    width: 40%;
-    transition: 1s;
-}
-#change_interface_website textarea:hover {
-    width: 40%;
-    transition: 1s;
 }
 #change_interface_website textarea {
     height: 150px;

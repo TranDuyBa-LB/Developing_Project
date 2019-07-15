@@ -6,7 +6,6 @@
     $_db = new database();
 
     //Tạo mới một bài viết
-    
     function create_posts($_posts){
         GLOBAL $_db;
 
@@ -33,7 +32,6 @@
     }
 
     //Tạo mới một tài khoản Admin
-
     function create_admin($_post){
         GLOBAL $_db;
 
@@ -61,8 +59,11 @@
     }
     
     //Đổi mật khẩu
+    function change_password(){
+        
+    }
 
-    function change_password(){}
+
     //Xóa một bài viết
     function delete_posts($_id_posts) {
         GLOBAL $_db;
@@ -87,12 +88,82 @@
         header ('Location:../../index.php');
     }
 
+    //Thay đổi giao diện web
+    function change_interface($_post,$_files){
+        GLOBAL $_db;
+        $_column=[];
+        $_values=[];
+        if(!empty($_post)){
+            if(!empty($_files)){
+                if($_files['file_logo']['error']>0)
+                    header ('Location:../../views/admin/admin.php?error=File up load bị lỗi !');
+                else {
+                    move_uploaded_file($_files['file_logo']['tmp_name'], '../../views/images/img_designs/'.$_files['file_logo']['name']);
+                    $_link_logo = 'views/images/img_designs/'.$_files['file_logo']['name'];
+                    $_values[]="'$_link_logo'";
+                    $_column[]='i_link_logo';
+                }
+            }
+            if(!empty($_post['title_web'])){
+                $_title_web = $_post['title_web'];
+                $_column[]='i_title';
+                $_values[]="'$_title_web'";
+            }
+            if(!empty($_post['email'])){
+                $_email = $_post['email'];
+                $_column[]='i_email';
+                $_values[]="'$_email'";
+            }
+            if(!empty($_post['slogan'])){
+                $_slogan = $_post['slogan'];
+                $_column[]='i_slogan';
+                $_values[]="'$_slogan'";
+            }
+        }
+
+        $_table = 'interface';
+
+        //Select kiểm tra xem đã có dữ liệu chưa
+        $_query = $_db->SELECT('*',$_table,1);
+        $_product = ($_db->execute_query($_query))->fetch();
+
+        if(empty($_product)) {
+        
+            $_column_ = implode(',',$_column); //Nối mảng cột thành một chuỗi gồm các cột cần INSERT
+            $_values_ = implode(',',$_values); //Nối mảng vlue thành một chuỗi gồm các giá trị cần INSERT
+
+            $_query = $_db->INSERT($_column_, $_table, $_values_);
+            $_obj_statement=$_db->execute_query($_query);
+
+            if($_obj_statement!=false)
+                header ('Location:../../views/admin/admin.php?error=Thêm giao diện thành công !');
+            else 
+                header ('Location:../../views/admin/admin.php?error=Thêm giao diện không thành công !');
+        } else {
+            $_set=[];
+            foreach ($_column as $key => $_cl)
+                $_set[]="$_cl=$_values[$key]";
+            $_set_ = implode(',',$_set);
+
+            $_query = $_db->UPDATE($_table,$_set_,"i_email<>'1'");
+            $_obj_statement=$_db->execute_query($_query);
+            if($_obj_statement!=false)
+                header ('Location:../../views/admin/admin.php?error=Thay đổi giao diện không thành công !');
+            else
+                header ('Location:../../views/admin/admin.php?error=Thay đổi giao diện thành công !');
+        }       
+    }
+
+
 
     if($_SERVER['REQUEST_METHOD']=='POST'){
         if($_POST['request']=='create_admin')
             create_admin($_POST);
         else if ($_POST['request']=='create_posts')
             create_posts($_POST);
+        else if ($_POST['request']=='change_interface_website')
+            change_interface($_POST,$_FILES);
+            
     } else if($_SERVER['REQUEST_METHOD']=='GET'){
         if($_GET['action']=='delete_posts')
             delete_posts($_GET['id_posts']);
