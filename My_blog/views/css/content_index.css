@@ -67,12 +67,12 @@
     font-size: 18px;
     color: white;
     font-family: 'Cabin', sans-serif;
-    box-shadow: 7px 7px 10px rgb(151, 151, 151);
 }
 #content .list_posts input:hover {
     background-color: rgb(255, 87, 87);
     transition: 1s;
     cursor: pointer;
+    box-shadow: 3px 3px 10px rgb(151, 151, 151);
 }
 #content .list_posts input:focus {
     outline: 0;

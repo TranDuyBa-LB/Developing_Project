@@ -1,6 +1,6 @@
 <div id="manage_posts">
     <div id="option">
-        <input id="search" type="text" placeholder="Tìm kiếm bài viết..." />
+        <input id="search" type="text" placeholder="Tìm kiếm bài viết theo tiêu đề..." />
         <p>Sắp xếp</p>
         <select id="sort">
             <option value="latest">Mới nhất</option>

@@ -2,9 +2,6 @@
         require '../../../model/database.php';
         $_db=new database();
 
-        $_table = 'posts';
-        $_where = 1;
-
         //Sắp xếp theo bảng chọn option
         if(empty($_GET['request_select']))
             $_request_select = 'latest';
@@ -25,34 +22,15 @@
             $_search = $_GET['search'];
         else 
             $_search = null;
-        if($_search!=null){
-            $_column = 'p_id,p_title';
-            $_query = $_db->SELECT($_column, $_table, $_where);
-            $_query = $_query.'ORDER BY p_id DESC';
-            $_obj_statement = $_db->execute_query($_query);
-            if($_obj_statement != false)
-                $_product = $_obj_statement->fetch();
-            else {
-                $_error = $_db->_error;
-                require 'admin.php';
-            }
-            $_array_where = [];
-            while(!empty($_product)){
-                $_title = "_".$_product['p_title'];
-                if(stripos($_title,$_search)!=false){
-                    $_p_id = $_product['p_id'];
-                    $_array_where[]="p_id=$_p_id";
-                } else 
-                    $_array_where[]="p_id=' '";
-                $_product=$_obj_statement->fetch();
-            }
-        }
-        
+        if($_search!=null)
+            $_where="p_title LIKE '%$_search%'";
+        else 
+            $_where = 1;
+        $_table = 'posts';
         $_column = '*';
-        if(!empty($_array_where))
-            $_where = implode(" or ",$_array_where);
+        
         $_query=$_db->SELECT($_column, $_table, $_where);
-        $_query = $_query.$_ORDER_BY;
+        $_query = $_query.'ORDER BY p_id DESC';
         $_obj_statement = $_db->execute_query($_query);
         if($_obj_statement!=false)
             $_product=$_obj_statement->fetch();
