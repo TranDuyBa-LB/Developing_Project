@@ -10,7 +10,7 @@
     $_table = 'posts';
 
     if($_search!=null)
-        $_where = "p_title or p_content or p_demo LIKE '%$_search%'";
+        $_where = "p_title or p_demo LIKE '%$_search%'";
     else 
         $_where = 1;
 

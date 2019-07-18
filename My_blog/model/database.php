@@ -26,7 +26,7 @@
                     if(empty($this->_object_db))
                         return false;
                     else{
-                        $this->__object_db = NULL;
+                        $this->_object_db = NULL;
                     }
                 }
 

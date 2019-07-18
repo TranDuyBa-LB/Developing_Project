@@ -59,8 +59,32 @@
     }
     
     //Đổi mật khẩu
-    function change_password(){
-        
+    function change_password($_post){
+        GLOBAL $_db;
+        session_start();
+        $_a_id=$_SESSION['user'];
+        if($_post['pass_new']===$_post['repeat_pass_new']){
+            $_a_password = md5($_post['password']);
+            $_table="admin";
+            $_column = 'a_id';
+            $_where = "a_id='$_a_id' AND a_password='$_a_password'";
+            $_query = $_db->SELECT($_column,$_table,$_where);
+            $_obj_statement = $_db->execute_query($_query);
+            $_product = $_obj_statement->fetch();
+            if(!empty($_product)) {
+                $_pass_new = md5($_post['pass_new']);
+                $_set = "a_password='$_pass_new'";
+                $_query = $_db->UPDATE($_table,$_set,$_where);
+                $_obj_statement = $_db->execute_query($_query);
+                if($_obj_statement!=false)
+                    header ('Location:../../views/admin/admin.php?request=tableManage_posts&error=Đổi password thành công !');
+                else
+                    header ('Location:../../views/admin/admin.php?request=tableManage_posts&error=Đổi password không thành công !');
+            } else
+                header ('Location:../../views/admin/admin.php?request=tableManage_posts&error=Mật khẩu cũ không đúng');
+        }
+        else 
+            logout();
     }
 
 
@@ -155,20 +179,24 @@
     }
 
 
-
-    if($_SERVER['REQUEST_METHOD']=='POST'){
-        if($_POST['request']=='create_admin')
-            create_admin($_POST);
-        else if ($_POST['request']=='create_posts')
-            create_posts($_POST);
-        else if ($_POST['request']=='change_interface_website')
-            change_interface($_POST,$_FILES);
-            
-    } else if($_SERVER['REQUEST_METHOD']=='GET'){
-        if($_GET['action']=='delete_posts')
-            delete_posts($_GET['id_posts']);
-        else if($_GET['action']=='logout')
-            logout();
-    }
+    require '../check/function_check.php';
+    if(check_session()==true){
+        if($_SERVER['REQUEST_METHOD']=='POST'){
+            if($_POST['request']=='create_admin')
+                create_admin($_POST);
+            else if ($_POST['request']=='create_posts')
+                create_posts($_POST);
+            else if ($_POST['request']=='change_interface_website')
+                change_interface($_POST,$_FILES);
+            else if ($_POST['request']=='change_password')
+                change_password($_POST);
+        } else if($_SERVER['REQUEST_METHOD']=='GET'){
+            if($_GET['action']=='delete_posts')
+                delete_posts($_GET['id_posts']);
+            else if($_GET['action']=='logout')
+                logout();
+        }
+    } else
+        header ('Location:../../index.php');
 
  ?>

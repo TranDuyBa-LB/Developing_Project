@@ -1,8 +1,9 @@
-function repeat_passoword(value_1,value_2){
-    var v1 = document.getElementById(value_1).value;
-    var v2 = document.getElementById(value_2).value;
-    if(v1!=v2){
-        alert('Mật khẩu không trùng khớp !');
+function repeat_passoword(pass_new,repeat_pass_new){
+    var p1 = document.getElementById('pass_new').value;
+    var p2 = document.getElementById('repeat_pass_new').value;
+    if(p1!=p2){
+        alert('Mật khẩu mới không trùng khớp !');
         return false;
-    }
+    } else 
+        return true;
 }

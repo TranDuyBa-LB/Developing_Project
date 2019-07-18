@@ -51,6 +51,9 @@
             }
             if(empty($_product))
                 header ('Location:../../index.php');
+            else {
+                return true;
+            }
         } else 
             header ('Location:../../index.php');
     }

@@ -4,7 +4,8 @@
 
     $_db = new database();
 
-    check_session();
+    if(check_session()!=true)
+        header ('Location:../../index.php');
 
     $_column = 'a_nickname';
     $_table = 'admin';
@@ -72,7 +73,7 @@
                     </li>
                     <li>
                         <img src="../images/img_designs/change_password.png" /> 
-                        <a href="javascript:void(0);"  id="change_password" >Đổi mật khẩu</a>
+                        <a href="admin.php?request=change_password"  id="change_password" >Đổi mật khẩu</a>
                     </li>
                 </ul>
             </div>
@@ -81,6 +82,8 @@
                     if(!empty($_GET['request'])){
                         if($_GET['request']=='tableManage_posts')
                             require('tableManage_posts/Manage_posts.php');
+                        else if($_GET['request']=='change_password')
+                            require ('change_password.php');
                         else 
                             require('create_posts.php');
                     }
