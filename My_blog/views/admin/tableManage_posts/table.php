@@ -3,6 +3,7 @@
         $_db=new database();
 
         //Sắp xếp theo bảng chọn option
+        $_ORDER_BY = 'ORDER BY p_id DESC';
         if(empty($_GET['request_select']))
             $_request_select = 'latest';
         else 
@@ -30,7 +31,7 @@
         $_column = '*';
         
         $_query=$_db->SELECT($_column, $_table, $_where);
-        $_query = $_query.'ORDER BY p_id DESC';
+        $_query = $_query.$_ORDER_BY;
         $_obj_statement = $_db->execute_query($_query);
         if($_obj_statement!=false)
             $_product=$_obj_statement->fetch();
@@ -44,10 +45,11 @@
         <th>Tiêu đề</th>
         <th>Chủ đề</th>
         <th>Số views</th>
-        <th>Số share</th>
-        <th>Số comment</th>
+        <!--<th>Số share</th>-->
+        <!--<th>Số comment</th>-->
         <th>Người viết</th>
         <th>Thời gian đăng</th>
+        <th>Thời gian sửa</th>
         <th>Sửa</th>
         <th>Xóa</th>
     </tr>
@@ -63,15 +65,14 @@
             <td> <?php echo $_product['p_title']; ?> </td>
             <td> <?php echo $_product['p_list'] ?> </td>
             <td> <?php echo $_product['p_views'] ?> </td>
-            <td> <?php echo $_product['p_share'] ?> </td>
-            <td>0</td>
             <td> <?php echo $_product['p_writer'] ?> </td>
             <td> <?php echo $_product['p_date'] ?> </td>
+            <td> <?php echo $_product['p_date_changePosts'] ?> </td>
             <td>
-                <a href="javascript:void(0)">Sửa</a>
+                <a href="admin.php?editPosts=true&id_posts=<?php echo $_product['p_id']; ?>">Sửa</a>
             </td>
             <td>
-                <a href="../../controller/admin/request_admin.php?id_posts=<?php echo $_product['p_id'] ?>&action=delete_posts">Xóa</a>
+                <a href="../../controller/admin/request_admin.php&id_posts=<?php echo $_product['p_id']; ?>&action=delete_posts">Xóa</a>
             </td>
         </tr>
     <?php 

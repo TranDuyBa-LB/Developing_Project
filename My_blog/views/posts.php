@@ -23,6 +23,16 @@
         }
         require '../controller/posts/check_views.php';
     }
+    $_column = '*';
+    $_table = 'interface';
+    $_where = 1;
+
+    $_query = $_db->SELECT($_column,$_table,$_where);
+    $_obj_statement=$_db->execute_query($_query);
+    if($_obj_statement!=false)
+        $_product_interface=$_obj_statement->fetch();
+    else 
+        echo "<script>alert('Phát sinh lỗi trong quá trình setup interface !')</script>";
  ?>
 <!DOCTYPE html>
 <html>
@@ -30,6 +40,7 @@
         <title>Bài viết</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" type="img/png" href="../views/images/img_designs/short_cut.png" />
         <link rel="stylesheet" type="text/css" href="css/header.css" />
         <link rel="stylesheet" type="text/css" href="css/footer.css" />
         <link rel="stylesheet" type="text/css" href="css/content_posts.css" />
@@ -38,39 +49,39 @@
     </head>
     <body>
         <div id="header">
-            <div id="logo">
-                <a href="http://localhost:8080/Developing_Project/My_blog/" title="BL Blog">
-                    <img src="images/img_designs/My_Logo.png" />
-                    <div></div>
-                    <h1>TranDuyBa-LB</h1>
-                </a>
+                <div id="logo">
+                    <a href="http://localhost:8080/Developing_Project/My_blog/" title="BL Blog">
+                        <img src="../<?php echo $_product_interface['i_link_logo']; ?>" />
+                        <div></div>
+                        <h1><?php echo $_product_interface['i_title']; ?></h1>
+                    </a>
+                </div>
+                <div id="slogan">
+                    <p><?php echo $_product_interface['i_slogan']; ?></p>
+                </div>
+                <div id="info">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/TranDuyBa.LB">
+                                <img src="../views/images/img_designs/facebook.png" title="facebook" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/TranDuyBa-LB">
+                                <img src="../views/images/img_designs/github.png" title="GitHub" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" >
+                                <img src="../views/images/img_designs/gmail.png" title="Gmail" /> 
+                            </a>
+                            <div id="gmail_header">
+                                <p><?php echo $_product_interface['i_email']; ?></p>
+                            </div>
+                        </li>
+                    </ul>   
+                </div>
             </div>
-            <div id="slogan">
-                <p>Đừng chỉ mãi đi ghi nhớ lịch sử của người khác mà hãy tự mình tạo lên lịch sử</p>
-            </div>
-            <div id="info">
-                <ul>
-                    <li>
-                        <a href="https://www.facebook.com/TranDuyBa.LB">
-                            <img src="images/img_designs/facebook.png" title="facebook" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/TranDuyBa-LB">
-                            <img src="images/img_designs/github.png" title="GitHub" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <img src="images/img_designs/gmail.png" title="Gmail" /> 
-                        </a>
-                        <div id="gmail_header">
-                            <p>tranduyba2599@gmail.com</p>
-                        </div>
-                    </li>
-                </ul>  
-            </div>
-        </div>
         <div id="content_posts">
             <?php if(!empty($_product)): ?>
             <h2 name = "title" > 

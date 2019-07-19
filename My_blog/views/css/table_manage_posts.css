@@ -82,10 +82,10 @@
     text-decoration: none;
     padding-top: 10px;
 }
-#table_posts tbody tr td:nth-child(9) a {
+#table_posts tbody tr td:nth-child(8) a {
     background-color: rgb(61, 145, 255);
 }
-#table_posts tbody tr td:nth-child(10) a {
+#table_posts tbody tr td:nth-child(9) a {
     background-color: rgb(255, 67, 67);
 }
 #table_posts tbody tr td a:hover {

@@ -29,7 +29,7 @@
     <div class="list_posts">
         <h2>
             <!--title-->
-            <a href="views/posts.php?id_posts=<?php echo $_product['p_id']; ?>" target="_blank" >
+            <a href="views/posts.php?id_posts=<?php echo $_product['p_id']; ?>" >
                 <?php echo $_product['p_title']; ?>
             </a>
         </h2>

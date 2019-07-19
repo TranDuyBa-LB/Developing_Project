@@ -9,7 +9,7 @@
     function create_posts($_posts){
         GLOBAL $_db;
 
-        $_date = date('h:i-d/m/y');
+        $_date = date('h:ia-d/m/y');
         $_writer = htmlentities($_posts['writer']);
         $_title = htmlentities($_posts['title']);
         $_demo = htmlentities($_posts['demo']);
@@ -31,6 +31,30 @@
 
     }
 
+    //Chỉnh sửa bài viết
+    function change_posts($_post){
+        GLOBAL $_db;
+
+        $_id_posts = (int)$_post['id_posts'];
+        $_title = $_post['title'];
+        $_list = $_post['list'];
+        $_demo = $_post['demo'];
+        $_content = $_post['content'];
+        $_date_ChangePost = date('h:ia-d/m/y');
+
+        $_table = 'posts';
+        $_set = "p_title='$_title',p_list='$_list',p_demo='$_demo',p_content='$_content',p_date_changePosts='$_date_ChangePost'";
+        $_where = "p_id=$_id_posts";
+
+        $_query = $_db->UPDATE($_table,$_set,$_where);
+        $_obj_statement = $_db->execute_query($_query);
+
+        if($_obj_statement!=false)
+            header('Location:../../views/admin/admin.php?request=tableManage_posts&error=Chỉnh sửa bài viết thành công !');
+        else 
+            header('Location:../../views/admin/admin.php?request=tableManage_posts&error=Chỉnh sửa bài viết không thành công !');
+    }
+
     //Tạo mới một tài khoản Admin
     function create_admin($_post){
         GLOBAL $_db;
@@ -40,7 +64,7 @@
         $_user_name = $_post['user_name'];
         $_nickname = $_post['nickname'];
         $_password = md5($_post['password']);
-        $_date = date('h:i-d/m/y');
+        $_date = date('h:ia-d/m/y');
         $_id_user = md5($_user_name);
 
         if(check_create_admin($_user_name,$_nickname)){
@@ -64,6 +88,7 @@
         session_start();
         $_a_id=$_SESSION['user'];
         if($_post['pass_new']===$_post['repeat_pass_new']){
+            $_date_changePass = $_date = date('h:ia-d/m/y');
             $_a_password = md5($_post['password']);
             $_table="admin";
             $_column = 'a_id';
@@ -73,7 +98,7 @@
             $_product = $_obj_statement->fetch();
             if(!empty($_product)) {
                 $_pass_new = md5($_post['pass_new']);
-                $_set = "a_password='$_pass_new'";
+                $_set = "a_password='$_pass_new', a_date_changePass='$_date_changePass'";
                 $_query = $_db->UPDATE($_table,$_set,$_where);
                 $_obj_statement = $_db->execute_query($_query);
                 if($_obj_statement!=false)
@@ -115,6 +140,7 @@
     //Thay đổi giao diện web
     function change_interface($_post,$_files){
         GLOBAL $_db;
+        $_date_changeInterFace = date('h:ia-d/m/y');
         $_column=[];
         $_values=[];
         if(!empty($_post)){
@@ -144,7 +170,8 @@
                 $_values[]="'$_slogan'";
             }
         }
-
+        $_column[] = 'i_change';
+        $_values[] = "'$_date_changeInterFace'";
         $_table = 'interface';
 
         //Select kiểm tra xem đã có dữ liệu chưa
@@ -160,7 +187,7 @@
             $_obj_statement=$_db->execute_query($_query);
 
             if($_obj_statement!=false)
-                header ('Location:../../views/admin/admin.php?error=Thêm giao diện thành công !');
+                header ("Location:../../views/admin/admin.php?error=Thêm giao diện thành công !");
             else 
                 header ('Location:../../views/admin/admin.php?error=Thêm giao diện không thành công !');
         } else {
@@ -190,6 +217,8 @@
                 change_interface($_POST,$_FILES);
             else if ($_POST['request']=='change_password')
                 change_password($_POST);
+            else if ($_POST['request']=='change_Posts')
+                change_posts($_POST);
         } else if($_SERVER['REQUEST_METHOD']=='GET'){
             if($_GET['action']=='delete_posts')
                 delete_posts($_GET['id_posts']);

@@ -28,6 +28,7 @@
         <title>Quản trị viên</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" type="img/png" href="../../views/images/img_designs/short_cut.png" />
         <link rel="stylesheet" type="text/css" href="../css/admin.css" />
         <link rel="stylesheet" type="text/css" href="../css/table_manage_posts.css" />
         <link rel="stylesheet" type="text/css" href="../css/change_password.css" />
