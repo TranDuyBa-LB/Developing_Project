@@ -61,7 +61,7 @@
                 </ul>   
             </div>
         </div>
-        <input id="search" type="text" placeholder="Tìm kiếm bài viết..." />
+        <input id="search" type="text" placeholder="Tìm kiếm bài viết theo tiêu đề..." />
         <div id="content">
             
         </div>

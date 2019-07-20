@@ -140,11 +140,13 @@
     //Thay đổi giao diện web
     function change_interface($_post,$_files){
         GLOBAL $_db;
-        $_date_changeInterFace = date('h:ia-d/m/y');
-        $_column=[];
-        $_values=[];
         if(!empty($_post)){
-            if(!empty($_files)){
+
+            $_date_changeInterFace = date('h:ia-d/m/y');
+            $_column=[];
+            $_values=[];
+
+            if(!empty($_files['file_logo']['name'])){
                 if($_files['file_logo']['error']>0)
                     header ('Location:../../views/admin/admin.php?error=File up load bị lỗi !');
                 else {
@@ -169,40 +171,42 @@
                 $_column[]='i_slogan';
                 $_values[]="'$_slogan'";
             }
+
+            $_column[] = 'i_date_change';
+            $_values[] = "'$_date_changeInterFace'";
+            $_table = 'interface';
+
+            //Select kiểm tra xem đã có dữ liệu chưa
+            $_query = $_db->SELECT('*',$_table,1);
+            $_product = ($_db->execute_query($_query))->fetch();
+
+            if(empty($_product)) {
+            
+                $_column_ = implode(',',$_column); //Nối mảng cột thành một chuỗi gồm các cột cần INSERT
+                $_values_ = implode(',',$_values); //Nối mảng vlue thành một chuỗi gồm các giá trị cần INSERT
+
+                $_query = $_db->INSERT($_column_, $_table, $_values_);
+                $_obj_statement=$_db->execute_query($_query);
+                
+                if($_obj_statement!=false)
+                    header ("Location:../../views/admin/admin.php?error=Thêm giao diện thành công !");
+                else 
+                    header ('Location:../../views/admin/admin.php?error=Thêm giao diện không thành công !');
+            } else {
+                $_set=[];
+                foreach ($_column as $key => $_cl)
+                    $_set[]="$_cl=$_values[$key]";
+                $_set_ = implode(',',$_set);
+
+                $_query = $_db->UPDATE($_table,$_set_,"i_email<>'1'");
+                $_obj_statement=$_db->execute_query($_query);
+                if($_obj_statement!=false)
+                    header ('Location:../../views/admin/admin.php?error=Thay đổi giao diện không thành công !');
+                else
+                    header ('Location:../../views/admin/admin.php?error=Thay đổi giao diện thành công !');
+            }       
+
         }
-        $_column[] = 'i_change';
-        $_values[] = "'$_date_changeInterFace'";
-        $_table = 'interface';
-
-        //Select kiểm tra xem đã có dữ liệu chưa
-        $_query = $_db->SELECT('*',$_table,1);
-        $_product = ($_db->execute_query($_query))->fetch();
-
-        if(empty($_product)) {
-        
-            $_column_ = implode(',',$_column); //Nối mảng cột thành một chuỗi gồm các cột cần INSERT
-            $_values_ = implode(',',$_values); //Nối mảng vlue thành một chuỗi gồm các giá trị cần INSERT
-
-            $_query = $_db->INSERT($_column_, $_table, $_values_);
-            $_obj_statement=$_db->execute_query($_query);
-
-            if($_obj_statement!=false)
-                header ("Location:../../views/admin/admin.php?error=Thêm giao diện thành công !");
-            else 
-                header ('Location:../../views/admin/admin.php?error=Thêm giao diện không thành công !');
-        } else {
-            $_set=[];
-            foreach ($_column as $key => $_cl)
-                $_set[]="$_cl=$_values[$key]";
-            $_set_ = implode(',',$_set);
-
-            $_query = $_db->UPDATE($_table,$_set_,"i_email<>'1'");
-            $_obj_statement=$_db->execute_query($_query);
-            if($_obj_statement!=false)
-                header ('Location:../../views/admin/admin.php?error=Thay đổi giao diện không thành công !');
-            else
-                header ('Location:../../views/admin/admin.php?error=Thay đổi giao diện thành công !');
-        }       
     }
 
 
