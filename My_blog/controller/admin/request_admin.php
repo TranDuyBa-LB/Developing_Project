@@ -209,7 +209,6 @@
         }
     }
 
-
     require '../check/function_check.php';
     if(check_session()==true){
         if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -226,6 +225,8 @@
         } else if($_SERVER['REQUEST_METHOD']=='GET'){
             if($_GET['action']=='delete_posts')
                 delete_posts($_GET['id_posts']);
+            else if($_GET['request']=='add_list')
+                add_list();
             else if($_GET['action']=='logout')
                 logout();
         }

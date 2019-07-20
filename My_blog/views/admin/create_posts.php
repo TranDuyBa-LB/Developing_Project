@@ -35,9 +35,25 @@
 <form action="../../controller/admin/request_admin.php" method="POST">
     <div id="create_posts">
         <input type="text" value="<?php echo $_product['a_nickname']; ?> (người viết)" readonly="false" placeholder="Người viết..." required />
-        <input type="text" name="list" placeholder="Chuyên mục..." value="<?php echo $_list; ?>" \ required />
-        <textarea id="title_posts" name="title" placeholder="Tiêu đề bài viết..."  required ><?php echo $_title; ?></textarea>
-        <textarea id="title_posts" name="demo" placeholder="Demo ngắn gọn bài viết..."  required ><?php echo $_demo; ?></textarea>
+        <select name='list' value="<?php echo $_list; ?>" >
+            <?php
+                if(empty($_list)){
+                    require '../../controller/admin/function_admin.php';
+                    $_obj_statement_list = select_list();
+                    $_list = $_obj_statement_list->fetch();
+                    while(!empty($_list)){
+                        $_l_name = $_list['l_name'];
+                        echo "<ontion>$_l_name</option>";
+                        $_list=$_obj_statement_list->fetch();
+                    }
+                } else 
+                    echo "<option>$_list</option>";
+             ?>
+        </select>
+        <input name="list_new" placeholder="Tạo thể loại mới..." />
+        <a href="../../controller/admin/request_admin.php?request=add_list" >Tạo</a>
+        <textarea  name="title" placeholder="Tiêu đề bài viết..."  required ><?php echo $_title; ?></textarea>
+        <textarea  name="demo" placeholder="Demo ngắn gọn bài viết..."  required ><?php echo $_demo; ?></textarea>
         <textarea id="content_posts" name="content"><?php echo $_content; ?></textarea>   
         <input type="hidden" name="writer" value="<?php echo $_product['a_nickname']; ?>" />
         <input type="hidden" name="request" value="<?php echo $_request; ?>" />
