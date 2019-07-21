@@ -209,6 +209,24 @@
         }
     }
 
+    function add_list($_get){
+        if(!empty($_get)){
+            if(!empty($_get['new_list'])){
+                GLOBAL $_db;
+                $_new_list = $_get['new_list'];
+                $_new_list = "'$_new_list'";
+                $_query = $_db->INSERT('l_name','list',$_new_list);
+                $_obj_statement = $_db->execute_query($_query);
+                if($_obj_statement!=false)
+                    header('Location:../../views/admin/admin.php?error=Tạo chuyên mục mới thành công !');
+                else
+                    header('Location:../../views/admin/admin.php?error=Tạochuyên mục mới không thành công !');
+            } else
+                header('Location:../../views/admin/admin.php?error=Bạn chưa điền tên chuyên mục mới !');
+        } else  
+            header('Location:../../views/admin/admin.php?error=Lỗi yêu cầu !');
+    }
+
     require '../check/function_check.php';
     if(check_session()==true){
         if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -226,7 +244,7 @@
             if($_GET['action']=='delete_posts')
                 delete_posts($_GET['id_posts']);
             else if($_GET['request']=='add_list')
-                add_list();
+                add_list($_GET);
             else if($_GET['action']=='logout')
                 logout();
         }

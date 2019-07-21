@@ -35,7 +35,7 @@
 <form action="../../controller/admin/request_admin.php" method="POST">
     <div id="create_posts">
         <input type="text" value="<?php echo $_product['a_nickname']; ?> (người viết)" readonly="false" placeholder="Người viết..." required />
-        <select name='list' value="<?php echo $_list; ?>" >
+        <select name='list' >
             <?php
                 if(empty($_list)){
                     require '../../controller/admin/function_admin.php';
@@ -50,8 +50,13 @@
                     echo "<option>$_list</option>";
              ?>
         </select>
-        <input name="list_new" placeholder="Tạo thể loại mới..." />
-        <a href="../../controller/admin/request_admin.php?request=add_list" >Tạo</a>
+        <input id="input_list" placeholder="Tạo thể loại mới..." onkeyup="add_list()" />
+        <a id="add_list" href="javascript:void(0)" >Tạo</a>
+        <script>
+            function add_list(){
+                document.getElementById('add_list').href="../../controller/admin/request_admin.php?request=add_list&new_list="+document.getElementById('input_list').value;
+            }
+        </script>
         <textarea  name="title" placeholder="Tiêu đề bài viết..."  required ><?php echo $_title; ?></textarea>
         <textarea  name="demo" placeholder="Demo ngắn gọn bài viết..."  required ><?php echo $_demo; ?></textarea>
         <textarea id="content_posts" name="content"><?php echo $_content; ?></textarea>   
