@@ -37,24 +37,31 @@
         <input type="text" value="<?php echo $_product['a_nickname']; ?> (người viết)" readonly="false" placeholder="Người viết..." required />
         <select name='list' >
             <?php
-                if(empty($_list)){
-                    require '../../controller/admin/function_admin.php';
-                    $_obj_statement_list = select_list();
-                    $_list = $_obj_statement_list->fetch();
-                    while(!empty($_list)){
-                        $_l_name = $_list['l_name'];
-                        echo "<ontion>$_l_name</option>";
-                        $_list=$_obj_statement_list->fetch();
+                require '../../controller/admin/function_admin.php';
+                $_obj_statement_list = select_list();
+                $_list_ = $_obj_statement_list->fetch();
+                if(empty($_list_)){
+                    while(!empty($_list_)){
+                        $_l_name = $_list_['l_name'];
+                        echo "<option>$_l_name</option>";
+                        $_list_=$_obj_statement_list->fetch();
                     }
-                } else 
+                } else {
                     echo "<option>$_list</option>";
+                    while(!empty($_list_)){
+                        $_l_name = $_list_['l_name'];
+                        if($_l_name!=$_list)
+                            echo "<option>$_l_name</option>";
+                        $_list_=$_obj_statement_list->fetch();
+                    }
+                }
              ?>
         </select>
         <input id="input_list" placeholder="Tạo thể loại mới..." onkeyup="add_list()" />
         <a id="add_list" href="javascript:void(0)" >Tạo</a>
         <script>
             function add_list(){
-                document.getElementById('add_list').href="../../controller/admin/request_admin.php?request=add_list&new_list="+document.getElementById('input_list').value;
+                document.getElementById('add_list').href="../../controller/admin/request_admin.php?action=add_list&new_list="+document.getElementById('input_list').value;
             }
         </script>
         <textarea  name="title" placeholder="Tiêu đề bài viết..."  required ><?php echo $_title; ?></textarea>

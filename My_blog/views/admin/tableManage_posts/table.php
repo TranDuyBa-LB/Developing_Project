@@ -72,7 +72,7 @@
                 <a href="admin.php?editPosts=true&id_posts=<?php echo $_product['p_id']; ?>">Sửa</a>
             </td>
             <td>
-                <a href="../../controller/admin/request_admin.php&id_posts=<?php echo $_product['p_id']; ?>&action=delete_posts">Xóa</a>
+                <a href="../../controller/admin/request_admin.php?id_posts=<?php echo $_product['p_id']; ?>&action=delete_posts">Xóa</a>
             </td>
         </tr>
     <?php 

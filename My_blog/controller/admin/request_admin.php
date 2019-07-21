@@ -8,7 +8,7 @@
     //Tạo mới một bài viết
     function create_posts($_posts){
         GLOBAL $_db;
-
+        
         $_date = date('h:ia-d/m/y');
         $_writer = htmlentities($_posts['writer']);
         $_title = htmlentities($_posts['title']);
@@ -75,20 +75,20 @@
             $_obj_statement = $_db->execute_query($_query);
             if($_obj_statement!=false)
                 header ('Location:../../views/admin/admin.php?error=Tạo tài khoản Admin thành công !');
-            else{
-                echo "<script>console.log('$_error');</script>";
+            else
                 header ('Location:../../views/admin/admin.php?error=Tạo tài khoản Admin không công !');
-            }
         }
     }
     
     //Đổi mật khẩu
     function change_password($_post){
         GLOBAL $_db;
-        session_start();
+        if(empty($_SESSION)) { 
+            session_start(); 
+        }
         $_a_id=$_SESSION['user'];
         if($_post['pass_new']===$_post['repeat_pass_new']){
-            $_date_changePass = $_date = date('h:ia-d/m/y');
+            $_date_changePass = date('h:ia-d/m/y');
             $_a_password = md5($_post['password']);
             $_table="admin";
             $_column = 'a_id';
@@ -132,7 +132,9 @@
 
     //Đăng xuất khỏi admin
     function logout() {
-        session_start();
+        if(empty($_SESSION)) { 
+            session_start(); 
+        }
         $_SESSION['user']=NULL;
         header ('Location:../../index.php');
     }
@@ -243,7 +245,7 @@
         } else if($_SERVER['REQUEST_METHOD']=='GET'){
             if($_GET['action']=='delete_posts')
                 delete_posts($_GET['id_posts']);
-            else if($_GET['request']=='add_list')
+            else if($_GET['action']=='add_list')
                 add_list($_GET);
             else if($_GET['action']=='logout')
                 logout();

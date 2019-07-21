@@ -26,10 +26,10 @@
                     } else 
                         return true;
                 } else
-                    echo "<script>console.log('$_error');</script>";
+                    echo "<script>console.log('Có lỗi trong quá trình thực thi query nick_name !');</script>";
             }
         } else 
-            echo "<script>console.log('$_error');</script>";
+            echo "<script>console.log('Có lỗi trong quá trình thực thi query user_name !');</script>";
     }
 
     function check_session(){
