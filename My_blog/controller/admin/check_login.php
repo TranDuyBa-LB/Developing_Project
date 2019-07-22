@@ -24,7 +24,6 @@
             if(md5($_POST['user_password']) === $_product['a_password']) {
                 session_start();
                 $_SESSION['user']=md5($_POST['user_name']);
-                echo "haha!";
                 header ('Location:../../views/admin/admin.php');
             } else 
                 header ('Location:../../views/login.php?id_login=fe8b4dc9c9b47e55a04cca4563841f79&error=Sai mật khẩu !');
