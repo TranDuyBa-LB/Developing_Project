@@ -12,9 +12,6 @@ function ajax_admin(request_url){
     xmlhttp.send();
 }
 
-document.getElementById('create_admin').onclick = function(){
-    ajax_admin("create_admin.php");
-}
 document.getElementById('change_interface_website').onclick = function(){
     ajax_admin("change_interface_Website.php");
 }

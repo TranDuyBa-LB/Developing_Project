@@ -70,7 +70,7 @@
                     </li>
                     <li>
                         <img src="../images/img_designs/create_account.png" /> 
-                        <a href="javascript:void(0);"  id="create_admin" >Tạo tài khoản</a>
+                        <a href="admin.php?request=create_admin" id="create_admin" >Tạo tài khoản</a>
                     </li>
                     <li>
                         <img src="../images/img_designs/change_password.png" /> 
@@ -85,6 +85,8 @@
                             require('tableManage_posts/Manage_posts.php');
                         else if($_GET['request']=='change_password')
                             require ('change_password.php');
+                        else if($_GET['request']=='create_admin')
+                            require ('create_admin.php');
                         else 
                             require('create_posts.php');
                     }

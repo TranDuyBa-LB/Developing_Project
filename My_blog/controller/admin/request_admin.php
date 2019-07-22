@@ -59,8 +59,6 @@
     function create_admin($_post){
         GLOBAL $_db;
 
-        require '../../controller/check/function_check.php';
-
         $_user_name = $_post['user_name'];
         $_nickname = $_post['nickname'];
         $_password = md5($_post['password']);
