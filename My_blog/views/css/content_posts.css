@@ -67,16 +67,19 @@
     #content_posts div:nth-child(2) > p {
         font-size: 15px;
     }
+    #content_posts div:nth-child(2) > div{
+        display: block;
+    }
+    #content_posts div:nth-child(2) > img:nth-child(4){
+        margin-left: 0px !important;
+    }
     #content_posts div:nth-child(3) {
         margin-top: 20px;
         text-align: justify;
         font-size: 14px;
         line-height: 21px;
     }
-    #content_posts div:nth-child(2) > div{
-        display: block;
-    }
-    #content_posts div:nth-child(2) > img:nth-child(4){
-        margin-left: 0px !important;
+    #content_posts div:nth-child(3) img {
+        width: 100%;
     }
 }

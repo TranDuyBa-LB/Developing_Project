@@ -37,9 +37,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Bài viết</title>
+        <title><?php echo $_product['p_title']; ?></title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title"         content="<?php echo $_product['p_title']; ?>" />
+        <meta property="og:description"   content="<?php echo $_product['p_demo']; ?>" />
+        <meta property="og:image"         content="https://eobi.000webhostapp.com/views/images/img_designs/My_Logo_jpg.jpg" />
         <link rel="shortcut icon" type="img/png" href="../views/images/img_designs/short_cut.png" />
         <link rel="stylesheet" type="text/css" href="css/header.css" />
         <link rel="stylesheet" type="text/css" href="css/footer.css" />
@@ -118,7 +121,22 @@
             <div name="content" >
                 <?php echo $_product['p_content']; ?>
             </div>
-            <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Flocalhost%3A8080%2FDeveloping_Project%2FMy_blog%2F&layout=button&size=large&width=83&height=28&appId" width="83" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            <!--Share facebook-->
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+
+            <!-- Your share button code -->
+            <div class="fb-share-button" 
+                data-href="<?php echo "https://eobi.000webhostapp.com/views/posts.php?id_posts=".$_id; ?>" 
+                data-layout="button"
+                data-size="large">
+            </div>
             <?php endif; ?>
         </div>
         <div id="comments">
