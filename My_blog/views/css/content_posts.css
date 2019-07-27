@@ -46,6 +46,10 @@
     margin-top: 30px;
 }
 
+#content_posts iframe {
+    position: relative;
+    bottom: 10px;
+}
 /*----------------CSS cho thiết bị di động--------------------------*/
 @media only screen and (max-width: 414px ){
     #content_posts {
@@ -80,6 +84,7 @@
         line-height: 21px;
     }
     #content_posts div:nth-child(3) img {
-        width: 100%;
+        width: 100% !important;
+        object-fit: cover;
     }
 }
