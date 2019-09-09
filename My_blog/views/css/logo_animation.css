@@ -1,0 +1,46 @@
+#header #logo > div {
+    text-align: left;
+}
+#header #logo > div img {
+    width: 7%;
+    height: 7%; 
+    position: relative;
+}
+#header #logo > div img:nth-child(1){
+    width: 8.5%;
+    height: 8.5%;
+    margin-left: 45%;
+    transition: 2s;
+    z-index: 1;
+}
+#header #logo > div img:nth-child(2) {
+    margin-bottom: 0.57%;
+    margin-left: -50%;
+    transition: 2s;
+    z-index: 3;
+}
+#header #logo > div img:nth-child(3){
+    margin-bottom: 0.5%;
+    margin-left: 78%;
+    transition: 2s;
+    z-index: 2;
+}
+@media only screen and (max-width: 414px ) {
+    #header #logo > div img {
+        width: 20%;
+        height: 20%;
+    }
+    #header #logo > div img:nth-child(1){
+        width: 25%;
+        height: 25%;
+        margin-left: 37%;
+    }
+    #header #logo > div img:nth-child(2) {
+        margin-left: -60%;
+        margin-bottom: 1.68%;
+    }
+    #header #logo > div img:nth-child(3) {
+        margin-left: 52% ;
+        margin-bottom: 1.5%;
+    }
+}

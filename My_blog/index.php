@@ -1,11 +1,9 @@
 <?php
     require 'model/database.php';
     $_db = new database();
-
     $_column = '*';
     $_table = 'interface';
     $_where = 1;
-
     $_query = $_db->SELECT($_column,$_table,$_where);
     $_obj_statement=$_db->execute_query($_query);
     if($_obj_statement!=false)
@@ -20,6 +18,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" type="img/png" href="views/images/img_designs/short_cut.png" />
+        <link rel="stylesheet" type="text/css" href="views/css/logo_animation.css" />
         <link rel="stylesheet" type="text/css" href="views/css/header.css" />
         <link rel="stylesheet" type="text/css" href="views/css/content_index.css" />
         <link rel="stylesheet" type="text/css" href="views/css/footer.css" />
@@ -29,8 +28,12 @@
     <body>
         <div id="header">
             <div id="logo">
+                <div>
+                    <img id="logoMid" src="views/images/img_designs/imgLogoAnimation/mid.png" />
+                    <img id="logoLeft" src="views/images/img_designs/imgLogoAnimation/left.png" />
+                    <img id="logoRight" src="views/images/img_designs/imgLogoAnimation/right.png" />
+                </div>
                 <a href="http://localhost:8080/Developing_Project/My_blog/" title="BL Blog">
-                    <img src="<?php echo $_product['i_link_logo']; ?>" />
                     <div></div>
                     <h1><?php echo $_product['i_title']; ?></h1>
                 </a>
@@ -92,9 +95,11 @@
             <p>Design and Code: Trần Duy Bá-LB</p>
         </div>
         <script type="text/javascript" src="controller/ajax/listDemoPosts_index.js"></script>
+        <script type="text/javascript" src="views/js/logoAnimation.js"></script>
         <script type="text/javascript">
             window.onload=function(){
                  search();
+                 logoAnimation();
             }
         </script>
     </body>

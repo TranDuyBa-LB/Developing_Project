@@ -45,11 +45,6 @@
 #content_posts iframe {
     margin-top: 30px;
 }
-
-#content_posts iframe {
-    position: relative;
-    bottom: 10px;
-}
 /*----------------CSS cho thiết bị di động--------------------------*/
 @media only screen and (max-width: 414px ){
     #content_posts {

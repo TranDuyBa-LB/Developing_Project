@@ -20,8 +20,8 @@
     word-wrap: break-word;
 }
 #header #logo a img {
-    width: 13%;
-    height: 13%;
+    /* width: 13%;
+    height: 13%; */
 }
 #header #slogan {
     text-align: center;

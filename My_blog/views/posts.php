@@ -44,6 +44,7 @@
         <meta property="og:description"   content="<?php echo $_product['p_demo']; ?>" />
         <meta property="og:image"         content="https://eobi.000webhostapp.com/views/images/img_designs/My_Logo_jpg.jpg" />
         <link rel="shortcut icon" type="img/png" href="../views/images/img_designs/short_cut.png" />
+        <link rel="stylesheet" type="text/css" href="css/logo_animation.css" />
         <link rel="stylesheet" type="text/css" href="css/header.css" />
         <link rel="stylesheet" type="text/css" href="css/footer.css" />
         <link rel="stylesheet" type="text/css" href="css/content_posts.css" />
@@ -53,10 +54,14 @@
     <body>
         <div id="header">
                 <div id="logo">
+                    <div>
+                        <img id="logoMid" src="images/img_designs/imgLogoAnimation/mid.png" />
+                        <img id="logoLeft" src="images/img_designs/imgLogoAnimation/left.png" />
+                        <img id="logoRight" src="images/img_designs/imgLogoAnimation/right.png" />
+                    </div>
                     <a href="http://localhost:8080/Developing_Project/My_blog/" title="BL Blog">
-                        <img src="../<?php echo $_product_interface['i_link_logo']; ?>" />
                         <div></div>
-                        <h1><?php echo $_product_interface['i_title']; ?></h1>
+                        <h1><?php echo $_product['i_title']; ?></h1>
                     </a>
                 </div>
                 <div id="slogan">
@@ -168,4 +173,10 @@
             <p>Design and Code: Trần Duy Bá-LB</p>
         </div>
     </body>
+    <script type="text/javascript" src="js/logoAnimation.js"></script>
+    <script type="text/javascript">
+        window.onload=function(){
+                logoAnimation();
+        }
+    </script>
 </html>
