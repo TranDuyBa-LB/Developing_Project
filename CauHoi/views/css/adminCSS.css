@@ -1,0 +1,69 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto Slab', serif;
+}
+#tools {
+    width: 95%;
+    height: 50px;
+    margin: 0px auto;
+    border-bottom: 1px solid silver;
+}
+#tools #search {
+    width: 300px;
+    height: 60%;
+    margin-top: 8px;
+    margin-left: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+#tools p {
+    display: inline;
+    margin-left: 50px;
+
+}
+#tools select {
+    margin-left: 20px;
+    width: 150px;
+    height: 60%;
+    border-radius: 5px;
+}
+#numberQuestion {
+    font-size: 20px;
+    width: 95%;
+    color: rgb(59, 128, 255);
+    margin: 20px auto;
+}
+#listQuestion {
+    width: 95%;
+    margin: 10px auto;
+    border: 1px solid silver;
+    border-collapse: collapse;
+}
+#listQuestion .content {
+    width: 60%;
+    padding: 10px;
+}
+#listQuestion thead tr td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid silver;
+    background-color: rgb(255, 111, 111);
+    color: white;
+}
+#listQuestion tbody tr td:not(.content) {
+    padding: 10px;
+    text-align: center;
+}
+#listQuestion tbody tr {
+    background-color: rgb(255, 255, 255);
+}
+#listQuestion tbody tr:nth-child(odd){
+    background-color: rgb(241, 241, 241);
+}
+#listQuestion .confirm,.delete {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}

@@ -1,0 +1,55 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto Slab', serif;
+}
+#screen {
+    margin: 10px auto;
+    width: 25%;
+    height: auto;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+#screen > p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+#screen > p:nth-child(2) {
+    font-size: 13px;
+    color: rgb(255, 72, 72);
+}
+#screen input,select,textarea {
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+    font-size: 13px;
+}
+#screen input,select,textarea:focus {
+    outline: 0;
+}
+#screen input:nth-child(3) {
+    margin-top: 20px;
+    width: 80%;
+    height: 30px;
+    padding-left: 10px;
+    border: 1px solid silver;
+}
+#screen select {
+    margin-left: 10%;
+    width: 150px;
+    height: 30px;
+    padding-left: 10px;
+}
+#screen textarea {
+    width: 80%;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+#screen input:nth-child(6){
+    width: 30%;
+    height: 50px;
+    border: 1px solid silver;
+    margin-bottom: 20px;
+}
