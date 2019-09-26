@@ -8,9 +8,9 @@
     </head>
     <body>
         <div id="tools">
-            <input id="search" type="text" placeholder="Tìm kiếm câu hỏi..." />
+            <input id="search" type="text" placeholder="Tìm kiếm câu hỏi..." onkeyup="search()"/>
             <p>Sắp xếp theo nhóm</p>
-            <select name="sortTeam">
+            <select id="sortTeam" name="sortTeam" onchange="sortTeam()">
                 <option value="0">Tất cả các nhóm</option>
                 <option value="1">Nhóm 1</option>
                 <option value="2">Nhóm 2</option>
@@ -26,9 +26,9 @@
                 <option value="12">Nhóm 12</option>
             </select>
             <p>Sắp xếp theo thứ tự</p>
-            <select name="sortTime">
-                <option>Tăng dần</option>
-                <option>Giả dần</option>
+            <select id="sortTime" name="sortTime" onchange="sortTime()">
+                <option value="up">Tăng dần</option>
+                <option value="down" selected="selected">Giả dần</option>
             </select>
         </div>
         <table id="listQuestion" >

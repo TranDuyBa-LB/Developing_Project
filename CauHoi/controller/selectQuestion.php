@@ -1,16 +1,8 @@
 <?php 
     require '../model/database.php';
-
-    $objDB = new database();
-
-    $table = 'listquestions';
-    $column = '*';
-
-    $query = $objDB->SELECT($column,$table);
-    $data = $objDB->executeQuery($query);
-    $arrayData = $data->fetch();
 ?>
 <html>
+    <?php echo $query; ?>
     <?php while($arrayData!=null): ?>
         <tr>
             <td>
