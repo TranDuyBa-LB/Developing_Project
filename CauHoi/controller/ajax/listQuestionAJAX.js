@@ -1,31 +1,48 @@
-function selectQuestion(request) {
-    if(document.getElementById('search').value==""){
+function sort(request) {
+
+    if(Number(request)!=NaN)
         request = "../controller/selectQuestion.php?sort="+request;
-        console.log(request);
-    }
-    else {
-        request = "../controller/selectQuestion.php?search="+document.getElementById('search').value;
-        console.log(request);
-    }
+    else 
+        request = "../controller/selectQuestion.php?sort="+request;
+    console.log(request);
     var xmlhttp = new XMLHttpRequest() || ActiveXObject("Microsoft.XMLHTTP");
     xmlhttp.onreadystatechange = function() {
         if(xmlhttp.readyState==4 && xmlhttp.status==200){
             document.getElementById('contentQuestion').innerHTML=xmlhttp.responseText;
         }
     }
-    xmlhttp.open("POST","../controller/selectQuestion.php",true);
+    xmlhttp.open("POST",request,true);
     xmlhttp.send();
+
 }
 
-function sortTeam() {
-    var sortTeam = document.getElementById('sortTeam').value;
-    selectQuestion(sortTeam);
+function searchF(request) {
+
+    if(request==""||" ")
+        request = "../controller/selectQuestion.php?search="+request;
+    else    
+        request = "../controller/selectQuestion.php";
+    console.log(request);
+    var xmlhttp = new XMLHttpRequest() || ActiveXObject("Microsoft.XMLHTTP");
+    xmlhttp.onreadystatechange = function() {
+        if(xmlhttp.readyState==4 && xmlhttp.status==200){
+            document.getElementById('contentQuestion').innerHTML=xmlhttp.responseText;
+        }
+    }
+    xmlhttp.open("POST",request,true);
+    xmlhttp.send();
+
 }
-function sortTime() {
-    var sortTime = document.getElementById('sortTime').value;
-    selectQuestion(sortTime);
+
+function sortTeam(){
+    var team = document.getElementById('sortTeam').value;
+    sort(team);
 }
-function search() {
-    var search = document.getElementById('search').value;
-    selectQuestion(search);
+function sortTime(){
+    var time = document.getElementById('sortTime').value;
+    sort(time);
+}
+function search(){
+    var search= document.getElementById('search').value;
+    searchF(search);
 }

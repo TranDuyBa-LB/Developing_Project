@@ -30,6 +30,7 @@
                 <option value="up">Tăng dần</option>
                 <option value="down" selected="selected">Giả dần</option>
             </select>
+            <input id="stopQuestion" type="button" value="Ngừng nhận câu hỏi" name="stopQuestion" />
         </div>
         <table id="listQuestion" >
             <thead>
@@ -52,6 +53,10 @@
     <script>
         window.onload=function(){
             selectQuestion();
+            setInterval(function(){
+                selectQuestion();
+                console.log('Check !');
+            },1000);
         }
     </script>
 </html>
