@@ -62,11 +62,11 @@
                 $statement = $this->objDatabase->prepare($query);
                 $execute = $statement->execute();
                 $this->disConnectDB();
-                if($execute ==true){
+                if($execute==true){
                     return $statement;
                 }
                 else
-                    header('Location:../views/displayError.php?error=Không thể thực thi truy vấn !');
+                    header("Location:../views/displayError.php?error=Không thể thực thi truy vấn !");
             } catch(Exception $error){
                 $this->error['query'] = $error;
             }

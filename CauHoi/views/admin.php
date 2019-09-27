@@ -50,13 +50,4 @@
         </table>
     </body>
     <script type="text/javascript" src="../controller/ajax/listQuestionAJAX.js"></script>
-    <script>
-        window.onload=function(){
-            selectQuestion();
-            setInterval(function(){
-                selectQuestion();
-                console.log('Check !');
-            },1000);
-        }
-    </script>
 </html>
