@@ -10,11 +10,12 @@
         <title>Đặt câu hỏi</title>
         <meta charset="UTF-8" />
         <link rel="stylesheet" type="text/css" href="views/css/indexCSS.css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+        <!--<link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">-->
     </head>
     <body>
         <form action="controller/addQuestion.php" method="POST">
             <div id="screen">   
+                <img src="views/imgs/logo.png" />
                 <p>Mời bạn đặt câu hỏi</p>
                 <p id="warning">
                     <?php echo $error; ?>
@@ -41,4 +42,5 @@
         </form>
     </body>
     <script type="text/javascript" src="views/js/checkRequestIndex.js"></script>
+    <script type="text/javascript" src="views/js/displayIndex.js"></script>
 </html>

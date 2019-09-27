@@ -49,11 +49,25 @@
             <td>
                 <?php echo $arrayData['time']; ?>
             </td>
-            <td> 
-                <img class="confirm" src="imgs/notconfirm.png" /> 
-                <input type="hidden" name="delete" value="" />
+            <?php $id = $arrayData['id']; ?>
+            <td>
+                <?php
+                    $confirm =  $arrayData['confirm'];
+                    if($confirm==NULL || $confirm=='0')
+                        $srcImg='imgs/notconfirm.png';
+                    else    
+                        $srcImg='imgs/confirm.png';
+                ?>
+                <a href="<?php echo "../controller/requests.php?requestName=confirm&id=$id&confirm=$confirm"; ?>"> 
+                    <img class="confirm" src="<?php echo $srcImg; ?>" /> 
+                </a>
             </td>
-            <td> <img class="delete" src="imgs/delete.png" /> </td>
+            <td>
+                <a href="<?php echo "../controller/requests.php?requestName=delete&id=$id"; ?>"> 
+                    <img class="delete" src="imgs/delete.png" />
+                </a>
+                <input type="hidden" name="idDelete" value="<?php echo $id; ?>" />
+            </td>
         </tr>
         <?php $arrayData = $data->fetch(); ?>
     <?php endwhile; ?>

@@ -4,7 +4,7 @@
         <title>Quản lý câu hỏi</title>
         <meta charset="UTF-8" />
         <link rel="stylesheet" type="text/css" href="css/adminCSS.css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet" />
+        <!--<link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet" />-->
     </head>
     <body>
         <div id="tools">
@@ -30,7 +30,16 @@
                 <option value="up">Tăng dần</option>
                 <option value="down" selected="selected">Giả dần</option>
             </select>
-            <input id="stopQuestion" type="button" value="Ngừng nhận câu hỏi" name="stopQuestion" />
+           <span id="deleteAll">
+                <input type="button" value="DELETE ALL" />
+                <div id="windowConfirm">
+                    <p>Bạn chắc muốn xóa toàn bộ câu hỏi chứ ?</p>
+                    <a href="../controller/requests.php">
+                        <input type="button" value="Xác nhận" />
+                    </a>
+                    <input id="notConfirm" type="button" value="Hủy bỏ" onclick="notConfirm()"/>
+                </div>  
+            </span>
         </div>
         <table id="listQuestion" >
             <thead>
@@ -50,4 +59,5 @@
         </table>
     </body>
     <script type="text/javascript" src="../controller/ajax/listQuestionAJAX.js"></script>
+    <script type="text/javascript" src="js/confirmDeleteAll.js"></script>
 </html>

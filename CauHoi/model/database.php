@@ -42,7 +42,7 @@
                         VALUES ($values) ";
             return $insert;
         }
-        public function DELETE($table,$where=1){
+        public function DELETE($table,$where){
             $delete = " DELETE FROM $table WHERE $where";
             return $delete;
         }

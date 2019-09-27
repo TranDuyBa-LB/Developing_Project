@@ -20,4 +20,5 @@
     else {
         header('Location:../index.php?error=Gửi câu hỏi thành công !');
     }
+    
 ?>

@@ -1,7 +1,7 @@
 * {
     padding: 0px;
     margin: 0px;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto Slab', Arial;
 }
 #tools {
     width: 95%;
@@ -29,17 +29,79 @@
     height: 60%;
     border-radius: 5px;
 }
-#numberQuestion {
-    font-size: 20px;
-    width: 95%;
-    color: rgb(59, 128, 255);
-    margin: 20px auto;
+#tools #deleteAll {
+    float: right;
+    margin-top: 10px;
+    position: relative;
+}
+#tools #deleteAll > input {
+    width: 100px;
+    height: 30px;
+    border: 1px solid silver;
+    cursor: pointer;
+    background-color: rgb(255, 87, 87);
+    color: white;
+    border-radius: 5px;
+}
+#tools #deleteAll > div {
+    overflow: hidden;
+    position: absolute;
+    width: 300px; 
+    height: 0px;
+    left: -305%;
+    top: -20%;
+    background-color: rgba(54, 128, 238, 0.938);
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0px 0px 10px rgb(44, 44, 44);
+    transition: 0.5s;
+}
+#tools #deleteAll > div > p {
+    text-align: center;
+    display: block;
+    margin-left: 0px;
+    width: 90%;
+    margin: 10px auto;
+}
+#tools #deleteAll > div > a {
+    display: inline-block;
+    margin-left: 12%;
+}
+#tools #deleteAll > div > a input {
+    height: 40px;
+    width: 100px;
+    cursor: pointer;
+    background-color: rgb(163, 163, 163);
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+#tools #deleteAll > div > a input:hover {
+    background-color: rgb(255, 96, 96);
+    transition: 0.5s;
+}
+#tools #deleteAll > div > input {
+    margin-top: 15px;
+    margin-left: 20px;
+    height: 40px;
+    width: 100px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: white;
+    outline: 0;
+}
+#tools #deleteAll > div > input:hover {
+    border: 1px solid white;
+    border-radius: 5px;
 }
 #listQuestion {
     width: 95%;
     margin: 10px auto;
     border: 1px solid silver;
     border-collapse: collapse;
+    height: 200px;
+    overflow: hidden;
 }
 #listQuestion .content {
     width: 60%;
@@ -65,5 +127,4 @@
 #listQuestion .confirm,.delete {
     width: 30px;
     height: 30px;
-    cursor: pointer;
 }

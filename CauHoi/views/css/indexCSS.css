@@ -1,22 +1,34 @@
 * {
     padding: 0px;
     margin: 0px;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto Slab', Arial;
+}
+body {
+    background-color: rgb(243, 243, 243);
 }
 #screen {
-    margin: 10px auto;
-    width: 25%;
+    overflow: hidden;
+    margin: -100% auto;
+    width: 0px;
     height: auto;
-    border: 1px solid red;
-    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(146, 146, 146);
+    transition: 1s;
+    text-align: center;
 }
-
+#screen > img {
+    width: 100px;
+    height: 90px;
+    margin-top: 10px;
+}
 #screen > p {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 20px;
 }
-#screen > p:nth-child(2) {
+#screen > p:nth-child(3) {
     font-size: 13px;
     color: rgb(255, 72, 72);
 }
@@ -25,16 +37,16 @@
     margin: 20px auto;
     border-radius: 5px;
     font-size: 13px;
+    border: 1px solid rgb(148, 148, 148);
 }
 #screen input,select,textarea:focus {
     outline: 0;
 }
-#screen input:nth-child(3) {
+#screen input:nth-child(4) {
     margin-top: 20px;
     width: 80%;
     height: 30px;
     padding-left: 10px;
-    border: 1px solid silver;
 }
 #screen select {
     margin-left: 10%;
@@ -47,9 +59,19 @@
     padding-left: 10px;
     padding-top: 10px;
 }
-#screen input:nth-child(6){
+#screen input:nth-child(7){
     width: 30%;
     height: 50px;
-    border: 1px solid silver;
+    border: none;
     margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+    background-color: rgb(68, 127, 238);
+}
+#screen input:nth-child(7):hover {
+    transition: 0.5s;
+    box-shadow: 0px 0px 10px rgb(94, 94, 94);
+    background-color: rgb(255, 77, 77);
+    
 }
