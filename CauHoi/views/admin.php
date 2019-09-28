@@ -1,11 +1,21 @@
+<?php
+    session_start();
+    if(!empty($_SESSION['login'])){
+        if($_SESSION['login']!=true)
+            header('Location:../views/login.php?error=Đăng nhập không thành công. <br/> Nhấn vào "Gợi ý" để biết gì đó !');
+    }
+    else    
+        header('Location:../views/login.php?error=Đăng nhập không thành công. <br/> Nhấn vào "Gợi ý" để biết gì đó !');
+?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>Quản lý câu hỏi</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" type="img/png" href="imgs/logo.png" />
         <link rel="stylesheet" type="text/css" href="css/adminCSS.css" />
-        <!--<link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet" />-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet" />
     </head>
     <body>
         <div id="tools">
@@ -44,6 +54,9 @@
                     <input id="notConfirm" type="button" value="Hủy bỏ" />
                 </div>  
             </span>
+            <a href="../controller/logout.php">
+                <input type="button" value="Đăng xuất" />
+            </a>
         </div>
         <table id="listQuestion" >
             <thead>

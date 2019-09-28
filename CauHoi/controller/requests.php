@@ -20,7 +20,7 @@
         header('Location:../views/admin.php?delete=true');
     }
 
-    //------------------------->Xác nhận lại mục xác nhận trả lời<------------------------------------//
+    //------------------------->Xác nhận lại mục "xác nhận trả lời"<------------------------------------//
     function changeConfirm($id, $confirm){
         global $objDB;
 
