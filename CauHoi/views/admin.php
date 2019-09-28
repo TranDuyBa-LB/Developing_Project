@@ -3,11 +3,15 @@
     <head>
         <title>Quản lý câu hỏi</title>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="css/adminCSS.css" />
         <!--<link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet" />-->
     </head>
     <body>
         <div id="tools">
+            <a href="https://eobi.000webhostapp.com"">
+                <img src="imgs/logo.gif" />
+            </a>
             <input id="search" type="text" placeholder="Tìm kiếm câu hỏi..." onkeyup="search()"/>
             <p>Sắp xếp theo nhóm</p>
             <select id="sortTeam" name="sortTeam" onchange="sortTeam()">
@@ -28,16 +32,16 @@
             <p>Sắp xếp theo thứ tự</p>
             <select id="sortTime" name="sortTime" onchange="sortTime()">
                 <option value="up">Tăng dần</option>
-                <option value="down" selected="selected">Giả dần</option>
+                <option value="down">Giảm dần</option>
             </select>
            <span id="deleteAll">
-                <input type="button" value="DELETE ALL" />
+                <input id="buttonDelete" type="button" value="DELETE ALL" />
                 <div id="windowConfirm">
                     <p>Bạn chắc muốn xóa toàn bộ câu hỏi chứ ?</p>
-                    <a href="../controller/requests.php">
+                    <a href="../controller/requests.php?requestName=delete&id=2.5&all=true">
                         <input type="button" value="Xác nhận" />
                     </a>
-                    <input id="notConfirm" type="button" value="Hủy bỏ" onclick="notConfirm()"/>
+                    <input id="notConfirm" type="button" value="Hủy bỏ" />
                 </div>  
             </span>
         </div>

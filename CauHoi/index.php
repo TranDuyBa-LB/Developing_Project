@@ -1,6 +1,6 @@
 <?php
     if(!empty($_GET['error']))
-        $error = 'Lỗi: '.$_GET['error'];
+        $error = $_GET['error'];
     else    
         $error = "";
 ?>
@@ -9,13 +9,16 @@
     <head>
         <title>Đặt câu hỏi</title>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="views/css/indexCSS.css" />
         <!--<link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">-->
     </head>
     <body>
         <form action="controller/addQuestion.php" method="POST">
             <div id="screen">   
-                <img src="views/imgs/logo.png" />
+                <a href="https://eobi.000webhostapp.com">
+                    <img src="views/imgs/logo.gif" />
+                </a>
                 <p>Mời bạn đặt câu hỏi</p>
                 <p id="warning">
                     <?php echo $error; ?>

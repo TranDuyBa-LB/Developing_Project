@@ -32,10 +32,11 @@
     $arrayData = $data->fetch();         //---------------->Lấy ra mảng dữ liệu là các hàng trong bảng<----------// 
 ?>
 <html>
+    <?php $i=0; //----------->Đếm số câu hỏi<-----------------//?>
     <?php while($arrayData!=null): ?>
         <tr>
             <td>
-                <?php echo $arrayData['id']; ?>
+                <?php echo ++$i; ?>
             </td>
             <td>
                 Nhóm <?php echo $arrayData['team']; ?>
@@ -66,7 +67,6 @@
                 <a href="<?php echo "../controller/requests.php?requestName=delete&id=$id"; ?>"> 
                     <img class="delete" src="imgs/delete.png" />
                 </a>
-                <input type="hidden" name="idDelete" value="<?php echo $id; ?>" />
             </td>
         </tr>
         <?php $arrayData = $data->fetch(); ?>

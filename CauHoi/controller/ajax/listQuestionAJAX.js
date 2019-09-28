@@ -6,9 +6,9 @@
 function sort(request) {
 
     if(Number(request)!=NaN)
-        request = "../controller/selectQuestion.php?sort="+request;
+        request = "selectQuestion.php?sort="+request;
     else 
-        request = "../controller/selectQuestion.php?sort="+request;
+        request = "selectQuestion.php?sort="+request;
     console.log(request);
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -24,9 +24,9 @@ function sort(request) {
 //-------------------->Tìm kiếm câu hỏi theo nội dung<-----------------//
 function searchF(request) {
     if(request!=""||" ")
-        request = "../controller/selectQuestion.php?search="+request;
+        request = "selectQuestion.php?search="+request;
     else    
-        request = "../controller/selectQuestion.php";
+        request = "selectQuestion.php";
     console.log(request);
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -39,7 +39,9 @@ function searchF(request) {
 
 }
 
-//-------------------->Thực hiện gọi liên tục các hàm ở trên theo điều kiện<-----------------//
+//------------------------------------------------------------------------------------------//
+//------------------>Thực hiện gọi liên tục các hàm ở trên theo điều kiện<-----------------//
+//----------------------------------------------------------------------------------------//
 
 var manageRealTime;     //-------------->Chứ hàm realTime đang được thực hiện<-------------//
 function realTime(action, request){
@@ -52,7 +54,7 @@ function realTime(action, request){
             sort(request);
         else if(action=="search")
             searchF(request);
-    },10000);
+    },1000);
 
 }
 

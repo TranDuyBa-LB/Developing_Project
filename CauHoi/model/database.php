@@ -1,9 +1,9 @@
 <?php
     class database {
-        private $host = 'localhost';
-        private $dbName = 'questions';
-        private $userName = 'question';
-        private $userPassword = 'Ba123456789';
+        private $host = 'localhost';              //---------->Tên host<------------//
+        private $dbName = 'questions';           //---------->Tên database<--------//
+        private $userName = 'question';         //---------->Tên user<------------//
+        private $userPassword = 'Ba123456789'; //---------->Mật khẩu user<-------//
 
         private $objDatabase;
 

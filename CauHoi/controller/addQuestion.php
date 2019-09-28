@@ -2,7 +2,7 @@
     require '../model/database.php';
     
     date_default_timezone_set('Asia/Ho_Chi_Minh');
-    $memberName = $_POST['name'];
+    $memberName = htmlentities($_POST['name']);
     $team = $_POST['team'];
     $question = htmlentities($_POST['content']);
     $time = date('h:i:sa');
