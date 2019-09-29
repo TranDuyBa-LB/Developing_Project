@@ -89,8 +89,9 @@ body {
         background-color: white;
     }
     #screen {
-        width: 100%;
+        width: 100% !important;
         box-shadow: none;
-        margin-top: 0px;
+        margin-top: 0px !important;
+        border: none;
     }
 }

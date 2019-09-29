@@ -24,7 +24,7 @@
     function changeConfirm($id, $confirm){
         global $objDB;
 
-        $table = 'listQuestions';
+        $table = 'listquestions';
         $where = "id=$id";
 
         if($confirm=='0' || $confirm=="")

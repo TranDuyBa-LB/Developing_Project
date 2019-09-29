@@ -14,6 +14,7 @@
     height: 44px;
     position: absolute;
     top: 2px;
+    left: 0px;
 }
 #tools #search {
     outline: 0;
@@ -26,7 +27,7 @@
     padding-left: 10px;
     margin-left: 60px;
 }
-#tools p {
+#tools > p {
     display: inline;
     margin-left: 50px;
 
@@ -98,7 +99,6 @@
     transition: 0.5s; 
 }
 #tools #deleteAll > div > input {
-    margin-top: 15px;
     margin-left: 20px;
     height: 40px;
     width: 100px;
@@ -112,7 +112,8 @@
     border: 1px solid white;
     border-radius: 5px;
 }
-#tools input:last-child {
+#tools > a:last-child input {
+    float: right;
     height: 40px;
     width: 100px;
     cursor: pointer;
@@ -120,9 +121,11 @@
     color: rgba(0, 47, 255, 0.74);
     border: 1px solid white;
     border-radius: 5px;
-    margin-left: 30px;
+    margin-right: 20px;
+    margin-top: 5px;
+    outline: 0;
 }
-#tools input:last-child:hover {
+#tools > a:last-child input:hover {
     border: 1px solid rgba(0, 47, 255, 0.74);
     transition: 0.5s;
 }
@@ -162,6 +165,10 @@
 }
 
 @media only screen and (max-width: 414px) {
+    #tools #search {
+        margin-left: 50px;
+        width: 80%;
+    }
     #tools {
         border: none;
     }
@@ -170,5 +177,23 @@
         margin-left: 0px;
         margin-top: 10px;
         margin-bottom: 10px;
+    }
+    #tools select {
+        width: 130px;
+        margin-top: 5px;
+    }
+    #tools #deleteAll > input {
+        margin-left: 10px;
+    }
+    #tools #deleteAll > div {
+        left: 0%;
+        top: 100%;
+    }
+    #tools #deleteAll > div > p {
+        float: none !important;
+    }
+    #tools > a:last-child input {
+        margin-top: 15px;
+        margin-left: 10px;
     }
 }

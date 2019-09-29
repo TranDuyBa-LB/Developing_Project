@@ -3,12 +3,8 @@
 ------------------------------------------------------------------------------------*/
 
 //-------------------->Lọc danh sách theo nhóm hoặc theo thứ tự thời gian<-----------------//
-function sort(request) {
-
-    if(Number(request)!=NaN)
-        request = "selectQuestion.php?sort="+request;
-    else 
-        request = "selectQuestion.php?sort="+request;
+function sort(request) { 
+    request = "selectQuestion.php?sort="+request;
     console.log(request);
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {

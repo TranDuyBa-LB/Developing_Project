@@ -36,7 +36,7 @@ body {
 #screen > p:nth-child(3) {
     margin-top: 10px;
     font-size: 13px;
-    color: rgba(255, 72, 72, 0);
+    color: rgb(255, 72, 72);
     font-size: 15px;
     transition: 1s;
 }
