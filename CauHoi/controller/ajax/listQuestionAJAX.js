@@ -5,7 +5,6 @@
 //-------------------->Lọc danh sách theo nhóm hoặc theo thứ tự thời gian<-----------------//
 function sort(request) { 
     request = "selectQuestion.php?sort="+request;
-    console.log(request);
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if(xmlhttp.readyState==4 && xmlhttp.status==200){
@@ -23,7 +22,6 @@ function searchF(request) {
         request = "selectQuestion.php?search="+request;
     else    
         request = "selectQuestion.php";
-    console.log(request);
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if(xmlhttp.readyState==4 && xmlhttp.status==200){

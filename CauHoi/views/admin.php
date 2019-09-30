@@ -1,12 +1,4 @@
-<?php
-    session_start();
-    if(!empty($_SESSION['login'])){
-        if($_SESSION['login']!=true)
-            header('Location:../views/login.php?error=Đăng nhập không thành công. <br/> Nhấn vào "Gợi ý" để biết gì đó !');
-    }
-    else    
-        header('Location:../views/login.php?error=Đăng nhập không thành công. <br/> Nhấn vào "Gợi ý" để biết gì đó !');
-?>
+<?php require '../controller/checkLogin.php'; ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,9 +7,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" type="img/png" href="imgs/logo.png" />
         <link rel="stylesheet" type="text/css" href="css/adminCSS.css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet" />
+        <!--<link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet" />-->
     </head>
     <body>
+        <div id="displayResponses"></div>
         <div id="tools">
             <a href="https://eobi.000webhostapp.com"">
                 <img src="imgs/logo.gif" />
@@ -65,8 +58,9 @@
                     <td>Tên nhóm</td>
                     <td>Người hỏi</td>
                     <td class="content">Nội dung câu hỏi</td>
-                    <td>Có thể trả lời</td>
                     <td>Thời gian gửi</td>
+                    <td>Trả lời</td>
+                    <td>Có thể trả lời</td>
                     <td>Xóa</td>
                 </tr>
             </thead>

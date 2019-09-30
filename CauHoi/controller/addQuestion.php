@@ -10,8 +10,8 @@
     $objDB = new database();
 
     $table = 'listquestions';
-    $column = 'team, memberName, question, time';
-    $value = "$team,'$memberName','$question','$time'";
+    $column = 'team, memberName, question, time, responses';
+    $value = "$team,'$memberName','$question','$time','false'";
 
     $query = $objDB->INSERT($column,$table,$value);
     $data = $objDB->executeQuery($query);

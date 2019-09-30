@@ -3,18 +3,28 @@
     margin: 0px;
     font-family: 'Roboto Slab', Arial;
 }
+#displayResponses {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(192, 192, 192, 0.555);
+    z-index: 999;
+}
 #tools {
     width: 95%;
     height: 50px;
     margin: 0px auto;
     border-bottom: 1px solid silver;
+    position: relative;
 }
-#tools > a img {
-    width: 50px;
-    height: 44px;
+#tools > a:first-child {
     position: absolute;
     top: 2px;
     left: 0px;
+}
+#tools > a:first-child img {
+    width: 50px;
+    height: 44px;
 }
 #tools #search {
     outline: 0;
@@ -159,7 +169,7 @@
 #listQuestion a {
     display: block;
 }
-#listQuestion .confirm,.delete {
+#listQuestion img {
     width: 30px;
     height: 30px;
 }

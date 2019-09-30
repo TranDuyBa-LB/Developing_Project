@@ -52,6 +52,18 @@
             </td>
             <?php $id = $arrayData['id']; ?>
             <td>
+                <a href="displayResponses.php?id=<?php echo $id; ?>">
+                    <?php
+                        $responses = $arrayData['responses'];
+                        if($responses=='false')
+                            $src = 'imgs/noResponses.png';
+                        else    
+                            $src = 'imgs/responses.png'
+                    ?>
+                    <img src="<?php echo $src; ?>" />
+                </a>
+            </td>
+            <td>
                 <?php
                     $confirm =  $arrayData['confirm'];
                     if($confirm==NULL || $confirm=='0')
