@@ -33,7 +33,8 @@
             $set="confirm='0'";
         $query = $objDB->UPDATE($table,$set,$where);
         $objDB->executeQuery($query);
-        header("Location:../views/admin.php?idConfirm=$id");
+        $sort = $_GET['sort'];
+        header("Location:../views/admin.php");
     }
 
     //------------------------------------------------------------------------------------

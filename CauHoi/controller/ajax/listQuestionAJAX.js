@@ -69,4 +69,5 @@ function search(){
 window.onload = function(){
     sort("0");
     realTime('selectAll');
+    displayResponses();
 };

@@ -52,13 +52,13 @@
             </td>
             <?php $id = $arrayData['id']; ?>
             <td>
-                <a href="displayResponses.php?id=<?php echo $id; ?>">
+                <a href="admin.php?id=<?php echo $id; ?>&displayResponses=true">
                     <?php
                         $responses = $arrayData['responses'];
-                        if($responses=='false')
+                        if($responses=='false' || $responses=="1")
                             $src = 'imgs/noResponses.png';
                         else    
-                            $src = 'imgs/responses.png'
+                            $src = 'imgs/responses.png';
                     ?>
                     <img src="<?php echo $src; ?>" />
                 </a>
@@ -66,7 +66,7 @@
             <td>
                 <?php
                     $confirm =  $arrayData['confirm'];
-                    if($confirm==NULL || $confirm=='0')
+                    if($confirm=='0')
                         $srcImg='imgs/notconfirm.png';
                     else    
                         $srcImg='imgs/confirm.png';
