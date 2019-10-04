@@ -6,7 +6,9 @@
     if(!empty($_POST['id']) && !empty($_POST['contentResponses'])){
         $id = $_POST['id'];
         $content = $_POST['contentResponses'];
-        if($content==" " ||$content=="" )
+
+        //---------Xác định xem có câu trả lời không, nếu là "1" => không có------//
+        if($content=="1")
             $content = 'false';
 
         require '../model/database.php';

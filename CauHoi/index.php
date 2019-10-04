@@ -1,8 +1,13 @@
+<!--Phiển bản 2-->
 <?php
     if(!empty($_GET['error']))
         $error = $_GET['error'];
     else    
         $error = "";
+    if(!empty($_GET['errorIdMember']))
+        $errorIdMember = $_GET['errorIdMember'];
+    else    
+        $errorIdMember = "";
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,7 +21,7 @@
     </head>
     <body>
         <form action="controller/addQuestion.php" method="POST">
-            <div id="screen">   
+            <div id="screenQuestion">   
                 <a href="https://eobi.000webhostapp.com">
                     <img src="views/imgs/logo.gif" />
                 </a>
@@ -40,11 +45,25 @@
                     <option value="11">Nhóm 11</option>
                     <option value="12">Nhóm 12</option>
                 </select>
-                <textarea id='content' name="content" placeholder="Nội dung câu hỏi" rows="10" required></textarea>
+                <textarea name="content" placeholder="Nội dung câu hỏi" rows="10" required></textarea>
+                <input type="button" value="Xem câu trả lời" onclick="displayEnterCode()" />
                 <input type="submit" value="Gửi câu hỏi" onclick="return checkRequest()" required/>
             </div>
         </form>
+        <div id="screenEnterCode">
+            <a href="http://hoidinao.tk">
+                <img src="views/imgs/logo.gif" />
+            </a>
+            <p>Mời bạn nhập mã để xem câu trả lời</p>
+            <p id="errorIdMember"><?php echo $errorIdMember; ?></p>
+            <input id="idMember" type="text" placeholder="Mã người gửi câu hỏi.." />
+            <input id="enter" type="button" value="Xem" onclick="listResponses()"/>
+            <div id="contentResponses">
+            
+            </div>
+        </div>
     </body>
     <script type="text/javascript" src="views/js/checkRequestIndex.js"></script>
     <script type="text/javascript" src="views/js/displayIndex.js"></script>
+    <script type="text/javascript" src="controller/ajax/listResponsesAJAX.js"></script>
 </html>

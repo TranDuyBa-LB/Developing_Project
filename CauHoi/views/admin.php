@@ -131,11 +131,12 @@
                 <tr>
                     <td>STT</td>
                     <td>Tên nhóm</td>
+                    <td>ID</td>
                     <td>Người hỏi</td>
                     <td class="content">Nội dung câu hỏi</td>
                     <td>Thời gian gửi</td>
                     <td>Trả lời</td>
-                    <td>Có thể trả lời</td>
+                    <td>Câu hỏi Group</td>
                     <td>Xóa</td>
                 </tr>
             </thead>

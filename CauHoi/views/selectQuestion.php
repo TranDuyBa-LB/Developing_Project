@@ -42,6 +42,9 @@
                 Nhóm <?php echo $arrayData['team']; ?>
             </td>
             <td>
+                <?php echo $arrayData['idMember']; ?>
+            </td>
+            <td>
                 <?php echo $arrayData['memberName']; ?>
             </td>
             <td class="content">
