@@ -1,0 +1,223 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto Slab', Arial;
+}
+body {
+    background-color: rgb(243, 243, 243);
+}
+#screenQuestion {
+    display: block;
+    overflow: hidden;
+    margin: -100% auto;
+    width: 0px;
+    height: auto;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(146, 146, 146);
+    transition: 1s;
+    text-align: center;
+}
+#screenQuestion > a img {
+    width: 99px;
+    height: 86px;
+    margin-top: 10px;
+}
+#screenQuestion > p:nth-child(2) {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.959);
+    height: 30px;
+    padding-top: 7px;
+    background-color: rgb(255, 91, 91);
+    box-shadow: 0px 3px 10px rgb(139, 139, 139); 
+}
+#screenQuestion > p:nth-child(3) {
+    margin-top: 10px;
+    font-size: 13px;
+    color: rgb(255, 72, 72);
+    font-size: 15px;
+    transition: 1s;
+}
+#screenQuestion input,select,textarea {
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+    font-size: 15px;
+    border: 1px solid rgb(156, 156, 156);
+}
+#screenQuestion input,select,textarea:focus {
+    outline: 0;
+}
+#screenQuestion input:nth-child(4) {
+    margin-top: 20px;
+    width: 80%;
+    height: 40px;
+    padding-left: 10px;
+}
+#screenQuestion select {
+    margin-left: 10%;
+    width: 150px;
+    height: 40px;
+    padding-left: 10px;
+}
+#screenQuestion textarea {
+    width: 80%;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+#screenQuestion input:nth-child(7){
+    width: 30%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: white;
+    color: rgb(68, 127, 238);
+    margin-right: 10px;
+    display: inline-block;
+}
+#screenQuestion input:nth-child(7):hover {
+    background-color: rgb(255, 77, 77);
+    color: white;
+    transition: 0.5s;
+    box-shadow: 0px 0px 10px rgb(94, 94, 94);
+}
+#screenQuestion input:last-child{
+    width: 30%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+    background-color: rgb(68, 127, 238);
+    display: inline-block;
+}
+#screenQuestion input:last-child:hover {
+    transition: 0.5s;
+    box-shadow: 0px 0px 10px rgb(94, 94, 94);
+    background-color: rgb(255, 77, 77);
+    
+}
+#screenEnterCode {
+    display: none;
+    overflow: hidden;
+    margin: -100% auto;
+    width: 0%;
+    height: auto;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(146, 146, 146);
+    transition: 1s;
+    text-align: center;
+}
+#screenEnterCode a img {
+    display: block;
+    width: 99px;
+    height: 86px;
+    margin: 10px auto;
+}
+#screenEnterCode p:nth-child(2){
+    width: 100%;
+    color: rgb(68, 127, 238);
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+#screenEnterCode p:nth-child(3) {
+    height: 0px;
+    width: 100%;
+    color: rgb(255, 77, 77);
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+#screenEnterCode input:nth-child(4) {
+    display: block;
+    margin: 20px auto;
+    width: 80%;
+    height: 40px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding-left: 10px;
+    outline: 0;
+    font-size: 18px;
+}
+#screenEnterCode input:nth-child(5) {
+    width: 25%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-color: rgb(68, 127, 238);
+    color: white;
+    outline: 0;
+}
+#screenEnterCode input:nth-child(5):hover {
+    transition: 0.5s;
+    background-color: rgb(255, 77, 77);
+    box-shadow: 0px 0px 10px rgb(73, 73, 73);
+}
+#screenEnterCode #contentResponses {
+    display: none;
+    width: 90%;
+    height: 0px;
+    margin: 10px auto;
+    border: 1px solid silver;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: 1s;
+}
+#screenEnterCode #contentResponses .responses {
+    border-bottom: 1.5px solid rgb(128, 128, 128);
+    width: 95%;
+    margin: 10px auto;
+    
+}
+#screenEnterCode #contentResponses .responses p:first-child {
+    text-align: justify;
+}
+#screenEnterCode #contentResponses .responses p:nth-child(2) {
+    margin-top: 10px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+}
+#screenEnterCode #contentResponses .responses div {
+    text-align: justify;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+@media only screen and (max-width: 414px) {
+    body {
+        background-color: white;
+    }
+    #screenQuestion {
+        width: 100% !important;
+        box-shadow: none;
+        background-color: rgba(0, 0, 255, 0);
+        margin-top: 0px !important;
+    }
+    #screenQuestion input:nth-child(7) {
+        width: 35%;
+    }
+    #screenEnterCode {
+        width: 100%;
+        margin-top: 5%;
+        box-shadow: none;
+        background-color: rgba(0, 0, 255, 0);
+    }
+    #screenEnterCode {
+        width: 100% !important;
+        margin-top: 10px !important;
+        box-shadow: none;
+        background-color: rgba(0, 0, 255, 0);
+    }
+}

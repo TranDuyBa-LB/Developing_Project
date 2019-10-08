@@ -1,0 +1,97 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto Slab', Arial;
+}
+body {
+    background-color: rgb(243, 243, 243);
+}
+#screen {
+    overflow: hidden;
+    width: 0%;
+    height: auto;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgb(109, 109, 109);
+    margin: 0px auto;
+    margin-top: -100%;
+    background-color: white;
+    text-align: center;
+    transition: 1s;
+}
+#screen a > img {
+    width: 99px;
+    height: 86px;
+    margin-top: 10px;
+}
+#screen > p:nth-child(2) {
+    margin-top: 10px;
+    font-size: 25px;
+    background-color: rgba(52, 106, 255, 0.836);
+    color: white;
+    padding-bottom: 5px;
+    box-shadow: 0px 0px 10px rgb(138, 138, 138);
+}
+#screen > p:nth-child(3) {
+    margin-top: 10px;
+    color: rgba(255, 52, 52, 0.945);
+    overflow: hidden;
+    transition: 1s;
+}
+#screen input {
+    display: block;
+    margin: 20px auto;
+    width: 70%;
+    height: 40px;
+    border: 1px solid rgb(134, 134, 134);
+    border-radius: 5px;
+    outline: 0;
+    padding-left: 10px;
+    font-size: 16px;
+}
+#screen input:nth-child(4) {
+    margin-top: 40px;
+}
+#screen input:nth-child(6) {
+    display: inline-block;
+    width: 30%;
+    height: 50px;
+    padding-left: 0px;
+    margin-top: 30px;
+    background-color: rgba(52, 106, 255, 0.836);
+    color: white;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 0px 5px rgb(100, 100, 100);
+}
+#screen input:nth-child(6):hover {
+    background-color: rgba(255, 55, 55, 0.897);
+    transition: 0.5s;
+}
+#screen input:nth-child(7) {
+    display: inline-block;
+    width: 30%;
+    height: 50px;
+    padding-left: 0px;
+    margin-top: 30px;
+    margin-left: 20px;
+    background-color: rgba(255, 255, 255, 0.836);
+    color: rgba(52, 106, 255, 0.836);
+    border: none;
+    cursor: pointer;
+}
+#screen input:nth-child(7):hover {
+    border: 1px solid rgba(255, 55, 55, 0.897);
+    color: rgba(255, 55, 55, 0.897);
+}
+@media only screen and (max-width: 414px){
+    body {
+        background-color: white;
+    }
+    #screen {
+        width: 100% !important;
+        box-shadow: none;
+        margin-top: 0px !important;
+        border: none;
+    }
+}
