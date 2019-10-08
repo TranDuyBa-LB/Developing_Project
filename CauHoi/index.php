@@ -1,3 +1,4 @@
+<!--Quản lý câu hỏi-->
 <!--Phiển bản 2-->
 <?php
     if(!empty($_GET['error']))
