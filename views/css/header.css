@@ -1,0 +1,105 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+#header {
+    position: relative;
+}
+#header a {
+    text-decoration: none;
+    color: black;
+}
+#header #logo{
+    text-align: center;
+    font-family: 'Cabin', sans-serif;
+}
+#header #logo a h1 {
+    width: 25%;
+    color: rgb(56, 56, 56);
+    display: inline;
+    word-wrap: break-word;
+}
+#header #logo a img {
+    /* width: 13%;
+    height: 13%; */
+}
+#header #slogan {
+    text-align: center;
+    margin-top: 10px;
+}
+#header #slogan p{
+    width: 25%;
+    display: inline-block;
+    font-family: 'Varela Round', sans-serif;
+    color: rgb(56, 56, 56);
+    word-wrap: break-word;
+}
+#header #info {
+    text-align: center;
+    margin-top: 15px;
+}
+#header #info > ul li {
+    display: inline;
+}
+#header #info > ul li a {
+    margin-left: 20px;
+}
+#header #info > ul li a img {
+    width: 2.5%;
+    height: 2.5%;
+}
+#header #info > ul li a img:hover {
+    transition: 2s;
+    transform: rotate(360deg);
+}
+
+#header #info #gmail_header {
+    position: absolute;
+    display: inline-block;
+    width: 0%;
+    height: 20px;
+    margin-left: 1px;
+    background-color: #ff5d5d;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 10px 10px 10px silver;
+    font-family: 'Cabin', sans-serif;
+    overflow: hidden;
+}
+#header #info > ul li:hover #gmail_header {
+    width: 20%;
+    transition: 1s;
+}
+
+/*----------------CSS cho thiết bị di động--------------------------*/
+@media only screen and (max-width: 414px ) {
+    #header #logo a img {
+        width: 40%;
+        height: 40%;
+    }
+    #header #slogan p{
+        width: 90%;
+        font-size: 18px;
+    }
+    #header #info > ul li a img {
+        width: 10%;
+        height: 10%;
+    }
+    #header #info #gmail_header {
+        position: relative;
+        display: block;
+        margin:0 auto;
+        width: 0%;
+        height: 0px;
+        box-shadow: 0px 10px 15px silver;
+        font-size: 18px;
+    }
+    #header #info > ul li:hover #gmail_header{
+        width: 100%;
+        height: 28px;
+        transition: 1s;
+    }
+}

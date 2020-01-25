@@ -1,0 +1,79 @@
+#footer {
+    height: auto;
+    background-color: #e0e0e0;
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Cabin', sans-serif;
+}
+#footer div > ul li {
+    display: inline;
+}
+#footer div ul li a {
+    text-decoration: none;
+}
+#footer div ul li:first-child ~ li{
+    margin-left: 20px;
+}
+#footer div ul li a img {
+    width: 3%;
+    height: 3%;
+}
+#footer div ul li a img:hover {
+    transition: 1.5s;
+    transform: rotate(360deg);
+}
+#footer div > ul li #gmail_footer {
+    position: absolute;
+    display: inline-block;
+    width: 0%;
+    height: 30px;
+    margin-left: 1px;
+    margin-top: -9px;
+    background-color: #4876d3;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 10px 10px 10px rgb(158, 158, 158);
+    font-family: 'Cabin', sans-serif;
+    overflow: hidden;
+}
+#footer div > ul li:hover #gmail_footer {
+    width: 20%;
+    transition: 1s;
+}
+
+
+/*----------------CSS cho thiết bị di động--------------------------*/
+@media only screen and (max-width: 414px ) {
+    #footer {
+        height: auto;
+    }
+    #footer div ul li a img {
+        width: 10%;
+        height: 10%;
+    }
+    #footer div > ul li #gmail_footer  {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        width: 0%;
+        height: 0%;
+        padding-top: 10px;
+        font-size: 18px;
+        padding-bottom: 5px;
+        margin-bottom: 0px;
+    }
+    #footer div > ul li:hover #gmail_footer{
+        height: 30px;
+        width: 100%;
+        transition: 1s;
+    }
+    #footer > p:nth-child(1){
+        padding-bottom: 0px;
+    }
+    #footer > p:nth-child(3){
+        padding-bottom: 50px;
+    }
+}

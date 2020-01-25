@@ -1,0 +1,155 @@
+#search {
+    display: block;
+    margin-top: 50px;
+    margin-left: 100px;
+    height: 40px;
+    width: 0%;
+    background-image: url('../images/img_designs/search.png');
+    background-size: 29px 29px;
+    background-repeat: no-repeat;
+    background-position: 5px;
+    padding-left: 40px;
+    border: 1.5px solid #4876d3;
+    border-radius: 50px;
+    font-size: 15px;
+    box-shadow: 5px 5px 10px rgba(161, 161, 161, 0.548);
+}
+#search:focus {
+    outline: 0;
+}#search:hover {
+    width: 30%;
+    transition: 1s;
+    padding-right: 30px;
+}
+#content {
+    width: 50%;
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+#content .list_posts {
+    margin-bottom: 50px;
+    border-bottom: 1px solid silver;
+}
+#content .list_posts h2 {
+    max-height: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+#content .list_posts h2 a {
+    font-size: 35px;
+    font-weight: normal; /*Hiển thị chữ in thường*/
+    text-decoration: none;
+    color: rgb(56, 56, 56);
+    font-family: 'Cabin', sans-serif;
+}
+#content .list_posts > p {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 180%;
+    max-height: 160px;
+    height: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-family: 'Varela Round', sans-serif;
+    color: rgb(56, 56, 56);
+}
+#content .list_posts input {
+    display: block;
+    width: 150px;
+    height: 50px;
+    margin-top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 5px;
+    background-color: #4876d3;
+    font-size: 18px;
+    color: white;
+    font-family: 'Cabin', sans-serif;
+}
+#content .list_posts input:hover {
+    background-color: rgb(255, 87, 87);
+    transition: 1s;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgb(151, 151, 151);
+}
+#content .list_posts input:focus {
+    outline: 0;
+}
+#content .list_posts > div {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: 'Varela Round', sans-serif;
+}
+#content .list_posts > div img {
+    width: 3%;
+    height: 3%;
+    display: inline-block;
+}
+#content .list_posts > div img:first-child ~ img {
+    margin-left: 20px ; 
+}
+#content .list_posts > div p {
+    display: inline;
+    padding-left: 5px;
+}
+#content .list_posts > div > div {
+    display: none;
+}
+/*----------------CSS cho thiết bị di động--------------------------*/
+@media only screen and (max-width: 414px ) {
+    #search {
+        width: 60%;
+        margin: 20px auto;
+        box-shadow: 0px 5px 10px rgba(121, 121, 121, 0.548);
+    }
+    #search:hover {
+        width: 70%;
+    }
+    #content {
+        width: 95%;
+        margin: 30px auto;
+    }
+    #content .list_posts:first-child {
+        margin-top: 50px;
+    }
+    #content .list_posts {
+        margin-bottom: 20px;
+    }
+    #content .list_posts h2 {
+        text-align: justify;
+    }
+    #content .list_posts h2 a {
+        font-size: 20px;
+    }
+    #content .list_posts > p {
+        text-align: justify;
+        font-size: 15px;
+    }
+    #content .list_posts input {
+        display: none;
+    }
+    #content .list_posts > div {
+        margin-top: 30px;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+    #content .list_posts > div p {
+        font-size: 13px;
+        padding-left: 3px;
+    }
+    #content .list_posts > div img {
+        width: 5%;
+        height: 5%;
+    }
+    #content .list_posts > div > div {
+        display: block;
+    }
+    #content .list_posts > div img:first-child ~ img,p{
+        margin-top: 5px;
+    }
+    #content .list_posts > div img:nth-child(4){
+        margin-left: 0px !important; 
+    }
+}
